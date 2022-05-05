@@ -2,32 +2,65 @@
 
 # dependencies
 node_modules
-.pnp
+/.pnp
 .pnp.js
 
 # testing
-coverage
+/coverage
 
 # next.js
 .next/
-out/
-build
+/out/
+
+# production
+*build/
+
 
 # misc
 .DS_Store
 *.pem
+.idea
+nbproject
+public/uploads/*
+!public/uploads/.gitkeep
 
 # debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+*.log
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# turbo
+# main env file
+.env
+
+# vercel
+.vercel
+
+# VS Code Plugins
+.history/
+
+# Turborepo
 .turbo
+
+# Storybook
+storybook-static
+
+# vscode
+.vscode
+
+# Logs and databases
+.tmp
+
+# Strapi
+exports
+*.cache
+.strapi-updater.json
+
+*.tsbuildinfo
+
+# Sentry
+.sentryclirc
