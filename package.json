@@ -7,18 +7,38 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --scope=*ui* --scope=*cms* --no-deps",
     "dev": "turbo run dev --parallel",
+    "web:dev": "turbo run dev --scope=*web* --no-deps",
+    "cms:dev": "turbo run dev --scope=*cms* --no-deps",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md,json}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
+    "storybook": "yarn workspace ui storybook",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "prettier": "latest",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.5.1",
     "turbo": "latest"
   },
   "engines": {
     "npm": ">=7.0.0",
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
-  "packageManager": "yarn@1.22.18"
+  "lint-staged": {
+    "apps/**/*.{ts,tsx,md,mdx,js,jsx,json}": [
+      "prettier --write"
+    ],
+    "packages/ui/!(icons)/*.{ts,tsx,md,mdx,js,jsx,json}": [
+      "prettier --write"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "packageManager": "yarn@1.22.17"
 }
