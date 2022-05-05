@@ -1,0 +1,5 @@
+{
+  "display": "ESLint",
+  "extends": "./base.json",
+  "exclude": ["../eslintconfig/.eslintrc.js"]
+}
