@@ -1,5 +1,25 @@
 {
-  "extends": "tsconfig/react-library.json",
-  "include": ["."],
-  "exclude": ["dist", "build", "node_modules"]
+  "extends": "tsconfig/base.json",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "lib": ["es2015", "DOM"],
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["./components"],
+      "@components/*": ["./components/*"],
+      "@styles": ["./styles"],
+      "@styles/*": ["./styles/*"]
+    }
+  },
+  "exclude": ["storybook-static", "icon-index-template.js", "icon-template.js"],
+  "include": [
+    ".eslintrc.js",
+    "assets/**/*",
+    "icons/**/*",
+    "components/**/*",
+    "styles/**/*",
+    "utils/**/*"
+  ]
 }
