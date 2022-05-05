@@ -1,0 +1,22 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+. "$(dirname "$0")/common.sh"
+
+echo '🚀🚀 Testing your project before pushing 🚀🚀'
+
+# Check ESLint Standards
+yarn lint ||
+(
+        echo '😤😤 ESLint Check Failed 😤😤 Make the required changes listed above, add changes and try to commit again.'
+        false;
+)
+
+yarn build ||
+(
+    echo '🔨👷 Better call Bob... Because your build failed 👷🔨 View the errors above to see why.
+    '
+    false;
+)
+
+# If build is successful, we can push to the remote branch
+echo '✅✅ You win this time... I am pushing this now. ✅✅'
