@@ -112,7 +112,7 @@ export type ThemeType = typeof theme;
 
 declare module 'styled-components' {
   export interface DefaultTheme extends Omit<ThemeType, 'colors'> {
-    colors: Colors;
-    isLight: boolean;
+    colors?: Colors;
+    isLight?: boolean;
   }
 }

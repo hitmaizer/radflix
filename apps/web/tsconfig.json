@@ -1,20 +1,31 @@
 {
+  "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "baseUrl": ".",
+    "lib": ["esnext.intl", "es2017.intl", "es2018.intl"],
+    "noImplicitAny": false,
     "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
+    "paths": {
+      "@assets": ["./src/assets"],
+      "@assets/*": ["./src/assets/*"],
+      "@config/*": ["./src/config/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"],
+      "@constants": ["./src/constants"],
+      "@hooks": ["./src/hooks"],
+      "@modules/*": ["./src/modules/*"],
+      "@providers": ["./src/providers"],
+      "@store": ["./src/store"],
+      "@store/*": ["./src/store/*"],
+      "@projects/*": ["./src/components/Projects/*"],
+      "@utils": ["./src/utils"],
+      "@offchain/*": ["./src/services/offchain/*"],
+      "@onchain/*": ["./src/services/onchain/*"],
+      "@styles": ["../../packages/ui/styles"],
+      "@styles/*": ["../../packages/ui/styles/*"]
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [".eslintrc.js", "**/*.tsx", "**/*.ts", "*.config.js"]
 }
