@@ -24,8 +24,9 @@
     "turbo": "latest"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
+    "node": "16.15.0",
+    "npm": "8.x",
+    "yarn": "1.22.x"
   },
   "lint-staged": {
     "apps/**/*.{ts,tsx,md,mdx,js,jsx,json}": [
