@@ -23,6 +23,7 @@ Text.defaultProps = {
   size: 'md',
   as: 'p',
   textAlign: 'inherit',
+  children: 'This is a text component',
 };
 
 export default Text;
