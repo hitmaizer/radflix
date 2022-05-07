@@ -15,7 +15,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
     "storybook": "yarn workspace ui storybook",
     "prepare": "husky install",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "start": "yarn workspace cms start"
   },
   "devDependencies": {
     "husky": "^7.0.4",
@@ -24,8 +25,9 @@
     "turbo": "latest"
   },
   "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
+    "node": "16.15.0",
+    "npm": "8.x",
+    "yarn": "1.22.x"
   },
   "lint-staged": {
     "apps/**/*.{ts,tsx,md,mdx,js,jsx,json}": [
