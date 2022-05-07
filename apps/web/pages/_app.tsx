@@ -6,7 +6,6 @@ import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'ui/styles';
-import '@config/fontsource';
 import theme from 'ui/styles/theme';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
