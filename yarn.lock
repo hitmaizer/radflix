@@ -1634,7 +1634,7 @@
   dependencies:
     tslib "^2.0.1"
 
-"@fontsource/roboto@^4.5.5", "@fontsource/roboto@^4.5.6":
+"@fontsource/roboto@^4.5.5":
   version "4.5.5"
   resolved "https://registry.yarnpkg.com/@fontsource/roboto/-/roboto-4.5.5.tgz#4ecc38e690469378e2ec2a97f9c12282c654cc93"
   integrity sha512-Pe1p+gAO6K0aLxBXlLoJRHVx352tVc/v/7DOnvM3t+FYXb+KUga9aCD1NpnDfd0kKnWXqrZyAXguyyFWDDuphw==
