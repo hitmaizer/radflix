@@ -15,7 +15,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md,json}\"",
     "storybook": "yarn workspace ui storybook",
     "prepare": "husky install",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "start": "yarn workspace cms start"
   },
   "devDependencies": {
     "husky": "^7.0.4",
