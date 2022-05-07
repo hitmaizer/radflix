@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skate_movies",
+  "info": {
+    "singularName": "skate-movie",
+    "pluralName": "skate-movies",
+    "displayName": "skateMovie",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "movieLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "moviePoster": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "releaseYear": {
+      "required": true,
+      "type": "integer"
+    },
+    "backdropPoster": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -10,5 +10,6 @@
     "dev": {
       "cache": false
     }
-  }
+  },
+  "baseBranch": "origin/main"
 }

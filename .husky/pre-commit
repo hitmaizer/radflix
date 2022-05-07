@@ -1,0 +1,10 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🚀🏍️ Testing your project before committing 🏍️🚀'
+
+# Check Prettier standards
+yarn lint-staged
+
+# If everything passes... Now we can commit
+echo '✅✅ Your changes were commited. Nice work!!! ✅✅'

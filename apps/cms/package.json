@@ -1,0 +1,30 @@
+{
+  "name": "cms",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Radflix CMS",
+  "scripts": {
+    "dev": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "4.1.9",
+    "@strapi/plugin-users-permissions": "4.1.9",
+    "@strapi/plugin-i18n": "4.1.9",
+    "better-sqlite3": "7.4.6"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "837e73ed-472b-4f31-88dc-b8235e5bd253"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
