@@ -4,7 +4,8 @@
   "info": {
     "singularName": "bmx-movie",
     "pluralName": "bmx-movies",
-    "displayName": "BmxMovie"
+    "displayName": "BmxMovie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -35,6 +36,10 @@
     },
     "backdropPoster": {
       "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
       "required": true
     }
   }
