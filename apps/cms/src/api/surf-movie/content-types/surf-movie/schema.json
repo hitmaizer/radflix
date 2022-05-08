@@ -4,7 +4,8 @@
   "info": {
     "singularName": "surf-movie",
     "pluralName": "surf-movies",
-    "displayName": "SurfMovie"
+    "displayName": "SurfMovie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -38,6 +39,10 @@
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
     }
   }
 }
