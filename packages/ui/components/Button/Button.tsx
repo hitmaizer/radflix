@@ -1,4 +1,4 @@
-import Text from 'components/Text';
+import Text from '@components/Text';
 
 import * as S from './Button.styles';
 import { ButtonProps } from './Button.types';
