@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dirt_bike_movies",
+  "info": {
+    "singularName": "dirt-bike-movie",
+    "pluralName": "dirt-bike-movies",
+    "displayName": "DirtBikeMovie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "movieLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "moviePoster": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "releaseYear": {
+      "type": "integer",
+      "required": true
+    },
+    "backdropPoster": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
