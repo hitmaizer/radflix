@@ -1,8 +1,7 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import 'styled-components';
 
 import theme from './theme';
-
-export type ColorMode = 'light' | 'dark' | 'system';
 
 export type ColorScheme =
   | 'default'
@@ -110,9 +109,4 @@ export type WrapperElement =
 
 export type ThemeType = typeof theme;
 
-declare module 'styled-components' {
-  export interface DefaultTheme extends Omit<ThemeType, 'colors'> {
-    colors?: Colors;
-    isLight?: boolean;
-  }
-}
+declare module 'styled-components' {}
