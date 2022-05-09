@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import Button from 'components/Button';
-import Logo from 'components/Logo';
+import Button from '@components/Button';
+import Logo from '@components/Logo';
 
 import * as S from './Navbar.styles';
 import { NavbarProps } from './Navbar.types';
@@ -33,7 +33,7 @@ export default Navbar;
 Navbar.defaultProps = {
   children: (
     <>
-      <Logo />
+      <Logo imgSrc="/radflix-logo.svg" />
       <Button padding="7px 17px" />
     </>
   ),
