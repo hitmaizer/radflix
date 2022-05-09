@@ -1,13 +1,18 @@
 const theme = {
   colors: {
     white: '#FFFFFF',
-    primary: '#e50914',
-    lightPrimary: '#EB5757B8 ',
-    darkGray: '#333333',
-    lighterGray: '#BDBDBD',
-    mediumGray: '#4F4F4F',
-    lightGray: '#828282',
-    offWhite: '#F2F2F2',
+    black: '#000000',
+    gray50: '#FAFAFA',
+    gray100: '#F5F5F5',
+    gray200: '#E5E5E5',
+    gray300: '#D4D4D4',
+    gray400: '#A3A3A3',
+    gray500: '#737373',
+    gray600: '#525252',
+    gray700: '#404040',
+    gray800: '#262626',
+    gray900: '#171717',
+    primary: '#E50914',
   },
 
   fonts: {

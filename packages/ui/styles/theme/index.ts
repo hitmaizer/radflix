@@ -11,6 +11,22 @@ const theme = {
       '"Roboto", system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue", "Noto Sans", "Liberation Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
   },
 
+  colors: {
+    white: '#FFFFFF',
+    black: '#000000',
+    gray50: '#FAFAFA',
+    gray100: '#F5F5F5',
+    gray200: '#E5E5E5',
+    gray300: '#D4D4D4',
+    gray400: '#A3A3A3',
+    gray500: '#737373',
+    gray600: '#525252',
+    gray700: '#404040',
+    gray800: '#262626',
+    gray900: '#171717',
+    primary: '#E50914',
+  },
+
   // default fontSizes
   fontSizes: [13, 15, 18, 22, 26, 32, 44, 64],
 
