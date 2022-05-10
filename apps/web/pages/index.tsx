@@ -34,7 +34,7 @@ export default function Home() {
           </Heading>
           <Text
             color="white"
-            marginTop={12}
+            marginTop={8}
             textAlign="center"
             fontWeight="medium"
           >
