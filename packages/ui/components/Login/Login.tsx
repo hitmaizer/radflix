@@ -1,4 +1,3 @@
-import Button from '@components/Button';
 import Heading from '@components/Heading';
 
 import * as S from './Login.styles';
@@ -10,9 +9,6 @@ const Login = ({ children }: LoginProps) => {
       <Heading color="white" size="3xl" fontWeight="bold">
         Sign In
       </Heading>
-      <S.LogintInput type="text" placeholder="Email or phone number" mt={4} />
-      <S.LogintInput type="password" placeholder="Password" />
-      <Button mt={8} height="48px" />
       {children}
     </S.LoginContainer>
   );
