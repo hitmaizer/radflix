@@ -34,7 +34,7 @@ export const Heading = styled.h1<StyledHeadingProps>`
   font-weight: ${({ theme: { fontWeights }, strong }) =>
     strong ? fontWeights.black : fontWeights.regular};
   color: ${({ theme }) => theme.colors?.primary};
-  max-width: 700px;
+  max-width: 940px;
   /* text-align: center; */
   ${textAlign}
   ${typography}
