@@ -1,7 +1,7 @@
 import Avatar from '@components/Avatar';
 import MenuItem from '@components/MenuItem';
 import * as HoverCard from '@radix-ui/react-hover-card';
-import { Pencil, QuestionCircle } from 'styled-icons/bootstrap';
+import { Pencil, QuestionCircle } from '@styled-icons/bootstrap';
 
 import * as S from './Logged.styles';
 import { LoggedProps } from './Logged.types';
