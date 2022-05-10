@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Homepage from 'src/components/Homepage/Homepage';
 import { Box, Button, Heading, Input, Logo, Stack, Text } from 'ui/components';
 
@@ -12,7 +13,9 @@ export default function Home() {
           p="16px 32px"
         >
           <Logo imgSrc="/radflix-logo.svg" />
-          <Button>Sign In</Button>
+          <Link href="/login" passHref>
+            <Button>Sign In</Button>
+          </Link>
         </Stack>
         <Box
           display="flex"
