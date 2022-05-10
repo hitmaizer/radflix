@@ -2,7 +2,7 @@
   "extends": "tsconfig/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "lib": ["esnext.intl", "es2017.intl", "es2018.intl"],
+    "lib": ["esnext.intl", "es2017.intl", "es2018.intl", "DOM"],
     "noImplicitAny": false,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
