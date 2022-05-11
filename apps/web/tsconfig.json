@@ -27,5 +27,11 @@
       "@styles/*": ["../../packages/ui/styles/*"]
     }
   },
-  "include": [".eslintrc.js", "**/*.tsx", "**/*.ts", "*.config.js"]
+  "include": [
+    ".eslintrc.js",
+    "**/*.tsx",
+    "**/*.ts",
+    "*.config.js",
+    "pages/api/auth/[...nextauth].ts"
+  ]
 }
