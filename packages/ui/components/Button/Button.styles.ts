@@ -31,4 +31,11 @@ export const Button = styled.button<ButtonProps>`
         color: ${({ theme }) => theme.colors?.white};
       }
     `}
+    ${({ text }) =>
+    text &&
+    css`
+      background-color: transparent;
+      border: none;
+      color: ${({ theme }) => theme.colors?.white};
+    `}
 `;

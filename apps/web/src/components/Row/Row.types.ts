@@ -2,10 +2,11 @@ import { ReactNode } from 'react';
 
 import { FlexboxProps, LayoutProps, SpaceProps } from 'styled-system';
 
-export interface CardProps extends SpaceProps, FlexboxProps, LayoutProps {
+export interface RowProps extends SpaceProps, FlexboxProps, LayoutProps {
   children?: ReactNode;
-  imgSrc?: string;
-  title?: string;
+  title: string;
+  fetchURL: string;
   square?: boolean;
+  isBigRow?: boolean;
   poster?: boolean;
 }

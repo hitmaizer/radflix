@@ -4,4 +4,7 @@ module.exports = withTM({
   compiler: {
     styledComponents: true,
   },
+  images: {
+    domains: ['https://lh3.googleusercontent.com/'],
+  },
 });
