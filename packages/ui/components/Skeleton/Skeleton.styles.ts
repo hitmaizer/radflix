@@ -6,8 +6,7 @@ export const Skeleton = styled.div<SkeletonProps>`
   position: relative;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.gray300};
-  margin: 10px 0;
-  border-radius: 4px;
+  border-radius: 12px;
 
   ${({ text }) =>
     text &&
