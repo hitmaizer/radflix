@@ -47,8 +47,8 @@ const Banner = ({ children, ...rest }: BannerProps) => {
           {...rest}
           style={{
             backgroundSize: 'cover',
-            backgroundImage: `linear-gradient(180deg, rgba(20,20,20,1) 9%, rgba(20,20,20,0) 51%, rgba(20,20,20,1) 100%), url("${movie?.attributes.backdropPoster}")`,
-            backgroundPosition: 'top center',
+            backgroundImage: `linear-gradient(180deg, rgba(23,23,23,1) 9%, rgba(23,23,23,0.4822303921568627) 51%, rgba(23,23,23,1) 100%), url("${movie?.attributes.backdropPoster}")`,
+            backgroundPosition: 'center',
           }}
         >
           <S.BannerContent>
@@ -70,7 +70,19 @@ const Banner = ({ children, ...rest }: BannerProps) => {
       )}
       {loading && (
         <>
-          <Skeleton banner />
+          <Skeleton banner>
+            <Stack
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyContent="flex-start"
+              gridGap="16px"
+            >
+              <Skeleton heading />
+              <Skeleton text />
+              <Skeleton card />
+            </Stack>
+          </Skeleton>
         </>
       )}
       {error && <p>{error}</p>}
