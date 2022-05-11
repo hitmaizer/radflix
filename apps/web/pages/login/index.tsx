@@ -30,13 +30,18 @@ const index = () => {
           <Login>
             <Stack display="flex" vertical gridGap="16px" mt={4}>
               <NormalInput
-                type="text"
+                id="email-address"
+                name="email"
+                type="email"
+                required
                 placeholder="Enter your email"
                 onChange={(e) => setUsername(e.currentTarget.value)}
                 value={username}
               />
               <NormalInput
                 type="password"
+                id="password"
+                name="password"
                 placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
