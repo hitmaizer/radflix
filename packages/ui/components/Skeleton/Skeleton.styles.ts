@@ -5,7 +5,7 @@ import { SkeletonProps } from './Skeleton.types';
 export const Skeleton = styled.div<SkeletonProps>`
   position: relative;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.gray300};
+  background-color: ${({ theme }) => theme.colors.gray800};
   border-radius: 12px;
 
   ${({ text }) =>
