@@ -15,5 +15,5 @@ const Skeleton = ({ children, ...rest }: SkeletonProps) => {
 export default Skeleton;
 
 Skeleton.defaultProps = {
-  banner: true,
+  card: true,
 };
