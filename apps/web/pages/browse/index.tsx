@@ -1,10 +1,10 @@
 import { GetServerSideProps } from 'next';
-import { useSession, getSession } from 'next-auth/react';
+import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import Banner from 'src/components/Banner/Banner';
 import Browse from 'src/components/Browse/Browse';
 
-import { Heading, Logged, Logo, Navbar, Stack, Text } from '@components';
+import { Button, Heading, Logged, Logo, Navbar, Stack } from '@components';
 
 const index = () => {
   const { data: session } = useSession();
@@ -20,25 +20,31 @@ const index = () => {
             <Stack
               display="flex"
               alignItems="center"
-              gridGap="16px"
+              gridGap="8px"
               flex={1}
               ml={8}
             >
               <Link href="/categories" passHref>
-                <Text color="white">Categorias</Text>
+                <Button text>Categorias</Button>
               </Link>
               <Link href="/documentaries" passHref>
-                <Text color="white">Documentários</Text>
+                <Button text>Documentários</Button>
               </Link>
               <Link href="/highlights" passHref>
-                <Text color="white">Highlights</Text>
+                <Button text>Highlights</Button>
               </Link>
             </Stack>
             <Logged
               imgSrc="/placeholder-avatar.jpg"
               display="flex"
               alignItems="center"
-            />
+            >
+              <Link href="/" passHref>
+                <Button text onClick={() => signOut()}>
+                  Sair do Radflix
+                </Button>
+              </Link>
+            </Logged>
           </Navbar>
           <Banner />
         </Browse>
