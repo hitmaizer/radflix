@@ -12,7 +12,6 @@ const Logged = ({ children, imgSrc, ...rest }: LoggedProps) => {
       <S.SearchIcon size="24px" color="white" />
       <S.BellIcon size="24px" color="white" />
       <Avatar size="sm" imgSrc={imgSrc} />
-      {children}
       <HoverCard.Root openDelay={250} closeDelay={250}>
         <HoverCard.Trigger asChild>
           <S.ChevronIcon size="32px" color="white" />
@@ -30,7 +29,7 @@ const Logged = ({ children, imgSrc, ...rest }: LoggedProps) => {
             text="Centro de assitência"
             icon={<QuestionCircle size="16px" color="white" />}
           />
-          <a href="/home">Sair do Netflix</a>
+          {children}
         </S.Content>
       </HoverCard.Root>
     </S.Logged>
