@@ -1,6 +1,7 @@
 import { GetServerSideProps } from 'next';
 import { useSession, getSession } from 'next-auth/react';
 import Link from 'next/link';
+import Banner from 'src/components/Banner/Banner';
 import Browse from 'src/components/Browse/Browse';
 
 import { Heading, Logged, Logo, Navbar, Stack, Text } from '@components';
@@ -39,6 +40,7 @@ const index = () => {
               alignItems="center"
             />
           </Navbar>
+          <Banner />
         </Browse>
       </>
     );
