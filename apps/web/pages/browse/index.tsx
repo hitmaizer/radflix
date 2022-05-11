@@ -1,8 +1,8 @@
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
-import Banner from 'src/components/Banner/Banner';
 import Browse from 'src/components/Browse/Browse';
+import Content from 'src/components/Content/Content';
 
 import { Button, Heading, Logged, Logo, Navbar, Stack } from '@components';
 
@@ -46,7 +46,7 @@ const index = () => {
               </Link>
             </Logged>
           </Navbar>
-          <Banner />
+          <Content />
         </Browse>
       </>
     );
