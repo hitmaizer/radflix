@@ -17,7 +17,14 @@ export default function Home() {
 
           <Button
             padding="7px 17px"
-            onClick={session ? () => signOut() : () => signIn('google')}
+            onClick={
+              session
+                ? () => signOut()
+                : () =>
+                    signIn('google', {
+                      callbackUrl: `${window.location.origin}/browse`,
+                    })
+            }
           >
             {!session ? 'Sign In' : ' Sign Out'}
           </Button>
