@@ -1,6 +1,7 @@
 import { FC, useState, useEffect } from 'react';
 
 import SEO from '@config/next-seo';
+import { SessionProvider } from 'next-auth/react';
 import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
@@ -8,7 +9,10 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'ui/styles';
 import theme from 'ui/styles/theme';
 
-const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
+const MyApp: FC<AppProps> = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}) => {
   const [mounted, setMounted] = useState(false);
   const { asPath } = useRouter();
 
@@ -21,20 +25,22 @@ const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <DefaultSeo
-          canonical={canonicalUrl}
-          openGraph={{
-            url: canonicalUrl,
-            type: 'website',
-            site_name: 'Radflix',
-          }}
-          dangerouslySetAllPagesToNoIndex
-          {...SEO}
-        />
-        <GlobalStyle />
-        {mounted && <Component {...pageProps} />}
-      </ThemeProvider>
+      <SessionProvider session={session}>
+        <ThemeProvider theme={theme}>
+          <DefaultSeo
+            canonical={canonicalUrl}
+            openGraph={{
+              url: canonicalUrl,
+              type: 'website',
+              site_name: 'Radflix',
+            }}
+            dangerouslySetAllPagesToNoIndex
+            {...SEO}
+          />
+          <GlobalStyle />
+          {mounted && <Component {...pageProps} />}
+        </ThemeProvider>
+      </SessionProvider>
     </>
   );
 };

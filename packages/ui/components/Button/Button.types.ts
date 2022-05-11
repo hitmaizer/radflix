@@ -19,4 +19,5 @@ export interface ButtonProps
   outline?: boolean;
   onClick?: () => void;
   banner?: boolean;
+  type?: string;
 }

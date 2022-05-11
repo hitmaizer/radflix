@@ -1,8 +1,9 @@
-import Link from 'next/link';
+import { useSession, signIn, signOut } from 'next-auth/react';
 import Homepage from 'src/components/Homepage/Homepage';
 import { Box, Button, Heading, Input, Logo, Stack, Text } from 'ui/components';
 
 export default function Home() {
+  const { data: session } = useSession();
   return (
     <>
       <Homepage>
@@ -13,9 +14,13 @@ export default function Home() {
           p="16px 32px"
         >
           <Logo imgSrc="/radflix-logo.svg" />
-          <Link href="/login" passHref>
-            <Button>Sign In</Button>
-          </Link>
+
+          <Button
+            padding="7px 17px"
+            onClick={session ? () => signOut() : () => signIn('google')}
+          >
+            {!session ? 'Sign In' : ' Sign Out'}
+          </Button>
         </Stack>
         <Box
           display="flex"
