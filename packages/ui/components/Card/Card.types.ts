@@ -7,4 +7,5 @@ export interface CardProps extends SpaceProps, FlexboxProps, LayoutProps {
   imgSrc?: string;
   title?: string;
   square?: boolean;
+  poster?: boolean;
 }

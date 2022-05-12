@@ -17,6 +17,7 @@ export interface ButtonProps
   children?: ReactNode;
   borderRadius?: string;
   outline?: boolean;
-  onClick?: () => void;
+  onClick?: () => void | Promise<undefined>;
   banner?: boolean;
+  text?: boolean;
 }

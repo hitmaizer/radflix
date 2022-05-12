@@ -7,6 +7,8 @@ export const Card = styled.div`
   ${space}
   ${flexbox}
   ${layout}
+  width: 100%;
+  height: 100%;
   display: inline-block;
   border-radius: 12px;
   cursor: pointer;
@@ -22,6 +24,8 @@ export const Image = styled.img<CardProps>`
   max-width: 250px;
   border-radius: 12px;
   width: 100%;
+  height: 100%;
+
   ${({ square }) =>
     square &&
     css`
@@ -30,5 +34,7 @@ export const Image = styled.img<CardProps>`
       object-position: top;
       border-radius: 12px;
       max-height: 200px;
+      width: 350px;
+      height: 200px;
     `}
 `;

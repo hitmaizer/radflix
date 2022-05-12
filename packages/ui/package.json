@@ -8,14 +8,17 @@
   "license": "MIT",
   "dependencies": {
     "@fontsource/roboto": "^4.5.5",
+    "@radix-ui/react-hover-card": "^0.1.5",
     "@storybook/react": "^6.4.20",
+    "@styled-icons/bootstrap": "^10.34.0",
+    "@styled-icons/boxicons-regular": "^10.38.0",
+    "@styled-icons/material": "^10.34.0",
     "polished": "^4.1.4",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.5",
     "styled-reset": "^4.3.4",
-    "styled-system": "^5.1.5",
-    "styled-icons": "^10.45.0"
+    "styled-system": "^5.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
