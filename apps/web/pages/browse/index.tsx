@@ -9,6 +9,7 @@ import { RootState } from 'src/redux/store';
 import {
   Button,
   Heading,
+  Loading,
   Logged,
   Logo,
   Navbar,
@@ -59,22 +60,25 @@ const index = () => {
           </Navbar>
           {loading && (
             <>
-              <Stack
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                justifyContent="flex-start"
-              >
-                <Skeleton heading />
-                <Stack display="flex" gridGap="8px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
+              <Loading display="flex" flexDirection="column">
+                <Stack
+                  display="flex"
+                  vertical
+                  alignItems="center"
+                  justifyContent="flex-start"
+                  mt="300px"
+                >
+                  <Skeleton heading />
+                  <Stack display="flex" gridGap="8px">
+                    <Skeleton card />
+                    <Skeleton card />
+                    <Skeleton card />
+                    <Skeleton card />
+                    <Skeleton card />
+                    <Skeleton card />
+                  </Stack>
                 </Stack>
-              </Stack>
+              </Loading>
             </>
           )}
           <Content />
