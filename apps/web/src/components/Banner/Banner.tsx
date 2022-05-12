@@ -70,19 +70,22 @@ const Banner = ({ children, ...rest }: BannerProps) => {
       )}
       {loading && (
         <>
-          <Skeleton banner>
-            <Stack
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              justifyContent="flex-start"
-              gridGap="16px"
-            >
-              <Skeleton heading />
-              <Skeleton text />
+          <Stack
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="flex-start"
+          >
+            <Skeleton heading />
+            <Stack display="flex" gridGap="8px">
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
               <Skeleton card />
             </Stack>
-          </Skeleton>
+          </Stack>
         </>
       )}
       {error && <p>{error}</p>}
