@@ -5,6 +5,8 @@ import { SessionProvider } from 'next-auth/react';
 import { DefaultSeo } from 'next-seo';
 import { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import { Provider } from 'react-redux';
+import { store } from 'src/redux/store';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'ui/styles';
 import theme from 'ui/styles/theme';
@@ -26,20 +28,22 @@ const MyApp: FC<AppProps> = ({
   return (
     <>
       <SessionProvider session={session}>
-        <ThemeProvider theme={theme}>
-          <DefaultSeo
-            canonical={canonicalUrl}
-            openGraph={{
-              url: canonicalUrl,
-              type: 'website',
-              site_name: 'Radflix',
-            }}
-            dangerouslySetAllPagesToNoIndex
-            {...SEO}
-          />
-          <GlobalStyle />
-          {mounted && <Component {...pageProps} />}
-        </ThemeProvider>
+        <Provider store={store}>
+          <ThemeProvider theme={theme}>
+            <DefaultSeo
+              canonical={canonicalUrl}
+              openGraph={{
+                url: canonicalUrl,
+                type: 'website',
+                site_name: 'Radflix',
+              }}
+              dangerouslySetAllPagesToNoIndex
+              {...SEO}
+            />
+            <GlobalStyle />
+            {mounted && <Component {...pageProps} />}
+          </ThemeProvider>
+        </Provider>
       </SessionProvider>
     </>
   );

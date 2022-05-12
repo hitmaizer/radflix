@@ -15,5 +15,5 @@ const Skeleton = ({ children, ...rest }: SkeletonProps) => {
 export default Skeleton;
 
 Skeleton.defaultProps = {
-  card: true,
+  heading: true,
 };

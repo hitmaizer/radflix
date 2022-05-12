@@ -5,8 +5,10 @@ import Heading from '@components/Heading';
 import Stack from '@components/Stack';
 import Text from '@components/Text';
 import Link from 'next/link';
-
-import { Skeleton } from '@components';
+import { useSelector, useDispatch } from 'react-redux';
+import { setError } from 'src/redux/error';
+import { setLoading } from 'src/redux/loading';
+import { RootState } from 'src/redux/store';
 
 import axios from '../../axios/instance';
 import requests from '../../axios/requests';
@@ -15,12 +17,13 @@ import { BannerProps, MovieObj } from './Banner.types';
 
 const Banner = ({ children, ...rest }: BannerProps) => {
   const [movie, setMovie] = useState<MovieObj>();
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>('');
+  const error = useSelector((state: RootState) => state.error.error);
+  const loading = useSelector((state: RootState) => state.loading.loading);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     async function fetchData() {
-      setLoading(true);
+      dispatch(setLoading(true));
       const req = await axios
         .get(requests.skateMovies)
         .then((res) =>
@@ -29,10 +32,10 @@ const Banner = ({ children, ...rest }: BannerProps) => {
           )
         )
         .catch((err) => {
-          setError(err);
+          dispatch(setError(err));
         })
         .finally(() => {
-          setLoading(false);
+          dispatch(setLoading(false));
         });
 
       return req;
@@ -68,26 +71,7 @@ const Banner = ({ children, ...rest }: BannerProps) => {
           </S.BannerContent>
         </S.Banner>
       )}
-      {loading && (
-        <>
-          <Stack
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="flex-start"
-          >
-            <Skeleton heading />
-            <Stack display="flex" gridGap="8px">
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-            </Stack>
-          </Stack>
-        </>
-      )}
+
       {error && <p>{error}</p>}
     </>
   );

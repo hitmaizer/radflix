@@ -1,13 +1,24 @@
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import Browse from 'src/components/Browse/Browse';
 import Content from 'src/components/Content/Content';
+import { RootState } from 'src/redux/store';
 
-import { Button, Heading, Logged, Logo, Navbar, Stack } from '@components';
+import {
+  Button,
+  Heading,
+  Logged,
+  Logo,
+  Navbar,
+  Skeleton,
+  Stack,
+} from '@components';
 
 const index = () => {
   const { data: session } = useSession();
+  const loading = useSelector((state: RootState) => state.loading.loading);
 
   if (typeof window === 'undefined') return null;
 
@@ -46,6 +57,26 @@ const index = () => {
               </Link>
             </Logged>
           </Navbar>
+          {loading && (
+            <>
+              <Stack
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="flex-start"
+              >
+                <Skeleton heading />
+                <Stack display="flex" gridGap="8px">
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                </Stack>
+              </Stack>
+            </>
+          )}
           <Content />
         </Browse>
       </>

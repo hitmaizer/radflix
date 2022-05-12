@@ -6,4 +6,5 @@ export const Content = styled.div`
   align-items: center;
   justify-content: flex-start;
   margin: auto;
+  gap: 32px;
 `;
