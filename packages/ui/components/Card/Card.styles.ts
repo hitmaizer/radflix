@@ -37,4 +37,15 @@ export const Image = styled.img<CardProps>`
       width: 350px;
       height: 200px;
     `}
+
+  ${({ poster }) =>
+    poster &&
+    css`
+      object-fit: cover;
+      object-position: top;
+      border-radius: 12px;
+      width: 250px;
+      height: 400px;
+      max-height: 600px;
+    `}
 `;
