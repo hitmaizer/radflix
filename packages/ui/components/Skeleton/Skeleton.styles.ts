@@ -33,7 +33,7 @@ export const Skeleton = styled.div<SkeletonProps>`
     heading &&
     css`
       height: 60px;
-      width: 100%;
+      width: 600px;
     `}
 `;
 
