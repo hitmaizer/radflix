@@ -60,23 +60,20 @@ const index = () => {
           </Navbar>
           {loading && (
             <>
-              <Loading display="flex" flexDirection="column">
-                <Stack
-                  display="flex"
-                  vertical
-                  alignItems="center"
-                  justifyContent="flex-start"
-                  mt="300px"
-                >
-                  <Skeleton heading />
-                  <Stack display="flex" gridGap="8px">
-                    <Skeleton card />
-                    <Skeleton card />
-                    <Skeleton card />
-                    <Skeleton card />
-                    <Skeleton card />
-                    <Skeleton card />
-                  </Stack>
+              <Loading
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                ml={10}
+              >
+                <Skeleton heading />
+                <Stack display="flex" gridGap="8px">
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
                 </Stack>
               </Loading>
             </>
