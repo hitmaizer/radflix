@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/hitmaizer/radflix/compare/v1.3.0...v1.4.0) (2022-05-13)
+
+
+### 🚀 Features
+
+* **cms:** re installs sharp ([d53d092](https://github.com/hitmaizer/radflix/commit/d53d092e514534f92b93fadb0009d75639949b5a))
+
 ## [1.3.0](https://github.com/hitmaizer/radflix/compare/v1.2.0...v1.3.0) (2022-05-13)
 
 
