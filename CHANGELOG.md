@@ -1,3 +1,69 @@
+## [1.1.0](https://github.com/hitmaizer/radflix/compare/v1.0.0...v1.1.0) (2022-05-13)
+
+
+### ✂️ Refactor
+
+* **banner:** removes -1 from random pick logic ([981c514](https://github.com/hitmaizer/radflix/commit/981c514c0427932980fa89ffd57e82eab81b5d46))
+* **banner:** removes local state adds loading + error from RTK ([3dba673](https://github.com/hitmaizer/radflix/commit/3dba673641238c8cf27716e7f622a380ede7e07b))
+* **cms:** rf findOne method id to slug on all content types ([10076eb](https://github.com/hitmaizer/radflix/commit/10076eb323000acd457a754bd5ae2ba66ff1b86b))
+* **cms:** updates movie collection to all-movie collection ([2b648f2](https://github.com/hitmaizer/radflix/commit/2b648f2e57a580d84e36ad17746f6778ab1ce123))
+* **content:** restructures content component render order ([5c64735](https://github.com/hitmaizer/radflix/commit/5c64735130d728eeb700ed7347d17c4d1b72a10b))
+* **content:** restructures content render order ([8be2bc3](https://github.com/hitmaizer/radflix/commit/8be2bc3c69f50499e2e6a47171f172110613ef3c))
+* **content:** skateMovies row render as poster row ([a1aa8ea](https://github.com/hitmaizer/radflix/commit/a1aa8eacc28db11b847d0b327ce2bad6b7d3b768))
+* **heading:** renders heading variant on storybook for testing ([12519f9](https://github.com/hitmaizer/radflix/commit/12519f9be4aaf6cd46d9ab27dc2cc29f53ec169b))
+* **row:** removes local state adds loading + error from RTK ([8ee0c8e](https://github.com/hitmaizer/radflix/commit/8ee0c8e06d5f5fedbab600a1a9a9a410c9a346a8))
+* **skeleton:** adds new line between skeleton variants rules ([afef9a9](https://github.com/hitmaizer/radflix/commit/afef9a918590b07a198eda5e19b9622e52cc8a72))
+
+
+### 🎨 Style
+
+* **card:** adds poster variant style rules ([84d0764](https://github.com/hitmaizer/radflix/commit/84d0764fc3d93f4624ecd9cad14a2f0fbe23ed37))
+* **loading:** adjusts styling on loading component ([ce726a8](https://github.com/hitmaizer/radflix/commit/ce726a8197c82af5346ea58db9de1a77c34e3364))
+* **row:** adds 32px grid gap between content items ([604eb30](https://github.com/hitmaizer/radflix/commit/604eb30b5dcc6de36d10135e76fd84e5be390a8c))
+* **skeleton:** adds overflow hidden to container + heading height ([1817e35](https://github.com/hitmaizer/radflix/commit/1817e35bd80d88062ca4008b5bfeced046840d7c))
+* **skeleton:** adjusts heading variant width ([058d5c4](https://github.com/hitmaizer/radflix/commit/058d5c40bd4aa851197d1e2b7bd6e6cf1ee86cf3))
+* **underbanner:** changes background position to top ([bf45aa1](https://github.com/hitmaizer/radflix/commit/bf45aa1e3f2e6c7e014346e0bb54914ab46b266e))
+* **underbanner:** fixes underbanner overlay === banner ([08354c7](https://github.com/hitmaizer/radflix/commit/08354c786c905f1a3900d8f649be2ed9ab1db6f9))
+
+
+### 🐛 Fixes
+
+* **banner:** fixes banner loading skeleton ([3e9b518](https://github.com/hitmaizer/radflix/commit/3e9b5188ba2a7ab9407cb68768b492dd001d8e39))
+* **browse:** fixes loading skeleton styling and layout ([72947a5](https://github.com/hitmaizer/radflix/commit/72947a54fa74a3cdf440fc9afc028bbe2c656425))
+
+
+### 🚀 Features
+
+* **actions :** deletes unnecessary env from yml file ([fa1b212](https://github.com/hitmaizer/radflix/commit/fa1b212f81e2dc63522ccce85df5a55e311f08d3))
+* **actions:** add project path env to cms deploy action ([02c92db](https://github.com/hitmaizer/radflix/commit/02c92db75077b9ea3bbecbba4fd446727dd4661b))
+* **browse :** adds loading state + skeleton loading to page ([4d4ad8a](https://github.com/hitmaizer/radflix/commit/4d4ad8aae50322020bc7a50ad63d867ddf433a0a))
+* **browse:** loading skeletons inside loading component ([4b1b2ce](https://github.com/hitmaizer/radflix/commit/4b1b2ce2ad6d924c86664050083591f71510aa71))
+* **browse:** styles pls login to access section ([6651cb8](https://github.com/hitmaizer/radflix/commit/6651cb8141d989f95914ac0270754bb5cbdde577))
+* **card:** adds poster prop to card component ([bf4004c](https://github.com/hitmaizer/radflix/commit/bf4004c8ea26dba8966dfce999fda573e9326741))
+* **content:** restructures content render order ([8c4e35d](https://github.com/hitmaizer/radflix/commit/8c4e35d72464867d4da66814a24ba16c187dbfae))
+* **git:** adds repository url to package json ([b0cbc8a](https://github.com/hitmaizer/radflix/commit/b0cbc8ab8715f48d8d39681789baf7dc187fbd24))
+* **homepage:** checks for session and redirects to browse if true ([71bfd6e](https://github.com/hitmaizer/radflix/commit/71bfd6e908426422df300e2b24bab002cc573223))
+* **loading:** adds loading component index file ([85a1cfb](https://github.com/hitmaizer/radflix/commit/85a1cfbc589b4b73f3e38da144526f86455f393b))
+* **loading:** adds loading component markup file ([5099e23](https://github.com/hitmaizer/radflix/commit/5099e236dfca19ad3ef3e419a430821fa34157cd))
+* **loading:** adds loading component prop types file ([a53d2db](https://github.com/hitmaizer/radflix/commit/a53d2db39883942e7fa8ef16d52c5d70a86f75a0))
+* **loading:** adds loading component styles file ([7eab827](https://github.com/hitmaizer/radflix/commit/7eab827ac3e723bdcc2be405abe18c90f4b58d5c))
+* **player:** adds player component index file ([00b3165](https://github.com/hitmaizer/radflix/commit/00b3165b6094c4b54a667b0cdc3a99e62e90865a))
+* **player:** adds player component markup file ([76a532d](https://github.com/hitmaizer/radflix/commit/76a532d18660ce659d298e542f3cc7e8ac331900))
+* **player:** adds player component prop types file ([0658542](https://github.com/hitmaizer/radflix/commit/0658542e006f60fb610c2a99d2da7d14d16c6164))
+* **player:** adds player component stories file ([9664629](https://github.com/hitmaizer/radflix/commit/9664629dae2fb7b20eb6e5172f4d732f4cacfd69))
+* **player:** adds player component styles file ([1623d07](https://github.com/hitmaizer/radflix/commit/1623d07f5fc394c1df719b32389ed8b207736b2f))
+* **redux:** adds errorSlice file ([a36222a](https://github.com/hitmaizer/radflix/commit/a36222a236760f0b2acf1da43fb1a4957bef15d7))
+* **redux:** adds loadingSlice file ([e50019e](https://github.com/hitmaizer/radflix/commit/e50019e3255c9bc40e1ab7e38845e344ca2c1c91))
+* **redux:** adds redux config store file ([9811079](https://github.com/hitmaizer/radflix/commit/98110796490caaba61f910e6e33c3d40d607327b))
+* **skeleton:** adds variant props to skeleton component ([37e9d57](https://github.com/hitmaizer/radflix/commit/37e9d5721288fb8113c390b555133b62fa0c717a))
+* **skeleton:** removes conflicting default props ([b245844](https://github.com/hitmaizer/radflix/commit/b2458447ccea2ed61f0d870707e04477f3f2edc2))
+* **ui:** adds backBtn library to ui app ([d2d70de](https://github.com/hitmaizer/radflix/commit/d2d70de513a9e8fa6d7df1bc0c392e4b4b5b37ee))
+* **ui:** updates ui components index exports ([3e49891](https://github.com/hitmaizer/radflix/commit/3e49891149e59913e1087f084968083ba543dcc9))
+* **ui:** updates ui components index exports file ([b2f19ee](https://github.com/hitmaizer/radflix/commit/b2f19ee5529300dc921a46f658105ad65948d9c3))
+* **web:** adds redux provider wrapped around web app ([ea792df](https://github.com/hitmaizer/radflix/commit/ea792dfce78fe2d8c42dd3e480d125767b892590))
+* **web:** adds reduxtoolkit + react-redux to package json ([e1cde75](https://github.com/hitmaizer/radflix/commit/e1cde75216d7164134d6c10656c5026c4dad1681))
+* **web:** starts markup for dynamic slug route page ([f7ca3f7](https://github.com/hitmaizer/radflix/commit/f7ca3f77ef677b821ea20467a274f51238c9f238))
+
 ## [1.0.0](https://github.com/hitmaizer/radflix/compare/...v1.0.0) (2022-05-12)
 
 
