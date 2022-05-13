@@ -1,3 +1,23 @@
+## [1.5.0](https://github.com/hitmaizer/radflix/compare/v1.4.0...v1.5.0) (2022-05-13)
+
+
+### ✂️ Refactor
+
+* **banner:** hero banner getting random item from allMovies ([5e98bfc](https://github.com/hitmaizer/radflix/commit/5e98bfc223f524fefae5d4fcade0f683cdab6623))
+
+
+### 🎨 Style
+
+* **loading:** adds more gap between loading elements ([61b264e](https://github.com/hitmaizer/radflix/commit/61b264e287253e2899dd5124d721f3753c63e1f1))
+
+
+### 🚀 Features
+
+* **axios:** adds allMovies request to requests file ([48b14dd](https://github.com/hitmaizer/radflix/commit/48b14ddafe890bdb4ee531211b09bdb73536a95c))
+* **browse:** renders 2 skeleton rows on loading instead of 1 ([c373179](https://github.com/hitmaizer/radflix/commit/c373179983d77ab115a7cd85ccd12ec372e6856e))
+* **cms:** updates findOne method id to slug on all movies ([b9bc929](https://github.com/hitmaizer/radflix/commit/b9bc9291c87640ec3b2dfb4116c49d74dee56877))
+* **watch:** adds dynamic routes based on slug for watch pages ([e45eeea](https://github.com/hitmaizer/radflix/commit/e45eeeaf6dc9b170a33e3ca85744d798a9a7ce9f))
+
 ## [1.4.0](https://github.com/hitmaizer/radflix/compare/v1.3.0...v1.4.0) (2022-05-13)
 
 
