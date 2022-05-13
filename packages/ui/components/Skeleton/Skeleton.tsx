@@ -26,7 +26,3 @@ const Skeleton = ({
 };
 
 export default Skeleton;
-
-Skeleton.defaultProps = {
-  heading: true,
-};
