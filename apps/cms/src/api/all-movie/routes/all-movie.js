@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * movie router.
+ * all-movie router.
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::movie.movie');
+module.exports = createCoreRouter('api::all-movie.all-movie');
