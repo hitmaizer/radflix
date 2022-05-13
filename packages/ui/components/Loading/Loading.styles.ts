@@ -9,6 +9,6 @@ export const Loading = styled.div`
   min-width: 100vw;
   height: 100vh;
   padding-top: 30vh;
-  gap: 16px;
+  gap: 32px;
   place-items: flex-start;
 `;

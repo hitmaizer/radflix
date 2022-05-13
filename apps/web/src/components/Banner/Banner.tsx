@@ -25,7 +25,7 @@ const Banner = ({ children, ...rest }: BannerProps) => {
     async function fetchData() {
       dispatch(setLoading(true));
       const req = await axios
-        .get(requests.skateMovies)
+        .get(requests.allMovies)
         .then((res) =>
           setMovie(
             res.data.data[Math.floor(Math.random() * res.data.data.length)]
@@ -61,7 +61,9 @@ const Banner = ({ children, ...rest }: BannerProps) => {
             {children}
             <Stack display="flex" gridGap={4}>
               <Link href={`/watch/${movie?.attributes.slug}`} passHref>
-                <Button banner> Play</Button>
+                <Link href={`/watch/${movie?.attributes.slug.toString()}`}>
+                  <Button banner> Play</Button>
+                </Link>
               </Link>
               <Button banner>My List</Button>
             </Stack>
