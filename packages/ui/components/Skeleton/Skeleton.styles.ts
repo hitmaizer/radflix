@@ -22,6 +22,7 @@ export const Skeleton = styled.div<SkeletonProps>`
       width: 400px;
       height: 200px;
     `}
+    
   ${({ banner }) =>
     banner &&
     css`
