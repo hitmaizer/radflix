@@ -11,6 +11,7 @@ export { default as Logo } from './Logo';
 export { default as MenuItem } from './MenuItem';
 export { default as Navbar } from './Navbar';
 export { default as NormalInput } from './NormalInput';
+export { default as Player } from './Player';
 export { default as Skeleton } from './Skeleton';
 export { default as Stack } from './Stack';
 export { default as Text } from './Text';
