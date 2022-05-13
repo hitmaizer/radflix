@@ -1,6 +1,6 @@
 export default {
   titleTemplate: '%s | Radflix',
-  defaultTitle: 'All of your extreme sports movies in one place!',
+  defaultTitle: 'Radflix | Extreme Sports Movies',
   twitter: {
     handle: '@radflix',
     site: '@radflix',
