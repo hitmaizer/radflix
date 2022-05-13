@@ -69,7 +69,7 @@ const index = () => {
                 ml={10}
               >
                 <Skeleton heading />
-                <Stack display="flex" gridGap="8px">
+                <Stack display="flex" gridGap="16px">
                   <Skeleton card />
                   <Skeleton card />
                   <Skeleton card />
@@ -78,7 +78,7 @@ const index = () => {
                   <Skeleton card />
                 </Stack>
                 <Skeleton heading />
-                <Stack display="flex" gridGap="8px">
+                <Stack display="flex" gridGap="16px">
                   <Skeleton card />
                   <Skeleton card />
                   <Skeleton card />
