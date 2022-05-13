@@ -1,3 +1,10 @@
+## [1.2.0](https://github.com/hitmaizer/radflix/compare/v1.1.0...v1.2.0) (2022-05-13)
+
+
+### 🚀 Features
+
+* **actions:** deletes cms deploy action file ([5962c76](https://github.com/hitmaizer/radflix/commit/5962c768d1f3ff70a3a2727d4293b68c4e79fae6))
+
 ## [1.1.0](https://github.com/hitmaizer/radflix/compare/v1.0.0...v1.1.0) (2022-05-13)
 
 
