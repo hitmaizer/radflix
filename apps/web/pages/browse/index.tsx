@@ -77,6 +77,15 @@ const index = () => {
                   <Skeleton card />
                   <Skeleton card />
                 </Stack>
+                <Skeleton heading />
+                <Stack display="flex" gridGap="8px">
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                </Stack>
               </Loading>
             </>
           )}
