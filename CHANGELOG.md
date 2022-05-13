@@ -1,3 +1,10 @@
+## [1.3.0](https://github.com/hitmaizer/radflix/compare/v1.2.0...v1.3.0) (2022-05-13)
+
+
+### 🚀 Features
+
+* **cms:** removes sharp from dependencies ([2a69237](https://github.com/hitmaizer/radflix/commit/2a69237e1a9b43cccde4eabeff6eabc7af205d26))
+
 ## [1.2.0](https://github.com/hitmaizer/radflix/compare/v1.1.0...v1.2.0) (2022-05-13)
 
 
