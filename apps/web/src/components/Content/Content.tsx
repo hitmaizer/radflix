@@ -13,9 +13,9 @@ const Content = ({ children, ...rest }: ContentProps) => {
       <Banner />
       <Row title="Skateboarding" fetchURL={requests.skateMovies} poster />
       <Row title="Snowboarding" fetchURL={requests.snowboardMovies} square />
-      <Row title="Dirt Bikes" fetchURL={requests.dirtbikeMovies} square />
-      <Row title="Surf" fetchURL={requests.surfMovies} poster />
+      <Row title="Surf" fetchURL={requests.surfMovies} square />
       <Row title="BMX Movies" fetchURL={requests.bmxMovies} square />
+      <Row title="Dirt Bikes" fetchURL={requests.dirtbikeMovies} poster />
 
       {children}
     </S.Content>
