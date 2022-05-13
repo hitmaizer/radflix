@@ -7,5 +7,8 @@ export const Loading = styled.div`
   ${layout}
 
   min-width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  padding-top: 30vh;
+  gap: 16px;
+  place-items: flex-start;
 `;
