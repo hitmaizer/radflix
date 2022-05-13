@@ -1,4 +1,5 @@
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { GetServerSideProps } from 'next';
+import { useSession, signIn, signOut, getSession } from 'next-auth/react';
 import Homepage from 'src/components/Homepage/Homepage';
 import { Box, Button, Heading, Input, Logo, Stack, Text } from 'ui/components';
 
@@ -61,3 +62,22 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const session = await getSession(context);
+
+  if (session) {
+    return {
+      redirect: {
+        destination: '/browse',
+        permanent: false,
+      },
+    };
+  }
+
+  return {
+    props: {
+      session,
+    },
+  };
+};

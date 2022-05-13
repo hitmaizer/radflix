@@ -6,4 +6,20 @@
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::bmx-movie.bmx-movie');
+module.exports = createCoreController(
+  'api::bmx-movie.bmx-movie',
+  ({ strapi }) => ({
+    async findOne(ctx) {
+      const { id: slug } = ctx.params;
+      const { query } = ctx;
+      if (!query.filters) query.filters = {};
+      query.filters.slug = { $eq: slug };
+      const entity = await strapi
+        .service('api::bmx-movie.bmx-movie')
+        .find(query);
+      const { results } = await this.sanitizeOutput(entity, ctx);
+
+      return this.transformResponse(results[0]);
+    },
+  })
+);

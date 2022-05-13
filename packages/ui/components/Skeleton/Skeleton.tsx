@@ -1,9 +1,22 @@
 import * as S from './Skeleton.styles';
 import { SkeletonProps } from './Skeleton.types';
 
-const Skeleton = ({ children, ...rest }: SkeletonProps) => {
+const Skeleton = ({
+  children,
+  heading,
+  card,
+  text,
+  banner,
+  ...rest
+}: SkeletonProps) => {
   return (
-    <S.Skeleton {...rest}>
+    <S.Skeleton
+      heading={heading}
+      card={card}
+      text={text}
+      banner={banner}
+      {...rest}
+    >
       <S.ShimmerWrapper>
         <S.Shimmer />
       </S.ShimmerWrapper>
@@ -13,7 +26,3 @@ const Skeleton = ({ children, ...rest }: SkeletonProps) => {
 };
 
 export default Skeleton;
-
-Skeleton.defaultProps = {
-  card: true,
-};

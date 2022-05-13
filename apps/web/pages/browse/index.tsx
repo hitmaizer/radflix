@@ -1,13 +1,27 @@
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import Browse from 'src/components/Browse/Browse';
 import Content from 'src/components/Content/Content';
+import Homepage from 'src/components/Homepage/Homepage';
+import { RootState } from 'src/redux/store';
 
-import { Button, Heading, Logged, Logo, Navbar, Stack } from '@components';
+import {
+  Box,
+  Button,
+  Heading,
+  Loading,
+  Logged,
+  Logo,
+  Navbar,
+  Skeleton,
+  Stack,
+} from '@components';
 
 const index = () => {
   const { data: session } = useSession();
+  const loading = useSelector((state: RootState) => state.loading.loading);
 
   if (typeof window === 'undefined') return null;
 
@@ -46,12 +60,46 @@ const index = () => {
               </Link>
             </Logged>
           </Navbar>
+          {loading && (
+            <>
+              <Loading
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                ml={10}
+              >
+                <Skeleton heading />
+                <Stack display="flex" gridGap="8px">
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                </Stack>
+              </Loading>
+            </>
+          )}
           <Content />
         </Browse>
       </>
     );
   }
-  return <Heading>Please Login to access this page.</Heading>;
+  return (
+    <Homepage>
+      <Box
+        display="flex"
+        justifyContent="center"
+        flexDirection="column"
+        alignItems="center"
+        pt={15}
+      >
+        <Heading size="4xl" color="white" fontWeight="bold" textAlign="center">
+          Please Login to access this page.
+        </Heading>
+      </Box>
+    </Homepage>
+  );
 };
 
 export default index;

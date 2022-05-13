@@ -41,5 +41,9 @@
       "path": "cz-conventional-changelog"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hitmaizer/radflix.git"
+  },
   "packageManager": "yarn@1.22.17"
 }

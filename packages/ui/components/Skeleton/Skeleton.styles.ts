@@ -7,6 +7,7 @@ export const Skeleton = styled.div<SkeletonProps>`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.gray800};
   border-radius: 12px;
+  overflow: hidden;
 
   ${({ text }) =>
     text &&
@@ -21,6 +22,7 @@ export const Skeleton = styled.div<SkeletonProps>`
       width: 400px;
       height: 200px;
     `}
+    
   ${({ banner }) =>
     banner &&
     css`
@@ -31,8 +33,8 @@ export const Skeleton = styled.div<SkeletonProps>`
   ${({ heading }) =>
     heading &&
     css`
-      height: 80vh;
-      width: 100%;
+      height: 60px;
+      width: 600px;
     `}
 `;
 
