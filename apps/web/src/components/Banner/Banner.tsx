@@ -28,7 +28,7 @@ const Banner = ({ children, ...rest }: BannerProps) => {
         .get(requests.skateMovies)
         .then((res) =>
           setMovie(
-            res.data.data[Math.floor(Math.random() * res.data.data.length - 1)]
+            res.data.data[Math.floor(Math.random() * res.data.data.length)]
           )
         )
         .catch((err) => {
