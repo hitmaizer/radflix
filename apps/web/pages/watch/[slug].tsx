@@ -6,6 +6,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import requests from 'src/axios/requests';
 import { MovieObj } from 'src/components/Banner/Banner.types';
+import Browse from 'src/components/Browse/Browse';
 
 import { Loading, Player, Skeleton, Stack } from '@components';
 
@@ -39,31 +40,33 @@ const Watch = ({ movie }: Movie) => {
   if (isFallback) {
     return (
       <>
-        <Loading
-          display="flex"
-          flexDirection="column"
-          alignItems="center"
-          ml={10}
-        >
-          <Skeleton heading />
-          <Stack display="flex" gridGap="8px">
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-          </Stack>
-          <Skeleton heading />
-          <Stack display="flex" gridGap="8px">
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-            <Skeleton card />
-          </Stack>
-        </Loading>
+        <Browse>
+          <Loading
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            ml={10}
+          >
+            <Skeleton heading />
+            <Stack display="flex" gridGap="8px">
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+            </Stack>
+            <Skeleton heading />
+            <Stack display="flex" gridGap="8px">
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+              <Skeleton card />
+            </Stack>
+          </Loading>
+        </Browse>
       </>
     );
   }
