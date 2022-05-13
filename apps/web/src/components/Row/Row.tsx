@@ -25,7 +25,7 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
 
   const handleClick = (m: MovieObj) => {
     setSelectedMovie(m);
-    setShowUnder(true);
+    setShowUnder(() => !showUnder);
   };
 
   useEffect(() => {
