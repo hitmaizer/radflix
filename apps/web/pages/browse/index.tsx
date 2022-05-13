@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import Browse from 'src/components/Browse/Browse';
 import Content from 'src/components/Content/Content';
+import Homepage from 'src/components/Homepage/Homepage';
 import { RootState } from 'src/redux/store';
 
 import {
+  Box,
   Button,
   Heading,
   Loading,
@@ -83,7 +85,21 @@ const index = () => {
       </>
     );
   }
-  return <Heading>Please Login to access this page.</Heading>;
+  return (
+    <Homepage>
+      <Box
+        display="flex"
+        justifyContent="center"
+        flexDirection="column"
+        alignItems="center"
+        pt={15}
+      >
+        <Heading size="4xl" color="white" fontWeight="bold" textAlign="center">
+          Please Login to access this page.
+        </Heading>
+      </Box>
+    </Homepage>
+  );
 };
 
 export default index;
