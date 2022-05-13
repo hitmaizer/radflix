@@ -15,7 +15,7 @@ const UnderBanner = ({ children, selectedMovie }: UnderBannerProps) => {
       style={{
         backgroundSize: 'cover',
         backgroundImage: `linear-gradient(180deg, rgba(23,23,23,1) 9%, rgba(23,23,23,0.4822303921568627) 51%, rgba(23,23,23,1) 100%), url("${selectedMovie?.attributes.backdropPoster}")`,
-        backgroundPosition: 'center',
+        backgroundPosition: 'top',
       }}
     >
       <S.UnderContent>
