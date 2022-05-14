@@ -1,4 +1,4 @@
-# Radflix monorepo
+# Radflix 
 
 Radflix is a simple Netflix clone, but it's themed around extreme sports, to create a extreme sports movies hub. 
 There's Skateboarding, Snowboarding, Surf, BMX and Surf movies.
