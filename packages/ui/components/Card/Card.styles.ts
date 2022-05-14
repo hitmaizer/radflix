@@ -34,7 +34,7 @@ export const Image = styled.img<CardProps>`
       object-position: top;
       border-radius: 12px;
       max-height: 200px;
-      width: 350px;
+      max-width: 350px;
       height: 200px;
     `}
 
@@ -44,7 +44,7 @@ export const Image = styled.img<CardProps>`
       object-fit: cover;
       object-position: top;
       border-radius: 12px;
-      width: 250px;
+      max-width: 250px;
       height: 400px;
       max-height: 600px;
     `}
