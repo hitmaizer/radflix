@@ -55,7 +55,24 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
           <Heading size="2xl" fontWeight="700" color="white" mr="auto">
             {title}
           </Heading>
-          <S.StyledSwiper slidesPerView={square ? 5 : 7} spaceBetween={8}>
+          <S.StyledSwiper
+            slidesPerView={square ? 2 : 2}
+            spaceBetween={8}
+            breakpoints={{
+              1400: {
+                slidesPerView: square ? 5 : 7,
+              },
+              1024: {
+                slidesPerView: square ? 4 : 6,
+              },
+              768: {
+                slidesPerView: square ? 3 : 5,
+              },
+              576: {
+                slidesPerView: square ? 3 : 4,
+              },
+            }}
+          >
             {movies.map((movie: MovieObj) => (
               <SwiperSlide key={movie.id} onClick={() => handleClick(movie)}>
                 <Card

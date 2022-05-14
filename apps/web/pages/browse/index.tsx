@@ -39,10 +39,10 @@ const index = () => {
               ml={8}
             >
               <Link href="/categories" passHref>
-                <Button text>Categorias</Button>
+                <Button text>Categories</Button>
               </Link>
               <Link href="/documentaries" passHref>
-                <Button text>Documentários</Button>
+                <Button text>Documentaries</Button>
               </Link>
               <Link href="/highlights" passHref>
                 <Button text>Highlights</Button>
@@ -55,7 +55,7 @@ const index = () => {
             >
               <Link href="/" passHref>
                 <Button text onClick={() => signOut()}>
-                  Sair do Radflix
+                  Logout from Radflix
                 </Button>
               </Link>
             </Logged>
