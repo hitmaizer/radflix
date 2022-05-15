@@ -8,5 +8,5 @@ const Logo = ({ imgSrc }: LogoProps) => {
 export default Logo;
 
 Logo.defaultProps = {
-  imgSrc: 'assets/radflix-logo.svg',
+  imgSrc: 'assets/radflix-logo.png',
 };
