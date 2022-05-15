@@ -1,8 +1,8 @@
 import * as S from './Logo.styles';
 import { LogoProps } from './Logo.types';
 
-const Logo = ({ imgSrc }: LogoProps) => {
-  return <S.Logo src={imgSrc} width="167px" />;
+const Logo = ({ imgSrc, width }: LogoProps) => {
+  return <S.Logo src={imgSrc} width={width} />;
 };
 
 export default Logo;
