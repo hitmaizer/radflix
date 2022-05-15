@@ -14,7 +14,7 @@ export default function Home() {
           justifyContent="space-between"
           p="16px 32px"
         >
-          <Logo imgSrc="/radflix-logo.svg" />
+          <Logo imgSrc="/radflix-logo.png" width="100px" />
 
           <Button
             padding="7px 17px"

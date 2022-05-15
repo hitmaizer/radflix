@@ -30,7 +30,7 @@ const index = () => {
       <>
         <Browse>
           <Navbar browse>
-            <Logo imgSrc="radflix-logo.svg" />
+            <Logo imgSrc="radflix-logo.png" width="100px" />
             <Stack
               display="flex"
               alignItems="center"
