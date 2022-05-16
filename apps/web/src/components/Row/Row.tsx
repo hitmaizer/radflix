@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import Card from '@components/Card';
-import Heading from '@components/Heading';
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from 'src/redux/error';
 import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
+
+import { Card, Heading } from '@ui';
 
 import axios from '../../axios/instance';
 import { MovieObj } from '../Banner/Banner.types';
@@ -25,7 +25,7 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
 
   const handleClick = (m: MovieObj) => {
     setSelectedMovie(m);
-    setShowUnder(true);
+    setShowUnder(() => !showUnder);
   };
 
   useEffect(() => {
@@ -55,7 +55,24 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
           <Heading size="2xl" fontWeight="700" color="white" mr="auto">
             {title}
           </Heading>
-          <S.StyledSwiper slidesPerView={square ? 5 : 7} spaceBetween={8}>
+          <S.StyledSwiper
+            slidesPerView={square ? 2 : 2}
+            spaceBetween={8}
+            breakpoints={{
+              1400: {
+                slidesPerView: square ? 5 : 7,
+              },
+              1024: {
+                slidesPerView: square ? 4 : 6,
+              },
+              768: {
+                slidesPerView: square ? 3 : 5,
+              },
+              576: {
+                slidesPerView: square ? 3 : 4,
+              },
+            }}
+          >
             {movies.map((movie: MovieObj) => (
               <SwiperSlide key={movie.id} onClick={() => handleClick(movie)}>
                 <Card

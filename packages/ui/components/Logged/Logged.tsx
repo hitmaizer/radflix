@@ -1,7 +1,7 @@
-import Avatar from '@components/Avatar';
-import MenuItem from '@components/MenuItem';
 import * as HoverCard from '@radix-ui/react-hover-card';
 import { Pencil, QuestionCircle } from '@styled-icons/bootstrap';
+
+import { Avatar, MenuItem } from '@ui';
 
 import * as S from './Logged.styles';
 import { LoggedProps } from './Logged.types';
@@ -18,15 +18,15 @@ const Logged = ({ children, imgSrc, ...rest }: LoggedProps) => {
         </HoverCard.Trigger>
         <S.Content>
           <MenuItem
-            text="Gerir Perfil"
+            text="Manage Profile"
             icon={<Pencil size="16px" color="white" />}
           />
           <MenuItem
-            text="Conta"
+            text="Account"
             icon={<S.UserIcon size="16px" color="white" />}
           />
           <MenuItem
-            text="Centro de assitência"
+            text="Help"
             icon={<QuestionCircle size="16px" color="white" />}
           />
           {children}

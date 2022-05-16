@@ -9,5 +9,7 @@ export const Browse = styled.div`
   
   min-height: 100vh;
   width: 100%;
+  min-width: 100vw;
   background-color: ${({ theme }) => theme.colors.gray900};
+  overflow: hidden;
 `;

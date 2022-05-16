@@ -37,5 +37,10 @@
     "eslint": "8.13.0",
     "eslintconfig": "*",
     "typescript": "4.6.3"
+  },
+  "engines": {
+    "node": "16.14.0",
+    "npm": "8.x",
+    "yarn": "1.22.x"
   }
 }

@@ -1,6 +1,8 @@
-# Turborepo starter
+# Radflix 
 
-This is an official Yarn v1 starter turborepo.
+Radflix is a simple Netflix clone, but it's themed around extreme sports, to create a extreme sports movies hub. 
+There's Skateboarding, Snowboarding, Surf, BMX and Surf movies.
+This app was created, not only as a way to practice my skills, but also to simulate a professional working enviroment.
 
 ## What's inside?
 
@@ -8,70 +10,32 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package ma
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org) app
-- `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+- `web`: a [Next.js](https://nextjs.org) app, handles the Frontend of Radflix.
+- `cms`: a [Strapi](https://strapi.io/) app, a Headless CMS, handles the Backend of Radflix.
+- `ui`: a stub React component library with [Storybook](https://storybook.js.org/) shared by other applications
 - `config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+All Frontend packages/apps are 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
-This turborepo has some additional tools already setup for you:
+This monorepo uses some additional tools:
 
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [Husky](https://typicode.github.io/husky/#/) git hooks, all commits were submitted to pre-commit and pre-push tests
+- [Commitizen](https://commitizen-tools.github.io/commitizen/) with conventional changelog
 
-## Setup
+## Frontend
 
-This repository is used in the `npx create-turbo` command, and selected when choosing which package manager you wish to use with your monorepo (Yarn).
+The Frontend is a [Next.js](https://nextjs.org) app with [TypeScript](https://www.typescriptlang.org/), using [NextAuth.js](https://next-auth.js.org/) for authentication with Google Provider, handles state with [Redux Toolkit](https://redux-toolkit.js.org/) and data fetching is done mostly with [axios](https://axios-http.com/).<br>
+Styling is done with CSS-in-JS's library [styled-components](https://styled-components.com/), [styled-system](https://styled-system.com/), [styled-icons](https://styled-icons.dev/) and some [Radix](https://www.radix-ui.com/) primitives.
 
-### Build
+## Backend
 
-To build all apps and packages, run the following command:
+Radflix's backend is handled by a [Strapi](https://strapi.io/) app that provides a REST API that the frontend uses to fetch data. It's currently deployed to Heroku, so it will most likely take a second to awake up on the first request call.
 
-```
-cd my-turborepo
-yarn run build
-```
 
-### Develop
 
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-yarn run dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching (Beta) you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Pipelines](https://turborepo.org/docs/core-concepts/pipelines)
-- [Caching](https://turborepo.org/docs/core-concepts/caching)
-- [Remote Caching (Beta)](https://turborepo.org/docs/core-concepts/remote-caching)
-- [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
-- [Configuration Options](https://turborepo.org/docs/reference/configuration)
-- [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)

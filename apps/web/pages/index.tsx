@@ -1,7 +1,8 @@
 import { GetServerSideProps } from 'next';
 import { useSession, signIn, signOut, getSession } from 'next-auth/react';
-import Homepage from 'src/components/Homepage/Homepage';
-import { Box, Button, Heading, Input, Logo, Stack, Text } from 'ui/components';
+
+import { Homepage } from '@components';
+import { Box, Button, Heading, Input, Logo, Stack, Text } from '@ui';
 
 export default function Home() {
   const { data: session } = useSession();
@@ -14,7 +15,7 @@ export default function Home() {
           justifyContent="space-between"
           p="16px 32px"
         >
-          <Logo imgSrc="/radflix-logo.svg" />
+          <Logo imgSrc="/radflix-logo.png" width="100px" />
 
           <Button
             padding="7px 17px"

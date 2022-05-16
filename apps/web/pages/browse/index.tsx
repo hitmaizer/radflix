@@ -1,10 +1,9 @@
+import { Browse, Content, Homepage } from '@components/index';
+import MenuList from '@components/MenuList';
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import Browse from 'src/components/Browse/Browse';
-import Content from 'src/components/Content/Content';
-import Homepage from 'src/components/Homepage/Homepage';
 import { RootState } from 'src/redux/store';
 
 import {
@@ -17,7 +16,7 @@ import {
   Navbar,
   Skeleton,
   Stack,
-} from '@components';
+} from '@ui';
 
 const index = () => {
   const { data: session } = useSession();
@@ -30,24 +29,8 @@ const index = () => {
       <>
         <Browse>
           <Navbar browse>
-            <Logo imgSrc="radflix-logo.svg" />
-            <Stack
-              display="flex"
-              alignItems="center"
-              gridGap="8px"
-              flex={1}
-              ml={8}
-            >
-              <Link href="/categories" passHref>
-                <Button text>Categorias</Button>
-              </Link>
-              <Link href="/documentaries" passHref>
-                <Button text>Documentários</Button>
-              </Link>
-              <Link href="/highlights" passHref>
-                <Button text>Highlights</Button>
-              </Link>
-            </Stack>
+            <Logo imgSrc="radflix-logo.png" width="100px" />
+            <MenuList />
             <Logged
               imgSrc="/placeholder-avatar.jpg"
               display="flex"
@@ -55,7 +38,7 @@ const index = () => {
             >
               <Link href="/" passHref>
                 <Button text onClick={() => signOut()}>
-                  Sair do Radflix
+                  Logout from Radflix
                 </Button>
               </Link>
             </Logged>
@@ -69,7 +52,7 @@ const index = () => {
                 ml={10}
               >
                 <Skeleton heading />
-                <Stack display="flex" gridGap="8px">
+                <Stack display="flex" gridGap="16px">
                   <Skeleton card />
                   <Skeleton card />
                   <Skeleton card />
@@ -78,7 +61,7 @@ const index = () => {
                   <Skeleton card />
                 </Stack>
                 <Skeleton heading />
-                <Stack display="flex" gridGap="8px">
+                <Stack display="flex" gridGap="16px">
                   <Skeleton card />
                   <Skeleton card />
                   <Skeleton card />

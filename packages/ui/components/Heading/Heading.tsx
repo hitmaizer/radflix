@@ -1,9 +1,7 @@
 import * as S from './Heading.styles';
 import { HeadingProps } from './Heading.types';
 
-const Heading = (props: HeadingProps) => {
-  const { children, ...rest } = props;
-
+const Heading = ({ children, ...rest }: HeadingProps) => {
   return <S.Heading {...rest}>{children}</S.Heading>;
 };
 

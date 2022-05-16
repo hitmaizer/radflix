@@ -11,4 +11,5 @@ export const Loading = styled.div`
   padding-top: 30vh;
   gap: 32px;
   place-items: flex-start;
+  overflow: hidden;
 `;

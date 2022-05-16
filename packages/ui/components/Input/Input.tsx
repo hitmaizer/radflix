@@ -1,7 +1,6 @@
-import Box from '@components/Box';
-import Button from '@components/Button';
-import Text from '@components/Text';
 import { NavigateNext } from '@styled-icons/material';
+
+import { Box, Button, Text } from '@ui';
 
 import * as S from './Input.styles';
 import { InputProps } from './Input.types';
@@ -18,7 +17,7 @@ const Input = ({ children, ...rest }: InputProps) => {
         justifyContent="center"
         padding="0 30px"
       >
-        <Text size="lg">{children}</Text>
+        <Text size="md">{children}</Text>
         <NavigateNext size="32px" color="white" />
       </Button>
     </Box>

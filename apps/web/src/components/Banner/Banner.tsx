@@ -1,14 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import Button from '@components/Button';
-import Heading from '@components/Heading';
-import Stack from '@components/Stack';
-import Text from '@components/Text';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from 'src/redux/error';
 import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
+
+import { Button, Heading, Stack, Text } from '@ui';
 
 import axios from '../../axios/instance';
 import requests from '../../axios/requests';

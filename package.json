@@ -24,7 +24,7 @@
     "turbo": "latest"
   },
   "engines": {
-    "node": "16.15.0",
+    "node": "16.14.0",
     "npm": "8.x",
     "yarn": "1.22.x"
   },
@@ -45,5 +45,8 @@
     "type": "git",
     "url": "https://github.com/hitmaizer/radflix.git"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.17",
+  "dependencies": {
+    "vercel": "^24.2.3"
+  }
 }

@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import { flexbox, layout, space } from 'styled-system';
 
+import { mediaQueries } from '@styles';
+
 import { CardProps } from './Card.types';
 
 export const Card = styled.div`
@@ -29,13 +31,17 @@ export const Image = styled.img<CardProps>`
   ${({ square }) =>
     square &&
     css`
-      max-width: 400px;
+      max-width: 600px;
       object-fit: cover;
       object-position: top;
       border-radius: 12px;
       max-height: 200px;
-      width: 350px;
-      height: 200px;
+      width: 100%;
+      height: 100px;
+      ${mediaQueries.md} {
+        height: 200px;
+        width: 100%;
+      }
     `}
 
   ${({ poster }) =>
@@ -44,8 +50,12 @@ export const Image = styled.img<CardProps>`
       object-fit: cover;
       object-position: top;
       border-radius: 12px;
-      width: 250px;
-      height: 400px;
+      max-width: 250px;
+      height: 300px;
       max-height: 600px;
+      ${mediaQueries.md} {
+        height: 400px;
+        width: 100%;
+      }
     `}
 `;

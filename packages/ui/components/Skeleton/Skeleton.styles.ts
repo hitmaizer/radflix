@@ -1,5 +1,7 @@
 import styled, { css, keyframes } from 'styled-components';
 
+import { mediaQueries } from '@styles';
+
 import { SkeletonProps } from './Skeleton.types';
 
 export const Skeleton = styled.div<SkeletonProps>`
@@ -19,8 +21,12 @@ export const Skeleton = styled.div<SkeletonProps>`
   ${({ card }) =>
     card &&
     css`
-      width: 400px;
-      height: 200px;
+      width: 150px;
+      height: 100px;
+      ${mediaQueries.lg} {
+        width: 400px;
+        height: 200px;
+      }
     `}
     
   ${({ banner }) =>
@@ -33,8 +39,12 @@ export const Skeleton = styled.div<SkeletonProps>`
   ${({ heading }) =>
     heading &&
     css`
-      height: 60px;
-      width: 600px;
+      height: 30px;
+      width: 300px;
+      ${mediaQueries.lg} {
+        height: 60px;
+        width: 600px;
+      }
     `}
 `;
 

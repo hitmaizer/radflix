@@ -1,12 +1,11 @@
-import { ReactNode } from 'react';
-
 import {
   LayoutProps,
   SpaceProps,
   ResponsiveValue,
   TextAlignProps,
 } from 'styled-system';
-import { HeadingElement } from 'styles';
+
+import { HeadingElement } from '@styles';
 
 export interface HeadingProps extends LayoutProps, SpaceProps, TextAlignProps {
   as?: HeadingElement;
@@ -14,7 +13,7 @@ export interface HeadingProps extends LayoutProps, SpaceProps, TextAlignProps {
   strong?: boolean;
   glow?: boolean;
   color?: string;
-  children: ReactNode;
+  children?: React.ReactNode;
 }
 
 export type StyledHeadingProps = Pick<HeadingProps, 'strong' | 'glow'>;

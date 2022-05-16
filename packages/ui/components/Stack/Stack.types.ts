@@ -1,7 +1,8 @@
 import { ReactNode, HTMLAttributes } from 'react';
 
-import { BoxProps } from '@components/Box/Box.types';
 import { GridGapProps } from 'styled-system';
+
+import { BoxProps } from '../Box/Box.types';
 
 export interface StackProps
   extends BoxProps,
