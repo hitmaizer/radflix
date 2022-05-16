@@ -11,8 +11,8 @@
       "@assets": ["./src/assets"],
       "@assets/*": ["./src/assets/*"],
       "@config/*": ["./src/config/*"],
-      "@components": ["../../packages/ui/components"],
-      "@components/*": ["../../packages/ui/components/*"],
+      "@ui": ["../../packages/ui/components"],
+      "@ui/*": ["../../packages/ui/components/*"],
       "@constants": ["./src/constants"],
       "@hooks": ["./src/hooks"],
       "@modules/*": ["./src/modules/*"],
@@ -24,7 +24,9 @@
       "@offchain/*": ["./src/services/offchain/*"],
       "@onchain/*": ["./src/services/onchain/*"],
       "@styles": ["../../packages/ui/styles"],
-      "@styles/*": ["../../packages/ui/styles/*"]
+      "@styles/*": ["../../packages/ui/styles/*"],
+      "@components": ["./src/components"],
+      "@components/*": ["./src/components/*"]
     }
   },
   "include": [
