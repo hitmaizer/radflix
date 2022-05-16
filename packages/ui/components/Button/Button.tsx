@@ -17,7 +17,7 @@ const Button = ({
       outline={outline}
       banner={banner}
     >
-      {children}
+      <Text>{children}</Text>
     </S.Button>
   );
 };
@@ -25,11 +25,7 @@ const Button = ({
 export default Button;
 
 Button.defaultProps = {
-  children: (
-    <>
-      <Text size="sm">Sign In</Text>
-    </>
-  ),
+  children: 'Hello mate',
   borderRadius: '4px',
   padding: '7px 17px',
 };
