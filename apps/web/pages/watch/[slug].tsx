@@ -2,13 +2,13 @@ import React from 'react';
 
 import { ParsedUrlQuery } from 'querystring';
 
+import { MovieObj } from '@components/Banner/Banner.types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 import requests from 'src/axios/requests';
-import { MovieObj } from 'src/components/Banner/Banner.types';
-import Browse from 'src/components/Browse/Browse';
 
-import { Loading, Player, Skeleton, Stack } from '@components';
+import { Browse } from '@components';
+import { Loading, Player, Skeleton, Stack } from '@ui';
 
 import axios from '../../src/axios/instance';
 
