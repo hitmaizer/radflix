@@ -1,3 +1,82 @@
+## [1.6.0](https://github.com/hitmaizer/radflix/compare/v1.5.0...v1.6.0) (2022-05-16)
+
+
+### ✂️ Refactor
+
+* **browse:** adds MenuList into own src component ([20efebe](https://github.com/hitmaizer/radflix/commit/20efebeeac42bd5822f59fdcabee83f843561712))
+* **browse:** updates imports to new path alias ([136b182](https://github.com/hitmaizer/radflix/commit/136b182539b501695d80e8f9ccc3889e20e0f5b2))
+* **browse:** updates imports to new path alias ([bc420e6](https://github.com/hitmaizer/radflix/commit/bc420e61cc2325ce1464ad492c207aff3b91976e))
+* **login:** updates imports to new path alias + updates logo ([1790bac](https://github.com/hitmaizer/radflix/commit/1790bacc29c6ae6c67c853ffd27b295333fa6afb))
+* **nvm:** node version downgrade ([60c3ac8](https://github.com/hitmaizer/radflix/commit/60c3ac872ac5cb0ba1b602edb97d5f9463a63bd3))
+* **README:** updates README description ([261fcf5](https://github.com/hitmaizer/radflix/commit/261fcf5e6a76aa266e7509576ba7977ce80163fc))
+* **ui:** updates all imports to ui path alias ([571b44c](https://github.com/hitmaizer/radflix/commit/571b44c2da3701ed2bc82aa2f56e2bb9f1920b8d))
+* **ui:** updates tsconfig path alias to ui ([5fb3744](https://github.com/hitmaizer/radflix/commit/5fb3744a63b2186875602e3c62394d34fb2a4838))
+* **web:** fetching from deployed app instead of localhost ([066414c](https://github.com/hitmaizer/radflix/commit/066414c9728116384de67376e174eeaea6728c99))
+* **web:** node version to 16.14.0 ([9715283](https://github.com/hitmaizer/radflix/commit/971528383b4479c00714521326d5b33fe3fd78d7))
+* **web:** updates browse page to new logo ([53763d6](https://github.com/hitmaizer/radflix/commit/53763d61da7cba403a7349c2adf5b6d2c729f2fb))
+* **web:** updates homepage to new logo ([a88a2f2](https://github.com/hitmaizer/radflix/commit/a88a2f23ee45beec9d61d9f41192c7e49dbeffa0))
+* **web:** updates imports to new path alias ([d56c812](https://github.com/hitmaizer/radflix/commit/d56c812e83e9220d5514c56af63331c242b32de8))
+
+
+### 🎨 Style
+
+* **banner:** adds overflow hidden ([28a1218](https://github.com/hitmaizer/radflix/commit/28a12185b87b8f05da860efdf8fbbaaf4acb7d1c))
+* **browse :** adjusts loading skeleton space between elements ([ee3f94c](https://github.com/hitmaizer/radflix/commit/ee3f94cf9d0b9ac5959f19a20849b754d15f54ef))
+* **Browse:** adds min-width + overflow: hidden ([17aab87](https://github.com/hitmaizer/radflix/commit/17aab8709f6f1f71696107dbf6e227f1a62fcaf2))
+* **card:** card img responsive height ([9fe6282](https://github.com/hitmaizer/radflix/commit/9fe62823a33c9dbbd45d2863dc632702e14159e9))
+* **card:** updates card from fixed width to max-width ([09181b0](https://github.com/hitmaizer/radflix/commit/09181b03638ed385e77f36050c7d6036de47ab60))
+* **card:** updates card responsive values ([2b596ab](https://github.com/hitmaizer/radflix/commit/2b596abda9a34134955a5b404bf4162f81f03988))
+* **content:** adds flex gap responsive values ([576a4ac](https://github.com/hitmaizer/radflix/commit/576a4accfa1d388493409e38dd4cb796c6f11241))
+* **Homepage:** adds 16px padding ([f9fe2f7](https://github.com/hitmaizer/radflix/commit/f9fe2f72bce02d71df46dd78dd1cc618dbdee622))
+* **input:** smaller text size on input button ([619b557](https://github.com/hitmaizer/radflix/commit/619b5577144d1606b74deb76842a73a5d62ba6ac))
+* **input:** updates input responsive values ([891e953](https://github.com/hitmaizer/radflix/commit/891e953d3aed7555a528faff492e00c0d84868d9))
+* **Loading:** adds overflow hidden ([ae06dc0](https://github.com/hitmaizer/radflix/commit/ae06dc06dd9e0c3fc22dd10b8debdd000cbe4564))
+* **skeleton:** updates skeleton cards responsive size ([b47eef0](https://github.com/hitmaizer/radflix/commit/b47eef007a4ad2f3d2b3712a97116ba805b07d16))
+
+
+### 🐛 Fixes
+
+* **card:** fix card responsive sizing ([33d739f](https://github.com/hitmaizer/radflix/commit/33d739fa3670efd1b8d0286752f756857675c7b7))
+
+
+### 🚀 Features
+
+* **banner:** adds index file to Banner src component ([a3df59a](https://github.com/hitmaizer/radflix/commit/a3df59a331f2f0c23d7dd034cdd0a4cac2e0e5ac))
+* **banner:** adds loading skeletons to banner when loading ([697a48a](https://github.com/hitmaizer/radflix/commit/697a48adbc7ca6dc3772b03e8c99ee636abf218a))
+* **banner:** removes redundant skeleton loading components ([ec4aff5](https://github.com/hitmaizer/radflix/commit/ec4aff5b0bb1d2dc33d24b2afd8a680e7ff7f15a))
+* **Browse:** adds index file to Browse src component ([2b5cc83](https://github.com/hitmaizer/radflix/commit/2b5cc83c7a6c79243d4572eb1da83baeb93dd33d))
+* **button:** updates children markup ([c1113f5](https://github.com/hitmaizer/radflix/commit/c1113f5dac3f1b4500efbb62e2a9a6fadd325027))
+* **Content:** adds index file to Content src component ([33faa7a](https://github.com/hitmaizer/radflix/commit/33faa7ab81a91bbecc41ebdda8d217688933dff4))
+* **Homepage:** adds index file to Homepage src component ([bc771ac](https://github.com/hitmaizer/radflix/commit/bc771ac03aff4cec53bdbed8e0d8f0f05def1d9c))
+* **logged:** updates logged menu btns to EN ([7bce0e0](https://github.com/hitmaizer/radflix/commit/7bce0e00b9f1ced2da74cea7355b8ccb3f499faf))
+* **logo:** adds width prop to logo component ([1539168](https://github.com/hitmaizer/radflix/commit/1539168b95e44244e76c876a6a8e4ceef5dddb65))
+* **logo:** sb rendering new logo on logo component ([cd02071](https://github.com/hitmaizer/radflix/commit/cd0207180173a504fe6ab20f57c522c268bcac30))
+* **menuList:** adds index file to src component MenuList ([244a6bc](https://github.com/hitmaizer/radflix/commit/244a6bc20615e9da92d730a93fa381591bfdb71d))
+* **menuList:** adds menuList component markup file ([8ed00e2](https://github.com/hitmaizer/radflix/commit/8ed00e2a4b50313a65f7027590cc3903757d6be4))
+* **menuList:** adds MenuList prop types file ([c5ea32c](https://github.com/hitmaizer/radflix/commit/c5ea32c41eaddad1e1edcd19c394771e9c51456a))
+* **menuList:** adds MenuList styles file ([261d8b9](https://github.com/hitmaizer/radflix/commit/261d8b9ec6f2582ffaa0143ca41a978bdf8b63cf))
+* **root:** adds vercel to root package ([b2eb2d0](https://github.com/hitmaizer/radflix/commit/b2eb2d0dc81fd954dcc0108b644f6eebc0935a07))
+* **Row:** adds index file to Row src component ([46690aa](https://github.com/hitmaizer/radflix/commit/46690aa3bed444a0286599e93dba5bd591d57782))
+* **row:** defines breakpoints slidesPerView on swiper ([ee77a6c](https://github.com/hitmaizer/radflix/commit/ee77a6cdf9492ea39ace47053f4c08b5f04c6298))
+* **row:** underbanner state switches boolean on card click ([87a2db6](https://github.com/hitmaizer/radflix/commit/87a2db682f43d210cc3c7ccd59bae26351fe82c7))
+* **SEO:** updates page title ([b2a1738](https://github.com/hitmaizer/radflix/commit/b2a1738450bbac26c75bbfbc400f84ea4282c80d))
+* **stack:** updates stack types file imports ([3bf6931](https://github.com/hitmaizer/radflix/commit/3bf6931676094d738c4cd59545a21105c854f775))
+* **ui:** adds new logo .png ([628ac16](https://github.com/hitmaizer/radflix/commit/628ac1672a7d5030898cdc98de2b2c8498d31ed6))
+* **UnderBanner:** adds index file to UnderBanner src component ([e6c61ba](https://github.com/hitmaizer/radflix/commit/e6c61bab939d8a1b5d65ac39eab5fedc2869622b))
+* **watch:** adjusts spacing between loading skeleton elements ([6e86732](https://github.com/hitmaizer/radflix/commit/6e86732bd7a28c5ba8d1dfcea166351e06c17603))
+* **web:** adds engines versions to package.json ([e7681fd](https://github.com/hitmaizer/radflix/commit/e7681fd67b940313b52ee8f5f6ed995d29bb3bd8))
+* **web:** adds index exports file to src components ([ed3d44d](https://github.com/hitmaizer/radflix/commit/ed3d44db325a647aca676021cb02c5d8e2ebd4e6))
+* **web:** adds new logo .png ([a014f62](https://github.com/hitmaizer/radflix/commit/a014f6240580d65dea5df1d71a9cf87d9a453d8e))
+* **web:** adds ui path to ui components + [@components](https://github.com/components) src ([bb5ee6d](https://github.com/hitmaizer/radflix/commit/bb5ee6dc03d33a175e8cccbe2fd1091b2f128e37))
+* **web:** deletes boilerplate api file ([58cb09c](https://github.com/hitmaizer/radflix/commit/58cb09cb13a7234d5ca04b40f95cce72f9385b57))
+* **web:** fixes type errors ([6e18061](https://github.com/hitmaizer/radflix/commit/6e1806164de10fdfeb93adca502ae1d7cdc52e51))
+* **web:** updates favicon file ([57adfa2](https://github.com/hitmaizer/radflix/commit/57adfa2e6b73effcd7fadccadc901a3215606522))
+* **web:** updates navbar btns text to EN ([a5331ca](https://github.com/hitmaizer/radflix/commit/a5331cad1ad4490365cc44be7b1695b6345f39f1))
+* **web:** updates next config ignoreBuildErrors true ([2a5ab9b](https://github.com/hitmaizer/radflix/commit/2a5ab9bf8341fcb331019a533983104ccd00a5e1))
+* **web:** updates nextauth api file ([3f507d6](https://github.com/hitmaizer/radflix/commit/3f507d6052e14aa2fad55f470d126d4cdc262caa))
+* **web:** updates src components index exports ([7434737](https://github.com/hitmaizer/radflix/commit/7434737fcdb5774aabbe23c62f426986625d0a24))
+* **web:** watch fallback loading style, wrapped insidebrowse ([dc9ccfc](https://github.com/hitmaizer/radflix/commit/dc9ccfcef2d7ae8a4e3390578d5c1edddc937334))
+
 ## [1.5.0](https://github.com/hitmaizer/radflix/compare/v1.4.0...v1.5.0) (2022-05-13)
 
 
