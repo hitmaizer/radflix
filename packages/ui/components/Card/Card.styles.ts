@@ -36,10 +36,11 @@ export const Image = styled.img<CardProps>`
       object-position: top;
       border-radius: 12px;
       max-height: 200px;
-      width: 150px;
+      width: 100%;
       height: 100px;
       ${mediaQueries.md} {
         height: 200px;
+        width: 100%;
       }
     `}
 
@@ -54,6 +55,7 @@ export const Image = styled.img<CardProps>`
       max-height: 600px;
       ${mediaQueries.md} {
         height: 400px;
+        width: 100%;
       }
     `}
 `;
