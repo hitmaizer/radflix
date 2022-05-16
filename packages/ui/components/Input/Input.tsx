@@ -1,7 +1,6 @@
-import Box from '@components/Box';
-import Button from '@components/Button';
-import Text from '@components/Text';
 import { NavigateNext } from '@styled-icons/material';
+
+import { Box, Button, Text } from '@ui';
 
 import * as S from './Input.styles';
 import { InputProps } from './Input.types';

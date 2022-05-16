@@ -1,6 +1,7 @@
-import Box from '@components/Box';
 import styled from 'styled-components';
 import { gridGap } from 'styled-system';
+
+import { Box } from '@ui';
 
 import { StackProps } from './Stack.types';
 

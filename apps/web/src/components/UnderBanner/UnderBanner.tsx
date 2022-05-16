@@ -1,10 +1,8 @@
 import React from 'react';
 
-import Button from '@components/Button';
-import Heading from '@components/Heading';
-import Stack from '@components/Stack';
-import Text from '@components/Text';
 import Link from 'next/link';
+
+import { Button, Heading, Stack, Text } from '@ui';
 
 import * as S from './UnderBanner.styles';
 import { UnderBannerProps } from './UnderBanner.types';

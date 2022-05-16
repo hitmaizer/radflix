@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import Button from '@components/Button';
-import Logo from '@components/Logo';
+import { Button, Logo } from '@ui';
 
 import * as S from './Navbar.styles';
 import { NavbarProps } from './Navbar.types';

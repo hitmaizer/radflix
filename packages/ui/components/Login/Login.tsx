@@ -1,4 +1,4 @@
-import Heading from '@components/Heading';
+import { Heading } from '@ui';
 
 import * as S from './Login.styles';
 import { LoginProps } from './Login.types';

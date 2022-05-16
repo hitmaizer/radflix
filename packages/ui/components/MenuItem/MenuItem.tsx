@@ -1,5 +1,6 @@
-import Text from '@components/Text';
 import { Pencil } from '@styled-icons/bootstrap/Pencil';
+
+import { Text } from '@ui';
 
 import * as S from './MenuItem.styles';
 import { MenuItemProps } from './MenuItem.types';
