@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-import Homepage from 'src/components/Homepage/Homepage';
+import Homepage from '@components/Homepage';
 
-import { Box, Button, Login, Logo, NormalInput, Stack } from '@components';
+import { Box, Button, Login, Logo, NormalInput, Stack } from '@ui';
 
 const index = () => {
   const [username, setUsername] = useState<string>('');
@@ -17,7 +17,7 @@ const index = () => {
           justifyContent="space-between"
           p="16px 32px"
         >
-          <Logo imgSrc="/radflix-logo.svg" />
+          <Logo imgSrc="/radflix-logo.png" width="100px" />
           <Button>Sign In</Button>
         </Stack>
         <Box
