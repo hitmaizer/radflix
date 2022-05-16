@@ -45,5 +45,8 @@
     "type": "git",
     "url": "https://github.com/hitmaizer/radflix.git"
   },
-  "packageManager": "yarn@1.22.17"
+  "packageManager": "yarn@1.22.17",
+  "dependencies": {
+    "vercel": "^24.2.3"
+  }
 }
