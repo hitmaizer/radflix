@@ -1,10 +1,8 @@
+import { Browse, Content, Homepage } from '@components/index';
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import Browse from 'src/components/Browse/Browse';
-import Content from 'src/components/Content/Content';
-import Homepage from 'src/components/Homepage/Homepage';
 import { RootState } from 'src/redux/store';
 
 import {
@@ -17,7 +15,7 @@ import {
   Navbar,
   Skeleton,
   Stack,
-} from '@components';
+} from '@ui';
 
 const index = () => {
   const { data: session } = useSession();

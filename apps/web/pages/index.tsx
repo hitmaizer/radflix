@@ -1,7 +1,8 @@
 import { GetServerSideProps } from 'next';
 import { useSession, signIn, signOut, getSession } from 'next-auth/react';
-import Homepage from 'src/components/Homepage/Homepage';
-import { Box, Button, Heading, Input, Logo, Stack, Text } from 'ui/components';
+
+import { Homepage } from '@components';
+import { Box, Button, Heading, Input, Logo, Stack, Text } from '@ui';
 
 export default function Home() {
   const { data: session } = useSession();
