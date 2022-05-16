@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import Card from '@components/Card';
-import Heading from '@components/Heading';
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from 'src/redux/error';
 import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
+
+import { Card, Heading } from '@ui';
 
 import axios from '../../axios/instance';
 import { MovieObj } from '../Banner/Banner.types';

@@ -4,8 +4,15 @@ import { CardProps } from './Card.types';
 const Card = ({ children, imgSrc, square, poster, ...rest }: CardProps) => {
   return (
     <S.Card {...rest}>
-      <S.Image src={imgSrc} alt="placeholder" square={square} poster={poster} />
-      {children}
+      <>
+        <S.Image
+          src={imgSrc}
+          alt="placeholder"
+          square={square}
+          poster={poster}
+        />
+        {children}
+      </>
     </S.Card>
   );
 };

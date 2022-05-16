@@ -1,16 +1,12 @@
 import { useEffect, useState } from 'react';
 
-import Button from '@components/Button';
-import Heading from '@components/Heading';
-import Stack from '@components/Stack';
-import Text from '@components/Text';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from 'src/redux/error';
 import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 
-import { Loading, Skeleton } from '@components';
+import { Button, Heading, Stack, Text } from '@ui';
 
 import axios from '../../axios/instance';
 import requests from '../../axios/requests';
@@ -74,35 +70,6 @@ const Banner = ({ children, ...rest }: BannerProps) => {
             </Text>
           </S.BannerContent>
         </S.Banner>
-      )}
-      {loading && (
-        <>
-          <Loading
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            ml={10}
-          >
-            <Skeleton heading />
-            <Stack display="flex" gridGap="16px">
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-            </Stack>
-            <Skeleton heading />
-            <Stack display="flex" gridGap="16px">
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-            </Stack>
-          </Loading>
-        </>
       )}
 
       {error && <p>{error}</p>}

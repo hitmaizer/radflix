@@ -5,6 +5,7 @@ export const Banner = styled.header`
   min-height: 80vh;
   display: flex;
   place-items: center;
+  overflow: hidden;
 `;
 
 export const BannerContent = styled.div`

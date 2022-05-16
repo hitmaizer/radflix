@@ -1,4 +1,5 @@
 import { Browse, Content, Homepage } from '@components/index';
+import MenuList from '@components/MenuList';
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
@@ -29,23 +30,7 @@ const index = () => {
         <Browse>
           <Navbar browse>
             <Logo imgSrc="radflix-logo.png" width="100px" />
-            <Stack
-              display="flex"
-              alignItems="center"
-              gridGap="8px"
-              flex={1}
-              ml={8}
-            >
-              <Link href="/categories" passHref>
-                <Button text>Categories</Button>
-              </Link>
-              <Link href="/documentaries" passHref>
-                <Button text>Documentaries</Button>
-              </Link>
-              <Link href="/highlights" passHref>
-                <Button text>Highlights</Button>
-              </Link>
-            </Stack>
+            <MenuList />
             <Logged
               imgSrc="/placeholder-avatar.jpg"
               display="flex"

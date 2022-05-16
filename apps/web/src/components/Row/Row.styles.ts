@@ -1,4 +1,4 @@
-import { CardProps } from '@components/Card/Card.types';
+import { CardProps } from '@ui/Card/Card.types';
 import styled, { css } from 'styled-components';
 import { flexbox, layout, space } from 'styled-system';
 import { Swiper } from 'swiper/react';

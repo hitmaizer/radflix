@@ -13,4 +13,5 @@ export const Homepage = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
+  padding: 16px;
 `;
