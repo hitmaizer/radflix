@@ -1,3 +1,28 @@
+### [1.9.1](https://github.com/hitmaizer/radflix/compare/v1.9.0...v1.9.1) (2022-05-18)
+
+
+### 🐛 Fixes
+
+* **underbanner:** fixes api response path ([9699be5](https://github.com/hitmaizer/radflix/commit/9699be533841af5038d5ec0acb4dc0d41d55979d))
+
+## [1.9.0](https://github.com/hitmaizer/radflix/compare/v1.8.0...v1.9.0) (2022-05-18)
+
+
+### 🚀 Features
+
+* **cms:** updates controllers for skater collection type ([c349a55](https://github.com/hitmaizer/radflix/commit/c349a5579cbc71d39e126ca6688287e1d588bf47))
+
+## [1.8.0](https://github.com/hitmaizer/radflix/compare/v1.7.0...v1.8.0) (2022-05-18)
+
+
+### 🚀 Features
+
+* **cms:** adds extednFIleUpload missing await ([391473c](https://github.com/hitmaizer/radflix/commit/391473c66c334d92c0864f0cb0a3993f58bf4c81))
+* **cms:** adds link property to skater collection type ([c1197d1](https://github.com/hitmaizer/radflix/commit/c1197d1b4731dc965e52fe3a422c51998a52f87a))
+* **cms:** deletes unnecessary gitkeep ([104efdc](https://github.com/hitmaizer/radflix/commit/104efdc85efbd24de4d2eaeba9ec7ebcde928433))
+* **web:** fixes path from api response ([6540231](https://github.com/hitmaizer/radflix/commit/65402313b3e8fca89fb9c3f6971dbfbd4bbd2f68))
+* **web:** fixes paths from api res + movieObj ([143db19](https://github.com/hitmaizer/radflix/commit/143db193a2e32ac1c62229bd751ff8f66e57758d))
+
 ## [1.7.0](https://github.com/hitmaizer/radflix/compare/v1.6.0...v1.7.0) (2022-05-18)
 
 
