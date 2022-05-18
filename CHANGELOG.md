@@ -1,3 +1,10 @@
+## [1.9.0](https://github.com/hitmaizer/radflix/compare/v1.8.0...v1.9.0) (2022-05-18)
+
+
+### 🚀 Features
+
+* **cms:** updates controllers for skater collection type ([c349a55](https://github.com/hitmaizer/radflix/commit/c349a5579cbc71d39e126ca6688287e1d588bf47))
+
 ## [1.8.0](https://github.com/hitmaizer/radflix/compare/v1.7.0...v1.8.0) (2022-05-18)
 
 
