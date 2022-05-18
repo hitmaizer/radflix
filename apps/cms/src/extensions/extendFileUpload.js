@@ -9,14 +9,14 @@ module.exports = {
     };
 
     async function uploadFileAndPersist(fileData, { user } = {}) {
-      const config = strapi.config.get('plugin.upload');
+      const config = await strapi.config.get('plugin.upload');
 
       const {
         getDimensions,
         generateThumbnail,
         generateResponsiveFormats,
         isSupportedImage,
-      } = upload.service('image-manipulation');
+      } = await upload.service('image-manipulation');
 
       await upload.service('provider').upload(fileData);
 
