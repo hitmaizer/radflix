@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skaters",
+  "info": {
+    "singularName": "skater",
+    "pluralName": "skaters",
+    "displayName": "skater"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "bio": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "poster": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
