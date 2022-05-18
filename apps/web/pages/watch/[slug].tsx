@@ -99,7 +99,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const data = await response.json();
 
   const paths = data.data.map((movie: MovieObj) => {
-    return { params: { slug: movie.attributes.slug } };
+    return { params: { slug: movie.slug } };
   });
 
   return {

@@ -78,12 +78,8 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
                 <Card
                   poster={poster}
                   square={square}
-                  title={movie.attributes.title}
-                  imgSrc={
-                    square
-                      ? movie.attributes.backdropPoster
-                      : movie.attributes.moviePoster
-                  }
+                  title={movie.title}
+                  imgSrc={square ? movie.backdropPoster : movie.moviePoster}
                 />
               </SwiperSlide>
             ))}
