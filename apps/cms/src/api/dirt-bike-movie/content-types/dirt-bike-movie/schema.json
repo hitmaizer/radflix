@@ -4,7 +4,8 @@
   "info": {
     "singularName": "dirt-bike-movie",
     "pluralName": "dirt-bike-movies",
-    "displayName": "DirtBikeMovie"
+    "displayName": "DirtBikeMovie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -39,6 +40,18 @@
     },
     "description": {
       "type": "text"
+    },
+    "poster": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }
