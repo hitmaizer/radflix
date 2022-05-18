@@ -1,5 +1,3 @@
-'use strict';
-
 /**
  *  dirt-bike-movie controller
  */
