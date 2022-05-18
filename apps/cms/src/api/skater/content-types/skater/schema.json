@@ -4,7 +4,8 @@
   "info": {
     "singularName": "skater",
     "pluralName": "skaters",
-    "displayName": "skater"
+    "displayName": "skater",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -24,15 +25,19 @@
       "targetField": "name"
     },
     "poster": {
-      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": ["images", "videos"]
     },
     "backdrop": {
-      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
+      "required": true,
+      "allowedTypes": ["images", "videos"]
+    },
+    "link": {
+      "type": "string",
       "required": true
     }
   }
