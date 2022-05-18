@@ -1,3 +1,10 @@
+### [1.9.1](https://github.com/hitmaizer/radflix/compare/v1.9.0...v1.9.1) (2022-05-18)
+
+
+### 🐛 Fixes
+
+* **underbanner:** fixes api response path ([9699be5](https://github.com/hitmaizer/radflix/commit/9699be533841af5038d5ec0acb4dc0d41d55979d))
+
 ## [1.9.0](https://github.com/hitmaizer/radflix/compare/v1.8.0...v1.9.0) (2022-05-18)
 
 
