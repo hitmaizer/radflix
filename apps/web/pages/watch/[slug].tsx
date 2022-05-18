@@ -18,18 +18,16 @@ interface IParams extends ParsedUrlQuery {
 
 interface Movie {
   movie: {
-    attributes: {
-      title: string;
-      movieLink: string;
-      moviePoster: string;
-      slug: string;
-      releaseYear: number;
-      backdropPoster: string;
-      description: string;
-      createdAt: string;
-      updatedAt: string;
-      publishedAt: string;
-    };
+    title: string;
+    movieLink: string;
+    moviePoster: string;
+    slug: string;
+    releaseYear: number;
+    backdropPoster: string;
+    description: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
     id: number;
   };
 }
@@ -73,7 +71,7 @@ const Watch = ({ movie }: Movie) => {
 
   return (
     <Stack>
-      <Player vidSrc={movie.attributes.movieLink} />
+      <Player vidSrc={movie.movieLink} />
     </Stack>
   );
 };
