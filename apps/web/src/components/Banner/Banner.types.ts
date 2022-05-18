@@ -8,16 +8,14 @@ export interface BannerProps {
 
 export interface MovieObj {
   id: number;
-  attributes: {
-    title: string;
-    movieLink: string;
-    moviePoster: string;
-    slug: string;
-    releaseYear: number;
-    backdropPoster: string;
-    description: string;
-    createdAt: string;
-    updatedAt: string;
-    publishedAt: string;
-  };
+  title: string;
+  movieLink: string;
+  moviePoster: string;
+  slug: string;
+  releaseYear: number;
+  backdropPoster: string;
+  description: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
 }
