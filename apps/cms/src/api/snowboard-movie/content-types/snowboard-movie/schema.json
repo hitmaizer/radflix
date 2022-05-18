@@ -43,6 +43,18 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "poster": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

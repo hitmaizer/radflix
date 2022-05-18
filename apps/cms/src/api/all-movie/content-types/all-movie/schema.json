@@ -4,7 +4,8 @@
   "info": {
     "singularName": "all-movie",
     "pluralName": "all-movies",
-    "displayName": "allMovie"
+    "displayName": "allMovie",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -39,6 +40,18 @@
     },
     "description": {
       "type": "text",
+      "required": true
+    },
+    "poster": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images", "videos"]
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "videos"],
+      "type": "media",
+      "multiple": false,
       "required": true
     }
   }
