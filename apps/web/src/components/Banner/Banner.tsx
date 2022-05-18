@@ -48,25 +48,25 @@ const Banner = ({ children, ...rest }: BannerProps) => {
           {...rest}
           style={{
             backgroundSize: 'cover',
-            backgroundImage: `linear-gradient(180deg, rgba(23,23,23,1) 9%, rgba(23,23,23,0.4822303921568627) 51%, rgba(23,23,23,1) 100%), url("${movie?.attributes.backdropPoster}")`,
+            backgroundImage: `linear-gradient(180deg, rgba(23,23,23,1) 9%, rgba(23,23,23,0.4822303921568627) 51%, rgba(23,23,23,1) 100%), url("${movie?.backdropPoster}")`,
             backgroundPosition: 'center',
           }}
         >
           <S.BannerContent>
             <Heading color="white" fontWeight="bold">
-              {movie?.attributes.title}
+              {movie?.title}
             </Heading>
             {children}
             <Stack display="flex" gridGap={4}>
-              <Link href={`/watch/${movie?.attributes.slug}`} passHref>
-                <Link href={`/watch/${movie?.attributes.slug.toString()}`}>
+              <Link href={`/watch/${movie?.slug}`} passHref>
+                <Link href={`/watch/${movie?.slug.toString()}`}>
                   <Button banner> Play</Button>
                 </Link>
               </Link>
               <Button banner>My List</Button>
             </Stack>
             <Text color="white" lineHeight={1.5} maxWidth="100px">
-              {`${movie?.attributes.description.substring(0, 150)}...`}
+              {`${movie?.description.substring(0, 150)}...`}
             </Text>
           </S.BannerContent>
         </S.Banner>
