@@ -1,3 +1,23 @@
+## [1.7.0](https://github.com/hitmaizer/radflix/compare/v1.6.0...v1.7.0) (2022-05-18)
+
+
+### ✂️ Refactor
+
+* **cms:** updates schema files to add media fields ([61b003a](https://github.com/hitmaizer/radflix/commit/61b003a1d64b7de9c2381b7bb52c15c2335d9205))
+
+
+### 🚀 Features
+
+* **cms:** adds extendFileUpload config file ([de57dc6](https://github.com/hitmaizer/radflix/commit/de57dc6b5876b4128a35f0b2b9a56e34e78cad98))
+* **cms:** adds fixed eslint config file ([20de662](https://github.com/hitmaizer/radflix/commit/20de66274bfa804f8d1b1acbd800e90f774cc950))
+* **cms:** adds index src file ([d0466d9](https://github.com/hitmaizer/radflix/commit/d0466d92ce4a24b4555c8aa3b2e466f15f774cf1))
+* **cms:** adds plugins file ([f00a6ae](https://github.com/hitmaizer/radflix/commit/f00a6ae3690ae8c596cbb9073f7fdc7554f55758))
+* **cms:** adds skater content type files ([72aa95f](https://github.com/hitmaizer/radflix/commit/72aa95f2d7b6fdc43c74ff530a56e45b6ef90c3c))
+* **cms:** adds strapi upload provider cloudinary ([a125016](https://github.com/hitmaizer/radflix/commit/a1250164783757d5118f3700027e709c27af761c))
+* **cms:** deletes unnecessary boilerplate files ([59763ab](https://github.com/hitmaizer/radflix/commit/59763abbdbea5f67bc01d0fe1c6df33121cef12d))
+* **cms:** updates eslint setup file ([9e190cf](https://github.com/hitmaizer/radflix/commit/9e190cf6e15368ee825be8dfa252af82da2361f1))
+* **cms:** updates middlewares file to display thumbnails ([4b11d94](https://github.com/hitmaizer/radflix/commit/4b11d9451bdfb84b9e39324c89c61c66efe73395))
+
 ## [1.6.0](https://github.com/hitmaizer/radflix/compare/v1.5.0...v1.6.0) (2022-05-16)
 
 
