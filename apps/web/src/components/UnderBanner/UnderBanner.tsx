@@ -30,9 +30,11 @@ const UnderBanner = ({
         </Heading>
         <Stack display="flex" gridGap={4}>
           <Link
-            href={`/watch/${
-              selectedMovie ? selectedMovie?.slug : selectedSkater?.slug
-            }`}
+            href={
+              selectedMovie
+                ? `/watch/${selectedMovie?.slug}`
+                : `/skaters/${selectedSkater?.slug}`
+            }
             passHref
           >
             <Button banner> Play</Button>
