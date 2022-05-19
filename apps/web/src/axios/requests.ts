@@ -5,6 +5,7 @@ const requests = {
   bmxMovies: `/bmx-movies`,
   dirtbikeMovies: `/dirt-bike-movies`,
   allMovies: `/all-movies`,
+  skaters: `/skaters?populate=*`,
 };
 
 export default requests;
