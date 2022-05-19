@@ -1,3 +1,10 @@
+## [1.11.0](https://github.com/hitmaizer/radflix/compare/v1.10.0...v1.11.0) (2022-05-19)
+
+
+### 🚀 Features
+
+* **cms:** es6 syntax for auth secret ([11fab07](https://github.com/hitmaizer/radflix/commit/11fab077894f01e71fab9be9b004235d84740776))
+
 ## [1.10.0](https://github.com/hitmaizer/radflix/compare/v1.9.1...v1.10.0) (2022-05-19)
 
 
