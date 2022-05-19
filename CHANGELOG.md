@@ -1,3 +1,37 @@
+## [1.12.0](https://github.com/hitmaizer/radflix/compare/v1.11.0...v1.12.0) (2022-05-19)
+
+
+### ✂️ Refactor
+
+* **skaterRow:** under banner not closing on click + blurhash ([9d57eb4](https://github.com/hitmaizer/radflix/commit/9d57eb4e588408b71001cdf85024db90a40040b5))
+* **underBanner:** ternary logic for selectedSkater option ([9dc5433](https://github.com/hitmaizer/radflix/commit/9dc5433f0dbe5294b1bdc669913b70401fee45f1))
+* **underBanner:** updates link path conditionally to watch/skater ([47e623a](https://github.com/hitmaizer/radflix/commit/47e623aad1e8e6246a0f180f0749cfefff83c319))
+
+
+### 🚀 Features
+
+* **axios:** adds skaters request ([b4a67b6](https://github.com/hitmaizer/radflix/commit/b4a67b6d0d7f623120e749be43b8f03bcf80c4a4))
+* **content:** renders skaterRow on content component ([d449587](https://github.com/hitmaizer/radflix/commit/d4495878c7d3853a3ca70ba43270d4cf10e2c51f))
+* **ImageCard:** adds ImageCard component index file ([87ce4cc](https://github.com/hitmaizer/radflix/commit/87ce4cca35dcb08e10d2a02d3be8ad79aa7ca3e2))
+* **ImageCard:** adds ImageCard component markup file ([fab25d3](https://github.com/hitmaizer/radflix/commit/fab25d3cdcaeb51c0ce260718ee82240a9e261cd))
+* **ImageCard:** adds ImageCard component styles file ([a9fa99f](https://github.com/hitmaizer/radflix/commit/a9fa99f73aac33bc909800e467d02868e70d7add))
+* **ImageCard:** adds ImageCard component types file ([449c27e](https://github.com/hitmaizer/radflix/commit/449c27eb1a26ec3ccbce09ee878daef73c6677a3))
+* **skaterRow:** adds skaterRow component index file ([df09e0b](https://github.com/hitmaizer/radflix/commit/df09e0b7df12e35a9e48e4d6f118f21df034f9cc))
+* **skaterRow:** adds SkaterRow component markup file ([8174854](https://github.com/hitmaizer/radflix/commit/8174854a015192409c275fe0d8e987f1e1e337f6))
+* **skaterRow:** adds skaterRow component styles file ([19c8be3](https://github.com/hitmaizer/radflix/commit/19c8be36b073565e22a60c6f8033746b071802c4))
+* **skaterRow:** adds skaterRow component types file ([f14fda6](https://github.com/hitmaizer/radflix/commit/f14fda623b636e2290d28da72db67cb1f5d2125c))
+* **skaters:** add dynamic routes page to watch per skater slug ([6e02b76](https://github.com/hitmaizer/radflix/commit/6e02b764c7aa75ef27ca828fed3cc3fdae00adda))
+* **underbanner:** updates underbanner component types file ([9b0a392](https://github.com/hitmaizer/radflix/commit/9b0a39229b5d69265b674e3cda57569169ea4064))
+* **web:** next accepting images from res.cloudinary ([e9faf8d](https://github.com/hitmaizer/radflix/commit/e9faf8d61c0a52622933bc5284e54b924a4aa63a))
+* **web:** updates src components index file exports ([e946460](https://github.com/hitmaizer/radflix/commit/e9464605dafe8f7227621a9590b32851e756dfba))
+
+## [1.11.0](https://github.com/hitmaizer/radflix/compare/v1.10.0...v1.11.0) (2022-05-19)
+
+
+### 🚀 Features
+
+* **cms:** es6 syntax for auth secret ([11fab07](https://github.com/hitmaizer/radflix/commit/11fab077894f01e71fab9be9b004235d84740776))
+
 ## [1.10.0](https://github.com/hitmaizer/radflix/compare/v1.9.1...v1.10.0) (2022-05-19)
 
 
