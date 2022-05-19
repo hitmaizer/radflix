@@ -1,17 +1,19 @@
 import { useEffect, useState } from 'react';
 
+import ImageCard from '@components/ImageCard';
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from 'src/redux/error';
 import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
 
-import { Card, Heading } from '@ui';
+import { Heading } from '@ui';
 
 import axios from '../../axios/instance';
 import UnderBanner from '../UnderBanner/UnderBanner';
 import * as S from './SkaterRow.styles';
 import { SkaterObj, SkaterRowProps } from './SkaterRow.types';
+
 import 'swiper/css';
 
 const Row = ({ title, fetchURL, square, poster, ...rest }: SkaterRowProps) => {
@@ -24,7 +26,7 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: SkaterRowProps) => {
 
   const handleClick = (m: SkaterObj) => {
     setSelectedSkater(m);
-    setShowUnder(() => !showUnder);
+    setShowUnder(true);
   };
 
   useEffect(() => {
@@ -74,12 +76,17 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: SkaterRowProps) => {
           >
             {skaters.map((skater: SkaterObj) => (
               <SwiperSlide key={skater.id} onClick={() => handleClick(skater)}>
-                <Card
+                <ImageCard
                   poster={poster}
                   square={square}
                   title={skater.name}
                   imgSrc={
                     square ? skater.backdrop.data.url : skater.poster.data.url
+                  }
+                  blurhash={
+                    square
+                      ? skater.backdrop.data.blurhash
+                      : skater.poster.data.blurhash
                   }
                 />
               </SwiperSlide>
