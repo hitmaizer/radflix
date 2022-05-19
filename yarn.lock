@@ -3586,7 +3586,7 @@
     "@strapi/utils" "4.1.7"
     sendmail "^1.6.1"
 
-"@strapi/provider-upload-cloudinary@^4.1.11":
+"@strapi/provider-upload-cloudinary@^4.1.7":
   version "4.1.11"
   resolved "https://registry.yarnpkg.com/@strapi/provider-upload-cloudinary/-/provider-upload-cloudinary-4.1.11.tgz#8aaa0a78ef2450fffe4a5c46f1236866310fd6ff"
   integrity sha512-i5uiq4eUKAD+TiBdMvyo2X9k53zMkXzHODq+MHaF9vyMuvFX/m2/8b4zjQ+lWHWMYOmla87bQRRMf1KBOMwrpg==
@@ -15522,7 +15522,7 @@ sharp@0.30.1:
     tar-fs "^2.1.1"
     tunnel-agent "^0.6.0"
 
-sharp@^0.30.4:
+sharp@^0.30.3:
   version "0.30.4"
   resolved "https://registry.yarnpkg.com/sharp/-/sharp-0.30.4.tgz#73d9daa63bbc20da189c9328d75d5d395fc8fb73"
   integrity sha512-3Onig53Y6lji4NIZo69s14mERXXY/GV++6CzOYx/Rd8bnTwbhFbL09WZd7Ag/CCnA0WxFID8tkY0QReyfL6v0Q==
