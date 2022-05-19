@@ -1,3 +1,11 @@
+## [1.10.0](https://github.com/hitmaizer/radflix/compare/v1.9.1...v1.10.0) (2022-05-19)
+
+
+### 🚀 Features
+
+* **cms:** adds auth secret to server file ([5327b91](https://github.com/hitmaizer/radflix/commit/5327b91b894f710f8b027c3181ee5e63d123d391))
+* **cms:** matching versions on strapi deps ([f4e2108](https://github.com/hitmaizer/radflix/commit/f4e210841aa073fb53c074c6d7c9d2441fc1cc37))
+
 ### [1.9.1](https://github.com/hitmaizer/radflix/compare/v1.9.0...v1.9.1) (2022-05-18)
 
 
