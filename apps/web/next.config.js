@@ -5,7 +5,7 @@ module.exports = withTM({
     styledComponents: true,
   },
   images: {
-    domains: ['https://lh3.googleusercontent.com/'],
+    domains: ['https://lh3.googleusercontent.com/', 'res.cloudinary.com'],
   },
   typescript: {
     // !! WARN !!
