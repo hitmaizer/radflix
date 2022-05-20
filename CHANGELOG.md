@@ -1,3 +1,22 @@
+### [1.12.1](https://github.com/hitmaizer/radflix/compare/v1.12.0...v1.12.1) (2022-05-20)
+
+
+### ✂️ Refactor
+
+* **ImageCard:** updates next image render method ([560adc8](https://github.com/hitmaizer/radflix/commit/560adc8f7afdc990fb8db870d593a43efb880405))
+* **row:** updates row component to render next ImageCard ([add8f13](https://github.com/hitmaizer/radflix/commit/add8f1307b3b7957bd6568d93efea58a2d7b3cd9))
+* **web:** updates next config to accept all image hosts used ([07b2a73](https://github.com/hitmaizer/radflix/commit/07b2a73b256bcea01d747be12ba3e734088539d9))
+
+
+### 🎨 Style
+
+* **ImageCard:** updates ImageCard component basic styling ([88c969a](https://github.com/hitmaizer/radflix/commit/88c969a0849fcd887ddbb77951dc78c08bd91799))
+
+
+### 🐛 Fixes
+
+* **cms:** fixes sharp version to be able to build cms app ([decfa8f](https://github.com/hitmaizer/radflix/commit/decfa8fe48e2dc953b4b676a8377fca0e616f598))
+
 ## [1.12.0](https://github.com/hitmaizer/radflix/compare/v1.11.0...v1.12.0) (2022-05-19)
 
 
