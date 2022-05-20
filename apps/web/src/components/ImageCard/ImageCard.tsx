@@ -10,14 +10,14 @@ const Card = ({
   ...rest
 }: ImageCardProps) => {
   return (
-    <S.Card {...rest}>
+    <S.Card poster={poster} square={square} {...rest}>
       <>
         <S.CardImage
           src={imgSrc!}
           alt="placeholder"
-          square={square}
-          poster={poster}
           blurDataURL={blurhash}
+          width="100%"
+          height="100%"
           layout="fill"
         />
         {children}

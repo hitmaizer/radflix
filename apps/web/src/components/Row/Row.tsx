@@ -1,18 +1,20 @@
 import { useEffect, useState } from 'react';
 
+import ImageCard from '@components/ImageCard';
 import { useSelector, useDispatch } from 'react-redux';
 import { setError } from 'src/redux/error';
 import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
 
-import { Card, Heading } from '@ui';
+import { Heading } from '@ui';
 
 import axios from '../../axios/instance';
 import { MovieObj } from '../Banner/Banner.types';
 import UnderBanner from '../UnderBanner/UnderBanner';
 import * as S from './Row.styles';
 import { RowProps } from './Row.types';
+
 import 'swiper/css';
 
 const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
@@ -75,7 +77,7 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
           >
             {movies.map((movie: MovieObj) => (
               <SwiperSlide key={movie.id} onClick={() => handleClick(movie)}>
-                <Card
+                <ImageCard
                   poster={poster}
                   square={square}
                   title={movie.title}
