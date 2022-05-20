@@ -6,58 +6,52 @@ import { mediaQueries } from '@styles';
 
 import { ImageCardProps } from './ImageCard.types';
 
-export const Card = styled.div`
+export const Card = styled.div<ImageCardProps>`
   ${space}
   ${flexbox}
   ${layout}
   width: 100%;
   height: 100%;
   display: inline-block;
-  border-radius: 12px;
   cursor: pointer;
   transition: all 300ms 0ms ease;
-  height: 450px;
+  min-height: 200px;
+  position: relative;
+
   &:hover {
-    transform: scale(1.08);
+    transform: scale(104%);
     transition-delay: 300ms;
   }
-`;
-
-export const CardImage = styled(Image)<ImageCardProps>`
-  object-fit: cover;
-  max-width: 250px;
-  border-radius: 12px;
-  width: 100%;
-  height: 100%;
-
-  ${({ square }) =>
-    square &&
-    css`
-      max-width: 600px;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 12px;
-      max-height: 200px;
-      width: 100%;
-      height: 100px;
-      ${mediaQueries.md} {
-        height: 200px;
-        width: 100%;
-      }
-    `}
-
   ${({ poster }) =>
     poster &&
     css`
+      height: 100%;
       object-fit: cover;
       object-position: top;
-      border-radius: 12px;
-      max-width: 250px;
       height: 300px;
       max-height: 600px;
       ${mediaQueries.md} {
         height: 400px;
-        width: 100%;
       }
     `}
+
+  ${({ square }) =>
+    square &&
+    css`
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      max-height: 200px;
+      height: 100px;
+      ${mediaQueries.md} {
+        height: 200px;
+      }
+    `}
+`;
+
+export const CardImage = styled(Image)<ImageCardProps>`
+  object-fit: cover;
+  border-radius: 12px;
+  width: 100%;
+  height: 100%;
 `;
