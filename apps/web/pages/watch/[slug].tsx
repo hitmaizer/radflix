@@ -87,6 +87,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       movie: data.data,
     },
+    revalidate: 18000,
   };
 };
 
