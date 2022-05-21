@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import Homepage from '@components/Homepage';
 
-import { Box, Button, Login, Logo, NormalInput, Stack } from '@ui';
+import { Box, Button, Login, Logo, NormalInput, Stack, Text } from '@ui';
 
 const index = () => {
   const [username, setUsername] = useState<string>('');
@@ -18,7 +18,9 @@ const index = () => {
           p="16px 32px"
         >
           <Logo imgSrc="/radflix-logo.png" width="100px" />
-          <Button>Sign In</Button>
+          <Button>
+            <Text>Sign In</Text>
+          </Button>
         </Stack>
         <Box
           display="flex"
