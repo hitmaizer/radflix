@@ -16,6 +16,7 @@ import {
   Navbar,
   Skeleton,
   Stack,
+  Text,
 } from '@ui';
 
 const index = () => {
@@ -38,7 +39,7 @@ const index = () => {
             >
               <Link href="/" passHref>
                 <Button text onClick={() => signOut()}>
-                  Logout from Radflix
+                  <Text>Logout from Radflix</Text>
                 </Button>
               </Link>
             </Logged>
