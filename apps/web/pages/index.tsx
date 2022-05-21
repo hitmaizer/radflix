@@ -28,7 +28,7 @@ export default function Home() {
                     })
             }
           >
-            {!session ? 'Sign In' : ' Sign Out'}
+            {!session ? <Text>Sign In</Text> : <Text>Logout</Text>}
           </Button>
         </Stack>
         <Box
