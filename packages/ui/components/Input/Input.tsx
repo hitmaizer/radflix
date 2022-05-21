@@ -17,8 +17,10 @@ const Input = ({ children, ...rest }: InputProps) => {
         justifyContent="center"
         padding="0 30px"
       >
-        <Text size="md">{children}</Text>
-        <NavigateNext size="32px" color="white" />
+        <>
+          <Text size="md">{children}</Text>
+          <NavigateNext size="32px" color="white" />
+        </>
       </Button>
     </Box>
   );

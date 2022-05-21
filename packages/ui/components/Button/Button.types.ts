@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 import {
   BackgroundColorProps,
   FlexboxProps,
@@ -14,7 +12,7 @@ export interface ButtonProps
     SpaceProps,
     PositionProps,
     BackgroundColorProps {
-  children?: ReactNode;
+  children?: JSX.Element | string;
   borderRadius?: string;
   outline?: boolean;
   onClick?: () => void | Promise<undefined>;
