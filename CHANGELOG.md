@@ -1,3 +1,27 @@
+## [1.13.0](https://github.com/hitmaizer/radflix/compare/v1.12.1...v1.13.0) (2022-05-21)
+
+
+### ✂️ Refactor
+
+* **browse:** text cmpnent instead of string inside btn compont ([5837092](https://github.com/hitmaizer/radflix/commit/583709214aa8eb23f564860d64e266f4e2afd420))
+* **button:** updates button component types file ([aac3418](https://github.com/hitmaizer/radflix/commit/aac3418d9be76d1ae3916926ae3f3c018c07ae1a))
+* **homepage:** adds text component inside button component render ([390a91a](https://github.com/hitmaizer/radflix/commit/390a91aeac936be471b148231fc48462a1f7cf7f))
+* **input:** wraps children inside react fragment ([0064aff](https://github.com/hitmaizer/radflix/commit/0064aff55e6cd7623890b828dd3d61fa69eb2cbb))
+* **login:** txt cmpnt isntead of string on btn ([660ee69](https://github.com/hitmaizer/radflix/commit/660ee6925cfd2264b0be48a6454a1cf7143e4011))
+
+
+### 🚀 Features
+
+* **player:** adds useActive custom hook file ([8f80823](https://github.com/hitmaizer/radflix/commit/8f8082388f9ea70a10cd14fa9ce04d1d1869591d))
+* **player:** conditionally renders back btn based on activity ([4dd3d8b](https://github.com/hitmaizer/radflix/commit/4dd3d8be30287fff2aba41541c8a5cefaac3fded))
+* **skaters:** adds revalidate after 5h to getStaticProps ([9856f10](https://github.com/hitmaizer/radflix/commit/9856f106df04edcf83e7f55dfca54855aeb4bcae))
+* **ui:** updates types versions of react and react dom ([ff76c62](https://github.com/hitmaizer/radflix/commit/ff76c6282bff9628e8d96d5a8c04cd34b36c18ee))
+* **watch:** adds revalidate after 5h to getStaticProps ([1d3eb27](https://github.com/hitmaizer/radflix/commit/1d3eb271272f85bb2d0b92a4c9ed86e417dbbe44))
+* **web:** adds useActive custom hook file ([8700dbc](https://github.com/hitmaizer/radflix/commit/8700dbc7deb0f321603e84fa00add9f3156161d0))
+* **web:** next app checks for type errors on build ([b3f114f](https://github.com/hitmaizer/radflix/commit/b3f114fe27a2061c6556a5364d227e6d7bcc2a5a))
+* **web:** updates types version of react and react dom ([3151bbd](https://github.com/hitmaizer/radflix/commit/3151bbd1e1a1ae9364cf2552091eabb9895fcaf3))
+* **yarn.lock:** reset yarn lock file ([b971ce9](https://github.com/hitmaizer/radflix/commit/b971ce908bc6cd17275e2b474b12d520ad8e4ebe))
+
 ### [1.12.1](https://github.com/hitmaizer/radflix/compare/v1.12.0...v1.12.1) (2022-05-20)
 
 
