@@ -15,7 +15,7 @@ export const Card = styled.div<ImageCardProps>`
   display: inline-block;
   cursor: pointer;
   transition: all 300ms 0ms ease;
-  min-height: 200px;
+  min-height: 100px;
   position: relative;
 
   &:hover {
