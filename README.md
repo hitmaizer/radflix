@@ -1,8 +1,12 @@
 # Radflix 
 
-Radflix is a simple Netflix clone, but it's themed around extreme sports, to create a extreme sports movies hub. 
-There's Skateboarding, Snowboarding, Surf, BMX and Surf movies.
-This app was created, not only as a way to practice my skills, but also to simulate a professional working enviroment.
+Radflix is a simple Netflix clone, but it's themed around extreme sports, to create an extreme sports movies hub.<br> 
+There are Skateboarding, Snowboarding, Surf, BMX, and Surfing movies.<br> 
+This app was created, not only as a way to practice my skills but also to simulate a professional work 
+environment.
+WIP.
+
+![radflix](https://user-images.githubusercontent.com/58346965/170453957-57a5b6d3-d636-4ec6-9eb1-fa1a5ecaf5e6.png)
 
 ## What's inside?
 
@@ -32,6 +36,7 @@ This monorepo uses some additional tools:
 
 The Frontend is a [Next.js](https://nextjs.org) app with [TypeScript](https://www.typescriptlang.org/), using [NextAuth.js](https://next-auth.js.org/) for authentication with Google Provider, handles state with [Redux Toolkit](https://redux-toolkit.js.org/) and data fetching is done mostly with [axios](https://axios-http.com/).<br>
 Styling is done with CSS-in-JS's library [styled-components](https://styled-components.com/), [styled-system](https://styled-system.com/), [styled-icons](https://styled-icons.dev/) and some [Radix](https://www.radix-ui.com/) primitives.
+It's currently hosted on [Vercel](https://vercel.com/).
 
 ## Backend
 
