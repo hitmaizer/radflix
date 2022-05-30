@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         <meta charSet="utf-8" />
         <meta
           property="og:image"
-          content="https://res.cloudinary.com/radflix-cms/image/upload/v1652869673/radflix_logo_29b2ec50ff.png?updated_at=2022-05-18T11:27:56.260Z"
+          content="https://i.ibb.co/BtJj682/seo-thumbnail.png"
         />
         <meta
           property="og:description"
