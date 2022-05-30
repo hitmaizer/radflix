@@ -1,5 +1,6 @@
 import { FC, useState, useEffect } from 'react';
 
+import Head from '@components/Head';
 import SEO from '@config/next-seo';
 import { SessionProvider } from 'next-auth/react';
 import { DefaultSeo } from 'next-seo';
@@ -40,8 +41,10 @@ const MyApp: FC<AppProps> = ({
               dangerouslySetAllPagesToNoIndex
               {...SEO}
             />
-            <GlobalStyle />
-            {mounted && <Component {...pageProps} />}
+            <Head>
+              <GlobalStyle />
+              {mounted && <Component {...pageProps} />}
+            </Head>
           </ThemeProvider>
         </Provider>
       </SessionProvider>
