@@ -1,3 +1,16 @@
+## [1.13.1](https://github.com/hitmaizer/radflix/compare/v1.13.0...v1.13.1) (2022-05-30)
+
+
+### ✂️ Refactor
+
+* **README:** adds screenshot to README ([00ed372](https://github.com/hitmaizer/radflix/commit/00ed372a0138461e171c9e5fbe782a9f0c0349e5))
+* **README:** updates README file ([ed12c62](https://github.com/hitmaizer/radflix/commit/ed12c624a119988161c5893bead10131b566b717))
+
+
+### 🐛 Fixes
+
+* **ImageCard:** fixes ImageCard sm display sizing ([52bd829](https://github.com/hitmaizer/radflix/commit/52bd829e1a85c7bf56e5fd8b94784a8d594a4f52))
+
 ## [1.13.0](https://github.com/hitmaizer/radflix/compare/v1.12.1...v1.13.0) (2022-05-21)
 
 
