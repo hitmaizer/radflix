@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "snowboard_docs",
+  "info": {
+    "singularName": "snowboard-doc",
+    "pluralName": "snowboard-docs",
+    "displayName": "snowboard-doc"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "movieLink": {
+      "type": "string",
+      "required": true
+    },
+    "poster": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "releaseYear": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

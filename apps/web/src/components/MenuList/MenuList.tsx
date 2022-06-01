@@ -14,8 +14,8 @@ const MenuList = ({ children }: MenuListProps) => {
       <Link href="/documentaries" passHref>
         <Button text>Documentaries</Button>
       </Link>
-      <Link href="/highlights" passHref>
-        <Button text>Highlights</Button>
+      <Link href="/brands" passHref>
+        <Button text>Brands</Button>
       </Link>
       {children}
     </S.MenuList>
