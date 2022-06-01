@@ -1,3 +1,23 @@
+## [1.15.0](https://github.com/hitmaizer/radflix/compare/v1.14.0...v1.15.0) (2022-06-01)
+
+
+### ✂️ Refactor
+
+* **MenuList:** updates MenuList item to brands ([af1a36b](https://github.com/hitmaizer/radflix/commit/af1a36bea4b04c9d002a2b107c1430bb1d34f21a))
+
+
+### 🚀 Features
+
+* **cms:** adds all-doc content type files ([ee74765](https://github.com/hitmaizer/radflix/commit/ee74765395b7600be551d2d6de651da357467528))
+* **cms:** adds berric content type files ([8e8dd02](https://github.com/hitmaizer/radflix/commit/8e8dd026cf3e6d24e3be3c7458e2ea1489946fd4))
+* **cms:** adds bmx-doc content type files ([959871a](https://github.com/hitmaizer/radflix/commit/959871ac2928d20c80c8a35db6761885217a68e8))
+* **cms:** adds braille content type files ([540b56d](https://github.com/hitmaizer/radflix/commit/540b56d9098d568256b9198e1e7f673d5113e9dd))
+* **cms:** adds skate-doc collection type files ([2b2581d](https://github.com/hitmaizer/radflix/commit/2b2581df10a7a89452ed8f4c6494b54364b2a714))
+* **cms:** adds snowboard-doc content type files ([7cb59ae](https://github.com/hitmaizer/radflix/commit/7cb59aed4de1ad0295cce82bd2e307f76d7b6850))
+* **cms:** adds surf-doc content type files ([225ab95](https://github.com/hitmaizer/radflix/commit/225ab955f1a1abfa05ed7ef6120880f0e3c89504))
+* **cms:** adds transworld content type files ([440fe7f](https://github.com/hitmaizer/radflix/commit/440fe7f8052c21aa5561448ce783f581c6e76135))
+* **cms:** adds trasher content type files ([29d89d6](https://github.com/hitmaizer/radflix/commit/29d89d65d0ed46ef2f4438cf7be30103b84d30fc))
+
 ## [1.14.0](https://github.com/hitmaizer/radflix/compare/v1.13.1...v1.14.0) (2022-05-30)
 
 
