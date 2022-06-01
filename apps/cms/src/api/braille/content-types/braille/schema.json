@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brailles",
+  "info": {
+    "singularName": "braille",
+    "pluralName": "brailles",
+    "displayName": "Braille"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "movieLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "poster": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "releaseYear": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

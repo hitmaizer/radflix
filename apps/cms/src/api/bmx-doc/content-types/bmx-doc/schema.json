@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bmx_docs",
+  "info": {
+    "singularName": "bmx-doc",
+    "pluralName": "bmx-docs",
+    "displayName": "bmx-doc"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "movieLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "poster": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "releaseYear": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}
