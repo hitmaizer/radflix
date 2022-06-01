@@ -1,3 +1,17 @@
+## [1.14.0](https://github.com/hitmaizer/radflix/compare/v1.13.1...v1.14.0) (2022-05-30)
+
+
+### 🐛 Fixes
+
+* **Head:** fixes thumbnail ratio of image ([ba8a8ea](https://github.com/hitmaizer/radflix/commit/ba8a8ea5b959eedcee3277545ec6da79b57ae699))
+
+
+### 🚀 Features
+
+* **Head:** adds Head compoientn index file ([24d275f](https://github.com/hitmaizer/radflix/commit/24d275f2f7e30e7b1a774c66621ef9b3a1fa9c63))
+* **Head:** adds Head component with description and image ([4fbbeb5](https://github.com/hitmaizer/radflix/commit/4fbbeb57f66479988a149ead9e4ed7006a7a9102))
+* **web:** app wrapper around Head component ([37c7a66](https://github.com/hitmaizer/radflix/commit/37c7a66dd358211f352f28ce93142d9e60adf5b1))
+
 ## [1.13.1](https://github.com/hitmaizer/radflix/compare/v1.13.0...v1.13.1) (2022-05-30)
 
 
