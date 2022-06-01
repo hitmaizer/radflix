@@ -1,3 +1,10 @@
+## [1.15.1](https://github.com/hitmaizer/radflix/compare/v1.15.0...v1.15.1) (2022-06-01)
+
+
+### 🐛 Fixes
+
+* **cms:** fixes admin pannel ([428bfb5](https://github.com/hitmaizer/radflix/commit/428bfb5d658cbf474bc65f0e73a3662bb4c91400))
+
 ## [1.15.0](https://github.com/hitmaizer/radflix/compare/v1.14.0...v1.15.0) (2022-06-01)
 
 
