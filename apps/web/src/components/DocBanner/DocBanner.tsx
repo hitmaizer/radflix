@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'src/axios/instance';
-import requests from 'src/axios/requests';
-import { setError } from 'src/redux/error';
-import { setLoading } from 'src/redux/loading';
+import { BannerContent } from '@components/Banner/Banner.styles';
+import Link from 'next/link';
+import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 
-import { Heading } from '@ui';
+import { Button, Heading, Stack, Text } from '@ui';
 
 import * as S from './DocBanner.styles';
 import { DocBannerProps } from './DocBanner.types';
@@ -29,40 +27,40 @@ export interface DocObj {
   };
   slug: string;
   title: string;
+  description: string;
 }
 
-const DocBanner = ({ children, imgSrc, ...rest }: DocBannerProps) => {
-  const [movie, setMovie] = useState<DocObj>();
+const DocBanner = ({
+  children,
+  imgSrc,
+  title,
+  slug,
+  description,
+  ...rest
+}: DocBannerProps) => {
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    async function fetchData() {
-      dispatch(setLoading(true));
-      const req = await axios
-        .get(requests.allDocs)
-        .then((res) =>
-          setMovie(
-            res.data.data[Math.floor(Math.random() * res.data.data.length)]
-          )
-        )
-        .catch((err) => {
-          dispatch(setError(err));
-        })
-        .finally(() => {
-          dispatch(setLoading(false));
-        });
-      return req;
-    }
-    fetchData();
-  }, []);
 
   return (
     <>
       <S.DocBanner {...rest}>
-        <Heading color="#fff">{movie?.title}</Heading>
         <S.SImage src={imgSrc!} layout="fill" />
+        <S.Overlay />
+        <BannerContent>
+          <Heading color="white" fontWeight="bold">
+            {title}
+          </Heading>
+          <Stack display="flex" gridGap={4}>
+            <Link href={`/watch/${slug}`}>
+              <Button banner>Play</Button>
+            </Link>
+            <Button banner>My List</Button>
+          </Stack>
+          <Text color="white" lineHeight={1.5}>{`${description?.substring(
+            0,
+            150
+          )}...`}</Text>
+        </BannerContent>
         {children}
       </S.DocBanner>
       {loading && <p>Loading ...</p>}
