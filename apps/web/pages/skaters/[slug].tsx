@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ParsedUrlQuery } from 'querystring';
 
+import BackBtn from '@components/BackBtn';
 import { SkaterObj } from '@components/SkaterRow/SkaterRow.types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
@@ -77,6 +78,7 @@ const Watch = ({ skater }: Skater) => {
   return (
     <Stack>
       <Player vidSrc={skater.link} />
+      <BackBtn />
     </Stack>
   );
 };

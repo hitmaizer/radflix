@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ParsedUrlQuery } from 'querystring';
 
+import BackBtn from '@components/BackBtn';
 import { DocObj } from '@components/DocBanner/DocBanner';
 import axios from 'axios';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -65,6 +66,7 @@ const Docs = ({ doc }: Doc) => {
   return (
     <Stack>
       <Player vidSrc={doc.movieLink} />
+      <BackBtn />
     </Stack>
   );
 };
