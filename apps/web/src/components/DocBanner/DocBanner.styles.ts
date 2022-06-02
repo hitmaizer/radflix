@@ -13,6 +13,15 @@ export const SImage = styled(Image)`
   left: 0;
   object-fit: cover;
   object-position: top;
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  top: 0;
+  left: 0;
+  background-size: cover;
   background: linear-gradient(
     180deg,
     rgba(23, 23, 23, 1) 9%,
