@@ -1,6 +1,7 @@
 import React from 'react';
 
 import DocBanner from '@components/DocBanner';
+import DocRow from '@components/DocRow';
 import { GetServerSideProps } from 'next';
 import { getSession, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
@@ -12,7 +13,6 @@ import { RootState } from 'src/redux/store';
 import { Browse, MenuList } from '@components';
 import {
   Button,
-  Heading,
   Loading,
   Logged,
   Logo,
@@ -31,35 +31,6 @@ const index = ({ movie }: any) => {
     return (
       <>
         <Browse>
-          {loading && (
-            <>
-              <Loading
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                ml={10}
-              >
-                <Skeleton heading />
-                <Stack display="flex" gridGap="16px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                </Stack>
-                <Skeleton heading />
-                <Stack display="flex" gridGap="16px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                </Stack>
-              </Loading>
-            </>
-          )}
           <Navbar browse>
             <Logo imgSrc="radflix-logo.png" width="100px" />
             <MenuList />
@@ -81,7 +52,48 @@ const index = ({ movie }: any) => {
             slug={movie.slug}
             description={movie.description}
           />
-          <Heading color="#fff">Aqui vai tar a pagina</Heading>
+          {loading && (
+            <>
+              <Loading
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                ml={10}
+              >
+                <Skeleton heading />
+                <Stack display="flex" gridGap="16px">
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                  <Skeleton card />
+                </Stack>
+              </Loading>
+            </>
+          )}
+          <Stack display="flex" vertical gridGap="40px">
+            <DocRow
+              title="Skateboarding Documentaries"
+              fetchURL={requests.skateDocs}
+              square
+            />
+            <DocRow
+              title="Surf Documentaries"
+              fetchURL={requests.surfDocs}
+              square
+            />
+            <DocRow
+              title="BMX Documentaries"
+              fetchURL={requests.bmxDocs}
+              square
+            />
+            <DocRow
+              title="Snowboard Documentaries"
+              fetchURL={requests.snowDocs}
+              square
+            />
+          </Stack>
         </Browse>
       </>
     );
