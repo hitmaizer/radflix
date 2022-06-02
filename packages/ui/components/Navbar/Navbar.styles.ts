@@ -13,7 +13,7 @@ export const Navbar = styled.div<NavbarProps>`
   align-items: center;
   padding-inline: 56px;
   background-color: transparent;
-  z-index: 1;
+  z-index: 3;
   transition: all 300ms ease;
   padding: 16px 32px;
   ${({ show }) =>

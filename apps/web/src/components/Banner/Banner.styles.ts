@@ -9,6 +9,7 @@ export const Banner = styled.header`
 `;
 
 export const BannerContent = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
