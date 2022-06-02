@@ -1,3 +1,75 @@
+## [1.18.0](https://github.com/hitmaizer/radflix/compare/v1.17.0...v1.18.0) (2022-06-02)
+
+
+### ✂️ Refactor
+
+* **BackBtn:** updates all players to use new next/router BackBtn ([fbe481a](https://github.com/hitmaizer/radflix/commit/fbe481ad4d9f612242a8bfd6a41182e5a821f017))
+
+
+### 🚀 Features
+
+* **BackBtn:** adds BackBtn component index file ([8e81ccc](https://github.com/hitmaizer/radflix/commit/8e81ccca38affbcdf54b184afbd0d7f89bfddb40))
+* **BackBtn:** adds BackBtn component markup file ([91536e2](https://github.com/hitmaizer/radflix/commit/91536e20d1366e8f931f00f606624c24b72250dd))
+* **BAckBtn:** adds BackBtn component prop types file ([94392a9](https://github.com/hitmaizer/radflix/commit/94392a92c7059a60e3c2aafdb334b61d811da967))
+* **BackBtn:** adds BackBtn component styles file ([5b63512](https://github.com/hitmaizer/radflix/commit/5b635129f84d083e136d1c118fdf3ceeec7fd0c1))
+* **docs:** adds docs dynamic routes ([ae66fef](https://github.com/hitmaizer/radflix/commit/ae66fefcf13febd3c7e63047f48e961e82af0b6e))
+* **documentaries:** adds Doc interface to fix any type ([43aced9](https://github.com/hitmaizer/radflix/commit/43aced904a52386751be4831b9b60081f307bd79))
+* **Player:** deletes old BackBtn from player component ([48ad478](https://github.com/hitmaizer/radflix/commit/48ad478e7a11bd2c3e09c3d6246f2f281cf40266))
+* **web:** adds necessary icon pack ([84172e7](https://github.com/hitmaizer/radflix/commit/84172e7502f98cbe1e16792f8696945ed9a6c749))
+
+## [1.17.0](https://github.com/hitmaizer/radflix/compare/v1.16.0...v1.17.0) (2022-06-02)
+
+
+### 🚀 Features
+
+* **cms:** re-install sharp ([77e11da](https://github.com/hitmaizer/radflix/commit/77e11da2b97151acb85a2597f576f6d13e242e9c))
+
+## [1.16.0](https://github.com/hitmaizer/radflix/compare/v1.15.1...v1.16.0) (2022-06-02)
+
+
+### ✂️ Refactor
+
+* **cms:** updates all-doc findOne method to search by slug ([ada3415](https://github.com/hitmaizer/radflix/commit/ada341589a59b936d49b006e2221eb8b6188b40e))
+* **cms:** updates berric findOne method to search by slug ([e0bc464](https://github.com/hitmaizer/radflix/commit/e0bc4649465b4c10827c728aab31ea877e6d4eb1))
+* **cms:** updates bmx-doc findOne to search by slug ([5b4ae78](https://github.com/hitmaizer/radflix/commit/5b4ae780e06229f56c314d37c9c5ce2dbb85978f))
+* **cms:** updates braille findOne to search by slug ([29b82d0](https://github.com/hitmaizer/radflix/commit/29b82d05e1a7281aad37763d9458a90a747c8f33))
+* **cms:** updates skate-doc findOne to search by slug ([36c8903](https://github.com/hitmaizer/radflix/commit/36c89036e4e7228569a6f4d0b7b0aa950247eb6b))
+* **cms:** updates snowboard-docs findOne to search by slug ([ce51207](https://github.com/hitmaizer/radflix/commit/ce512070529262eff774e67026cc17f6b8030469))
+* **cms:** updates surf-doc findONe to search by slug ([695839a](https://github.com/hitmaizer/radflix/commit/695839a99e347db76cbb9d15772ea4bcebffacd7))
+* **cms:** updates transworld findOne to search by slug ([c97eff5](https://github.com/hitmaizer/radflix/commit/c97eff5f9ddc7d83173fee005bc72c1e9c9f2857))
+* **cms:** updates trasher findOne to search by slug ([6353bea](https://github.com/hitmaizer/radflix/commit/6353beaec38542903a5a21a5d519a62103f70350))
+* **DocBanner:** updates DocBanner to receive bannerimg from GSP ([1af2d50](https://github.com/hitmaizer/radflix/commit/1af2d50c2b1ba79a08402286d1214f8a6d413a7e))
+* **DocBanner:** updates play button to /docs route ([9d57b1e](https://github.com/hitmaizer/radflix/commit/9d57b1efe5d60aec9702d14fb080d1066640eac2))
+
+
+### 🎨 Style
+
+* **Banner:** adds position relative to Banner component ([2f23fd0](https://github.com/hitmaizer/radflix/commit/2f23fd0e9834beb032a5558ec427de39df9950e3))
+* **Navbar:** updates Navbar z-index to 3 ([e88aeaa](https://github.com/hitmaizer/radflix/commit/e88aeaa513c227b2643eae71a176dbcec4822af6))
+
+
+### 🚀 Features
+
+* **axios:** updates requests Obj ([4268d0a](https://github.com/hitmaizer/radflix/commit/4268d0a86844b109b2101a040601ae0c377d52c4))
+* **cms:** adds sharp fresh install ([616f53d](https://github.com/hitmaizer/radflix/commit/616f53d2a75c7f41c26dacc4126bc3e4eb3fb9ec))
+* **cms:** adds sharp linux ([3b40b6f](https://github.com/hitmaizer/radflix/commit/3b40b6f57a6c4f4d1d26c00b7ad0ffaae20c545d))
+* **DocBanner:** adds DocBanner component index file ([6b304c6](https://github.com/hitmaizer/radflix/commit/6b304c660c7f56688cf26c460817f47d83c9973c))
+* **DocBanner:** adds DocBanner component markup file ([50119ae](https://github.com/hitmaizer/radflix/commit/50119ae368567ff60cedb9a4a0f1ff4e7e26d617))
+* **DocBanner:** adds DocBanner component styles file ([9cd19e2](https://github.com/hitmaizer/radflix/commit/9cd19e2d2eeaa4524f0c4b1564acab9ffc0f5058))
+* **DocBanner:** adds DocBanner prop types file ([02bbfe1](https://github.com/hitmaizer/radflix/commit/02bbfe1cab812defd2d8a5f4f505c856b1beda96))
+* **DocBanner:** adds Overlay styled-component ([1cf0e8b](https://github.com/hitmaizer/radflix/commit/1cf0e8bfe0e3c4cc31a2bff2ca42189cdce2c8be))
+* **DocBanner:** removes fetch logic, adds docBanner markup ([1f72022](https://github.com/hitmaizer/radflix/commit/1f72022b448991a4d444789649d6a3dc1e06e0e3))
+* **DocBanner:** updates DocBanner types file ([89cc6e8](https://github.com/hitmaizer/radflix/commit/89cc6e8d6eec2e889a80d5b2bef66ca739c0cebc))
+* **DocRow:** adds DocRow component index file ([e4b7dd8](https://github.com/hitmaizer/radflix/commit/e4b7dd83fcef63c1e44d320628ec4afb2c237813))
+* **DocRow:** adds DocRow component markup file ([5491413](https://github.com/hitmaizer/radflix/commit/5491413ed4cbc9e698d18340c19060175a94a7d1))
+* **DocRow:** adds DocRow component style file ([18f87d1](https://github.com/hitmaizer/radflix/commit/18f87d1bc2c713b6ce7f0e0569ee25f3757faec5))
+* **DocRow:** adds DocRow component types file ([43b7656](https://github.com/hitmaizer/radflix/commit/43b76566380645df5d80f79100d72fa864677a55))
+* **documentaries:** adds Documentaries page markup ([57f08af](https://github.com/hitmaizer/radflix/commit/57f08afb38f352994d35360421b7db175d29b775))
+* **documentaries:** deletes debugging console log ([e21adb3](https://github.com/hitmaizer/radflix/commit/e21adb3ab2e537a0bb2127ec87ae1f531a945767))
+* **documentaries:** getStaticProps to DocBanner component ([38f20aa](https://github.com/hitmaizer/radflix/commit/38f20aa462ccbc0a2f14c401aa4d17ebe93c5e72))
+* **MenuList:** updates categories button to link to browse ([dda4bdd](https://github.com/hitmaizer/radflix/commit/dda4bdd0fa9e2567977f64ef9b90d03a17546068))
+* **web:** adds index documentaries page ([6644037](https://github.com/hitmaizer/radflix/commit/6644037ec46b2aca02e99dca566e93597fc56dc6))
+
 ## [1.15.1](https://github.com/hitmaizer/radflix/compare/v1.15.0...v1.15.1) (2022-06-01)
 
 
