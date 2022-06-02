@@ -1,3 +1,22 @@
+## [1.18.0](https://github.com/hitmaizer/radflix/compare/v1.17.0...v1.18.0) (2022-06-02)
+
+
+### ✂️ Refactor
+
+* **BackBtn:** updates all players to use new next/router BackBtn ([fbe481a](https://github.com/hitmaizer/radflix/commit/fbe481ad4d9f612242a8bfd6a41182e5a821f017))
+
+
+### 🚀 Features
+
+* **BackBtn:** adds BackBtn component index file ([8e81ccc](https://github.com/hitmaizer/radflix/commit/8e81ccca38affbcdf54b184afbd0d7f89bfddb40))
+* **BackBtn:** adds BackBtn component markup file ([91536e2](https://github.com/hitmaizer/radflix/commit/91536e20d1366e8f931f00f606624c24b72250dd))
+* **BAckBtn:** adds BackBtn component prop types file ([94392a9](https://github.com/hitmaizer/radflix/commit/94392a92c7059a60e3c2aafdb334b61d811da967))
+* **BackBtn:** adds BackBtn component styles file ([5b63512](https://github.com/hitmaizer/radflix/commit/5b635129f84d083e136d1c118fdf3ceeec7fd0c1))
+* **docs:** adds docs dynamic routes ([ae66fef](https://github.com/hitmaizer/radflix/commit/ae66fefcf13febd3c7e63047f48e961e82af0b6e))
+* **documentaries:** adds Doc interface to fix any type ([43aced9](https://github.com/hitmaizer/radflix/commit/43aced904a52386751be4831b9b60081f307bd79))
+* **Player:** deletes old BackBtn from player component ([48ad478](https://github.com/hitmaizer/radflix/commit/48ad478e7a11bd2c3e09c3d6246f2f281cf40266))
+* **web:** adds necessary icon pack ([84172e7](https://github.com/hitmaizer/radflix/commit/84172e7502f98cbe1e16792f8696945ed9a6c749))
+
 ## [1.17.0](https://github.com/hitmaizer/radflix/compare/v1.16.0...v1.17.0) (2022-06-02)
 
 
