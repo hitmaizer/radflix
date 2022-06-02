@@ -51,7 +51,7 @@ const DocBanner = ({
             {title}
           </Heading>
           <Stack display="flex" gridGap={4}>
-            <Link href={`/watch/${slug}`}>
+            <Link href={`/docs/${slug}`}>
               <Button banner>Play</Button>
             </Link>
             <Button banner>My List</Button>
