@@ -31,7 +31,7 @@ export interface DocObj {
   title: string;
 }
 
-const DocBanner = ({ children, ...rest }: DocBannerProps) => {
+const DocBanner = ({ children, imgSrc, ...rest }: DocBannerProps) => {
   const [movie, setMovie] = useState<DocObj>();
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
@@ -54,7 +54,6 @@ const DocBanner = ({ children, ...rest }: DocBannerProps) => {
           dispatch(setLoading(false));
         });
       return req;
-      console.log(req);
     }
     fetchData();
   }, []);
@@ -63,7 +62,7 @@ const DocBanner = ({ children, ...rest }: DocBannerProps) => {
     <>
       <S.DocBanner {...rest}>
         <Heading color="#fff">{movie?.title}</Heading>
-        <S.SImage src={movie?.backdrop.data[0].url!} layout="fill" />
+        <S.SImage src={imgSrc!} layout="fill" />
         {children}
       </S.DocBanner>
       {loading && <p>Loading ...</p>}
