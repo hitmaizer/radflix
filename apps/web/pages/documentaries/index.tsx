@@ -2,14 +2,25 @@ import React from 'react';
 
 import DocBanner from '@components/DocBanner';
 import { GetServerSideProps } from 'next';
-import { getSession, useSession } from 'next-auth/react';
+import { getSession, signOut, useSession } from 'next-auth/react';
+import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import axios from 'src/axios/instance';
 import requests from 'src/axios/requests';
 import { RootState } from 'src/redux/store';
 
-import { Browse } from '@components';
-import { Heading, Loading, Skeleton, Stack } from '@ui';
+import { Browse, MenuList } from '@components';
+import {
+  Button,
+  Heading,
+  Loading,
+  Logged,
+  Logo,
+  Navbar,
+  Skeleton,
+  Stack,
+  Text,
+} from '@ui';
 
 const index = ({ movie }: any) => {
   const { data: session } = useSession();
@@ -49,7 +60,27 @@ const index = ({ movie }: any) => {
               </Loading>
             </>
           )}
-          <DocBanner imgSrc={movie.backdrop.data[0].url} />
+          <Navbar browse>
+            <Logo imgSrc="radflix-logo.png" width="100px" />
+            <MenuList />
+            <Logged
+              imgSrc="/placeholder-avatar.jpg"
+              display="flex"
+              alignItems="center"
+            >
+              <Link href="/" passHref>
+                <Button text onClick={() => signOut()}>
+                  <Text>Logout from Radflix</Text>
+                </Button>
+              </Link>
+            </Logged>
+          </Navbar>
+          <DocBanner
+            imgSrc={movie.backdrop.data[0].url}
+            title={movie.title}
+            slug={movie.slug}
+            description={movie.description}
+          />
           <Heading color="#fff">Aqui vai tar a pagina</Heading>
         </Browse>
       </>
