@@ -3,44 +3,42 @@ import React from 'react';
 import { ParsedUrlQuery } from 'querystring';
 
 import BackBtn from '@components/BackBtn';
-import { SkaterObj } from '@components/SkaterRow/SkaterRow.types';
+import { DocObj } from '@components/DocBanner/DocBanner';
+import axios from 'axios';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
 
 import { Browse } from '@components';
 import { Loading, Player, Skeleton, Stack } from '@ui';
 
-import axios from '../../src/axios/instance';
-
 interface IParams extends ParsedUrlQuery {
   slug: string;
 }
 
-interface Skater {
-  skater: {
-    id: number;
-    name: string;
-    link: string;
-    slug: string;
-    bio: string;
-    poster: {
-      data: {
-        url: string;
-        blurhash: string;
-      };
-    };
+interface Doc {
+  doc: {
     backdrop: {
       data: {
         url: string;
         blurhash: string;
       };
     };
+    id: number;
+    movieLink: string;
+    poster: {
+      data: {
+        url: string;
+        blurhash: string;
+      };
+    };
+    slug: string;
+    title: string;
+    description: string;
   };
 }
 
-const Watch = ({ skater }: Skater) => {
+const Docs = ({ doc }: Doc) => {
   const { isFallback } = useRouter();
-
   if (isFallback) {
     return (
       <>
@@ -60,52 +58,44 @@ const Watch = ({ skater }: Skater) => {
               <Skeleton card />
               <Skeleton card />
             </Stack>
-            <Skeleton heading />
-            <Stack display="flex" gridGap="16px">
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-              <Skeleton card />
-            </Stack>
           </Loading>
         </Browse>
       </>
     );
   }
-
   return (
     <Stack>
-      <Player vidSrc={skater.link} />
+      <Player vidSrc={doc.movieLink} />
       <BackBtn />
     </Stack>
   );
 };
 
-export default Watch;
+export default Docs;
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams;
   const response = await axios.get(
-    `https://radflix-cms.herokuapp.com/api/skaters/${slug}`
+    `https://radflix-cms.herokuapp.com/api/all-docs/${slug}`
   );
   const data = await response.data;
 
   return {
     props: {
-      skater: data.data,
+      doc: data.data,
     },
     revalidate: 18000,
   };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch('https://radflix-cms.herokuapp.com/api/skaters');
+  const response = await fetch(
+    'https://radflix-cms.herokuapp.com/api/all-docs'
+  );
   const data = await response.json();
 
-  const paths = data.data.map((skater: SkaterObj) => {
-    return { params: { slug: skater.slug } };
+  const paths = data.data.map((doc: DocObj) => {
+    return { params: { slug: doc.slug } };
   });
 
   return {

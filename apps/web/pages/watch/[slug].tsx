@@ -2,6 +2,7 @@ import React from 'react';
 
 import { ParsedUrlQuery } from 'querystring';
 
+import BackBtn from '@components/BackBtn';
 import { MovieObj } from '@components/Banner/Banner.types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
@@ -72,6 +73,7 @@ const Watch = ({ movie }: Movie) => {
   return (
     <Stack>
       <Player vidSrc={movie.movieLink} />
+      <BackBtn />
     </Stack>
   );
 };
