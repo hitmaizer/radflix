@@ -8,7 +8,7 @@ import { MenuListProps } from './MenuList.types';
 const MenuList = ({ children }: MenuListProps) => {
   return (
     <S.MenuList>
-      <Link href="/categories" passHref>
+      <Link href="/browse" passHref>
         <Button text>Categories</Button>
       </Link>
       <Link href="/documentaries" passHref>
