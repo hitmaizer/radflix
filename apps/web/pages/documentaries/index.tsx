@@ -12,7 +12,6 @@ import { Browse } from '@components';
 import { Heading, Loading, Skeleton, Stack } from '@ui';
 
 const index = ({ movie }: any) => {
-  console.log(movie);
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
 
