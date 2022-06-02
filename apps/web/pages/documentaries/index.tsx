@@ -22,7 +22,29 @@ import {
   Text,
 } from '@ui';
 
-const index = ({ movie }: any) => {
+interface Doc {
+  doc: {
+    backdrop: {
+      data: {
+        url: string;
+        blurhash: string;
+      };
+    };
+    id: number;
+    movieLink: string;
+    poster: {
+      data: {
+        url: string;
+        blurhash: string;
+      };
+    };
+    slug: string;
+    title: string;
+    description: string;
+  };
+}
+
+const index = ({ doc }: Doc) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
 
@@ -47,10 +69,10 @@ const index = ({ movie }: any) => {
             </Logged>
           </Navbar>
           <DocBanner
-            imgSrc={movie.backdrop.data[0].url}
-            title={movie.title}
-            slug={movie.slug}
-            description={movie.description}
+            imgSrc={doc.backdrop.data[0].url}
+            title={doc.title}
+            slug={doc.slug}
+            description={doc.description}
           />
           {loading && (
             <>
@@ -121,7 +143,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       session,
-      movie: data,
+      doc: data,
     },
   };
 };
