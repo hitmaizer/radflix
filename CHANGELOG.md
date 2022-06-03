@@ -1,3 +1,24 @@
+## [1.19.0](https://github.com/hitmaizer/radflix/compare/v1.18.0...v1.19.0) (2022-06-03)
+
+
+### ✂️ Refactor
+
+* **DocBanner:** updates object-position from top to center ([b41f7a1](https://github.com/hitmaizer/radflix/commit/b41f7a17436d270f34269d67f466bfdb462003bd))
+* **MenuList:** updates MenuList component to use LinkText ([339687c](https://github.com/hitmaizer/radflix/commit/339687c8ecfe8e6e69d1f760b44c59ec176eb977))
+
+
+### 🎨 Style
+
+* **Logo:** adds cursor pointer ([90214e8](https://github.com/hitmaizer/radflix/commit/90214e814a862380bbbd319e048f29ebdac93f80))
+
+
+### 🚀 Features
+
+* **Browse:** adds next/link to logo to homepage ([282da52](https://github.com/hitmaizer/radflix/commit/282da52a9e18f8ac77a7560a3666bceecbdcb4a3))
+* **Documentaries:** adds next/link to logo to homepage ([747abcb](https://github.com/hitmaizer/radflix/commit/747abcb68f11c802f6ae4f4f62d7ddb7e603ce81))
+* **LinkText:** adds LinkText component with active styling ([02c4860](https://github.com/hitmaizer/radflix/commit/02c486072052f8dd16748086c920a20c8e79cc8a))
+* **yarn.lock:** updates yarn-lock ([9f754e2](https://github.com/hitmaizer/radflix/commit/9f754e2a32c8c513f2b74c9c16b33296c304dc25))
+
 ## [1.18.0](https://github.com/hitmaizer/radflix/compare/v1.17.0...v1.18.0) (2022-06-02)
 
 
