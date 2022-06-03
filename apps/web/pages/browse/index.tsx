@@ -30,7 +30,11 @@ const index = () => {
       <>
         <Browse>
           <Navbar browse>
-            <Logo imgSrc="radflix-logo.png" width="100px" />
+            <Link href="/" passHref>
+              <a href="dummy">
+                <Logo imgSrc="radflix-logo.png" width="100px" />
+              </a>
+            </Link>
             <MenuList />
             <Logged
               imgSrc="/placeholder-avatar.jpg"
