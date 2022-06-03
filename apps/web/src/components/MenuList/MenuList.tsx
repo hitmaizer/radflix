@@ -1,6 +1,6 @@
-import Link from 'next/link';
+import LinkText from '@components/LinkText';
 
-import { Button } from '@ui';
+import { Stack } from '@ui';
 
 import * as S from './MenuList.styles';
 import { MenuListProps } from './MenuList.types';
@@ -8,15 +8,11 @@ import { MenuListProps } from './MenuList.types';
 const MenuList = ({ children }: MenuListProps) => {
   return (
     <S.MenuList>
-      <Link href="/browse" passHref>
-        <Button text>Categories</Button>
-      </Link>
-      <Link href="/documentaries" passHref>
-        <Button text>Documentaries</Button>
-      </Link>
-      <Link href="/brands" passHref>
-        <Button text>Brands</Button>
-      </Link>
+      <Stack display="flex" gridGap="16px" ml={10}>
+        <LinkText pathName="browse">Categories</LinkText>
+        <LinkText pathName="documentaries">Documentaries</LinkText>
+        <LinkText pathName="brands">Brands</LinkText>
+      </Stack>
       {children}
     </S.MenuList>
   );

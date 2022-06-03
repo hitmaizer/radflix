@@ -12,7 +12,7 @@ export const SImage = styled(Image)`
   top: 0;
   left: 0;
   object-fit: cover;
-  object-position: top;
+  object-position: center;
 `;
 
 export const Overlay = styled.div`
