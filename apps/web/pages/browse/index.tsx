@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
+
 import { Browse, Content, Homepage } from '@components/index';
 import MenuList from '@components/MenuList';
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import axios from 'src/axios/instance';
+import requests from 'src/axios/requests';
+import { setMovies } from 'src/redux/allMovies';
+import { setError } from 'src/redux/error';
+import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 
 import {
@@ -22,6 +29,22 @@ import {
 const index = () => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
+  const movies = useSelector((state: RootState) => state.movies.movies);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchData() {
+      dispatch(setLoading(true));
+      axios
+        .get(requests.allMovies)
+        .then((res) => dispatch(setMovies(res.data?.data)))
+        .catch((err) => dispatch(setError(err)))
+        .finally(() => dispatch(setLoading(false)));
+    }
+    fetchData();
+  }, []);
+
+  console.log(movies);
 
   if (typeof window === 'undefined') return null;
 
