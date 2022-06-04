@@ -46,14 +46,7 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
   return (
     <>
       {!loading && (
-        <S.Row
-          display="flex"
-          flexDirection="column"
-          ml={16}
-          square={square}
-          poster={poster}
-          {...rest}
-        >
+        <S.Row display="flex" flexDirection="column" ml={16} {...rest}>
           <Heading size="2xl" fontWeight="700" color="white" mr="auto">
             {title}
           </Heading>
