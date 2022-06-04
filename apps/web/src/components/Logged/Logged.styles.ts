@@ -42,3 +42,23 @@ export const SearchIcon = styled(Search)`
 export const BellIcon = styled(BellFill)`
   cursor: pointer;
 `;
+
+export const FilterContainer = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+export const Input = styled.input`
+  border: 1px solid ${({ theme }) => theme.colors.gray50};
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.gray50};
+  text-indent: 15px;
+  border-radius: 4px;
+  height: 32px;
+  width: 150px;
+  transition: width 300ms ease;
+  &:focus {
+    width: 400px;
+  }
+`;

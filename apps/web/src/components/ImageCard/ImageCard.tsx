@@ -16,8 +16,6 @@ const Card = ({
           src={imgSrc!}
           alt="placeholder"
           blurDataURL={blurhash}
-          width="100%"
-          height="100%"
           layout="fill"
         />
         {children}

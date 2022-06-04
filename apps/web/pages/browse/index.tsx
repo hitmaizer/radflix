@@ -1,9 +1,17 @@
-import { Browse, Content, Homepage } from '@components/index';
+import { useEffect } from 'react';
+
+import { Browse, Content, Homepage, Logged } from '@components/index';
 import MenuList from '@components/MenuList';
+import Results from '@components/Results';
 import { GetServerSideProps } from 'next';
 import { useSession, getSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import axios from 'src/axios/instance';
+import requests from 'src/axios/requests';
+import { setMovies } from 'src/redux/allMovies';
+import { setError } from 'src/redux/error';
+import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 
 import {
@@ -11,7 +19,6 @@ import {
   Button,
   Heading,
   Loading,
-  Logged,
   Logo,
   Navbar,
   Skeleton,
@@ -22,6 +29,23 @@ import {
 const index = () => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
+  const movies = useSelector((state: RootState) => state.movies.movies);
+  const filteredData = useSelector(
+    (state: RootState) => state.filteredData.filter
+  );
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    async function fetchData() {
+      dispatch(setLoading(true));
+      axios
+        .get(requests.allMovies)
+        .then((res) => dispatch(setMovies(res.data?.data)))
+        .catch((err) => dispatch(setError(err)))
+        .finally(() => dispatch(setLoading(false)));
+    }
+    fetchData();
+  }, []);
 
   if (typeof window === 'undefined') return null;
 
@@ -40,11 +64,14 @@ const index = () => {
               imgSrc="/placeholder-avatar.jpg"
               display="flex"
               alignItems="center"
+              filteredData={movies}
             >
               <Link href="/" passHref>
-                <Button text onClick={() => signOut()}>
-                  <Text>Logout from Radflix</Text>
-                </Button>
+                <a href="dummy">
+                  <Button text onClick={() => signOut()}>
+                    <Text>Logout from Radflix</Text>
+                  </Button>
+                </a>
               </Link>
             </Logged>
           </Navbar>
@@ -77,7 +104,8 @@ const index = () => {
               </Loading>
             </>
           )}
-          <Content />
+          {filteredData.length !== 0 && <Results data={filteredData} square />}
+          {filteredData.length === 0 && <Content />}
         </Browse>
       </>
     );

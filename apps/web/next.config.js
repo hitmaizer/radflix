@@ -31,6 +31,7 @@ module.exports = withTM({
       'm.media-amazon.com',
       'images-na.ssl-images-amazon.com',
       'd28hgpri8am2if.cloudfront.net',
+      'wikiimg.tojsiabtv.com',
     ],
   },
   typescript: {
