@@ -13,6 +13,7 @@
     "@radix-ui/react-hover-card": "^0.1.5",
     "@reduxjs/toolkit": "^1.8.1",
     "@styled-icons/bootstrap": "^10.34.0",
+    "@styled-icons/boxicons-regular": "^10.38.0",
     "@styled-icons/evaicons-solid": "^10.34.0",
     "axios": "^0.27.2",
     "next": "12.1.4",
