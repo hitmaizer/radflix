@@ -10,17 +10,8 @@ import axios from 'src/axios/instance';
 import requests from 'src/axios/requests';
 import { RootState } from 'src/redux/store';
 
-import { Browse, MenuList } from '@components';
-import {
-  Button,
-  Loading,
-  Logged,
-  Logo,
-  Navbar,
-  Skeleton,
-  Stack,
-  Text,
-} from '@ui';
+import { Browse, Logged, MenuList } from '@components';
+import { Button, Loading, Logo, Navbar, Skeleton, Stack, Text } from '@ui';
 
 interface Doc {
   doc: {
