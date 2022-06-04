@@ -1,3 +1,37 @@
+## [1.20.0](https://github.com/hitmaizer/radflix/compare/v1.19.0...v1.20.0) (2022-06-04)
+
+
+### ✂️ Refactor
+
+* **ImageCard:** removes width and height to fix console warning ([814effd](https://github.com/hitmaizer/radflix/commit/814effdf4fdf4ff5891f5db9b3e95cb132c3c701))
+* **redux:** allMovies starts as a empty array ([6882005](https://github.com/hitmaizer/radflix/commit/68820050347bc5af9a2e28cd0eaf5d7154ef2387))
+
+
+### 🚀 Features
+
+* **browse:** adds useEffect to get all movies into movies slice ([40cbd65](https://github.com/hitmaizer/radflix/commit/40cbd65600b73a6caba94c8da463803a2324907f))
+* **browse:** updates render of browse to include results ([36a1bc0](https://github.com/hitmaizer/radflix/commit/36a1bc0023d7f81306931452b21a4e7632be7590))
+* **documentaries:** fetches allDocs + renders results ([4ff3a37](https://github.com/hitmaizer/radflix/commit/4ff3a37d676434e44fde5e91c79976c4346b89ca))
+* **documentaries:** updates Logged component import ([d673595](https://github.com/hitmaizer/radflix/commit/d673595eca2279072338789a733d12df954aa52d))
+* **Logged:** adds missing styled components for filter input ([c981041](https://github.com/hitmaizer/radflix/commit/c9810415052f6077ccc11a9fed0d8850eb98eb45))
+* **Logged:** moves Logged component into next app ([e6667e2](https://github.com/hitmaizer/radflix/commit/e6667e2a8e7939e8a949dc36b66585899e02cfee))
+* **logged:** updates logged location to next app ([a73b8b0](https://github.com/hitmaizer/radflix/commit/a73b8b090bb961cc01ba9c6efded1e1d0c8df064))
+* **Logged:** updates render of logged component adds show state ([4129758](https://github.com/hitmaizer/radflix/commit/4129758c675d260fc10e5e0a2fde8ed58e453d07))
+* **next-config:** updates missing host name for next/image ([3f02dbd](https://github.com/hitmaizer/radflix/commit/3f02dbd892cddfaed801435a11e92c274d8f65db))
+* **package:** adds missing radix and styledicon packages ([e0dac0d](https://github.com/hitmaizer/radflix/commit/e0dac0d3978b6193d9ca71abf6b06f30dd0dac44))
+* **package:** adds missing styled-icons package ([9773d47](https://github.com/hitmaizer/radflix/commit/9773d477db2e21b11ca8d627d5cb64a6257dd384))
+* **redux:** adds allMovies slice ([9f17bab](https://github.com/hitmaizer/radflix/commit/9f17bab1677d82d58ebca88a36e504d94440941a))
+* **redux:** adds docsSlice file ([0a371e1](https://github.com/hitmaizer/radflix/commit/0a371e16d8ba30faa48fdd07f783ea2859f3eaea))
+* **redux:** adds filter slice file ([7990c5f](https://github.com/hitmaizer/radflix/commit/7990c5fe92c0aba8182c466d90ee21d759c43b3e))
+* **redux:** updates redux store to add docsSlice ([28dd9d1](https://github.com/hitmaizer/radflix/commit/28dd9d1a313f4526b8cef0d8810b9fe3cd9c1c43))
+* **redux:** updates store to add allMovies slice ([215b947](https://github.com/hitmaizer/radflix/commit/215b94788981e74b899e83a9df006aaac462a2c8))
+* **redux:** updates store, adds filteredData slice ([7d6245a](https://github.com/hitmaizer/radflix/commit/7d6245adfb458ee92e2c7da799f1a00ed9ad9532))
+* **Results:** adds Results component files ([802e3c6](https://github.com/hitmaizer/radflix/commit/802e3c6fc8447a75958228a95696c50120f9009b))
+* **ResultsDocs:** adds ResultsDocs component files ([93fd2d0](https://github.com/hitmaizer/radflix/commit/93fd2d08d809ceeb2ba1a60dbfa3b0995771fbc7))
+* **Row:** cleanup redundant code ([080d201](https://github.com/hitmaizer/radflix/commit/080d2013ba5a23e34998a95c42cdb07b8c89a2da))
+* **ui:** updates ui components index exports ([443d102](https://github.com/hitmaizer/radflix/commit/443d102cfef739272f82a7050dd0b2d12b30a52c))
+* **web:** updates src components index exports ([032dc4b](https://github.com/hitmaizer/radflix/commit/032dc4b4e667b52fd729e514b048466756b5478d))
+
 ## [1.19.0](https://github.com/hitmaizer/radflix/compare/v1.18.0...v1.19.0) (2022-06-03)
 
 
