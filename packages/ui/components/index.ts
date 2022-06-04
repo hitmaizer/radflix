@@ -5,7 +5,6 @@ export { default as Card } from './Card';
 export { default as Heading } from './Heading';
 export { default as Input } from './Input';
 export { default as Loading } from './Loading';
-export { default as Logged } from './Logged';
 export { default as Login } from './Login';
 export { default as Logo } from './Logo';
 export { default as MenuItem } from './MenuItem';

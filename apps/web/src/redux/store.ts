@@ -1,12 +1,18 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
+import moviesSlice from './allMovies';
+import docsSlice from './docs';
 import errorSlice from './error';
+import filterSlice from './filter';
 import loadingSlice from './loading';
 
 export const store = configureStore({
   reducer: {
     loading: loadingSlice,
     error: errorSlice,
+    movies: moviesSlice,
+    filteredData: filterSlice,
+    docsData: docsSlice,
     // This is where we add reducers.
     // Since we don't have any yet, leave this empty
   },
