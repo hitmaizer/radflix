@@ -1,9 +1,16 @@
+export { default as BackBtn } from './BackBtn';
 export { default as Banner } from './Banner';
 export { default as Browse } from './Browse';
 export { default as Content } from './Content';
+export { default as DocBanner } from './DocBanner';
+export { default as DocRow } from './DocRow';
+export { default as Head } from './Head';
 export { default as Homepage } from './Homepage';
 export { default as ImageCard } from './ImageCard';
+export { default as LinkText } from './LinkText';
+export { default as Logged } from './Logged';
 export { default as MenuList } from './MenuList';
+export { default as Results } from './Results';
 export { default as Row } from './Row';
 export { default as SkaterRow } from './SkaterRow';
 export { default as UnderBanner } from './UnderBanner';
