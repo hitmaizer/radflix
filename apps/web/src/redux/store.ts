@@ -5,6 +5,7 @@ import docsSlice from './docs';
 import errorSlice from './error';
 import filterSlice from './filter';
 import loadingSlice from './loading';
+import skatersSlice from './skaters';
 
 export const store = configureStore({
   reducer: {
@@ -13,6 +14,7 @@ export const store = configureStore({
     movies: moviesSlice,
     filteredData: filterSlice,
     docsData: docsSlice,
+    skaters: skatersSlice,
     // This is where we add reducers.
     // Since we don't have any yet, leave this empty
   },

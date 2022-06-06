@@ -1,15 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import Link from 'next/link';
-import { useSelector, useDispatch } from 'react-redux';
-import { setError } from 'src/redux/error';
-import { setLoading } from 'src/redux/loading';
+import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 
 import { Button, Heading, Stack, Text } from '@ui';
 
-import axios from '../../axios/instance';
-import requests from '../../axios/requests';
 import * as S from './Banner.styles';
 import { BannerProps, MovieObj } from './Banner.types';
 
@@ -17,28 +13,10 @@ const Banner = ({ children, ...rest }: BannerProps) => {
   const [movie, setMovie] = useState<MovieObj>();
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
-  const dispatch = useDispatch();
+  const movies = useSelector((state: RootState) => state.movies.movies);
 
   useEffect(() => {
-    async function fetchData() {
-      dispatch(setLoading(true));
-      const req = await axios
-        .get(requests.allMovies)
-        .then((res) =>
-          setMovie(
-            res.data.data[Math.floor(Math.random() * res.data.data.length)]
-          )
-        )
-        .catch((err) => {
-          dispatch(setError(err));
-        })
-        .finally(() => {
-          dispatch(setLoading(false));
-        });
-
-      return req;
-    }
-    fetchData();
+    setMovie(movies[Math.floor(Math.random() * movies.length)]);
   }, []);
 
   return (
