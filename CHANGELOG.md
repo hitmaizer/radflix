@@ -1,3 +1,35 @@
+## [1.21.0](https://github.com/hitmaizer/radflix/compare/v1.20.0...v1.21.0) (2022-06-06)
+
+
+### ✂️ Refactor
+
+* **Banner:** updates Banner component to use movies state ([bc70b32](https://github.com/hitmaizer/radflix/commit/bc70b327fb7d5c3ce1406853185007b8978c6314))
+* **browse:** updates movies to getStaticProps ([0b81d3e](https://github.com/hitmaizer/radflix/commit/0b81d3e31143f6eb7cd2d9dff0f050dfe158e9f1))
+* **redux:** updates store to add skaters slice ([a8042a7](https://github.com/hitmaizer/radflix/commit/a8042a74eb7afe65eebc89de5455a8d5bf740d09))
+* **ResultsDocs:** updates ResultsDocs types file ([5d54c79](https://github.com/hitmaizer/radflix/commit/5d54c790de1e675b2393a6fde6301838d40f696a))
+* **resutsDocs:** removes fixed height ([5d1a197](https://github.com/hitmaizer/radflix/commit/5d1a1970fee8b7457bfbe84f638f732edc17ded8))
+* **SkaterRow:** deletes fetch and uses skaters from redux state ([fbb0e39](https://github.com/hitmaizer/radflix/commit/fbb0e397f1c394d5cb9a539d829b52707e476563))
+
+
+### 🎨 Style
+
+* **Results:** removes fixed height ([da92e40](https://github.com/hitmaizer/radflix/commit/da92e4006197d1277a2334d5d0f03f0fc4344e02))
+
+
+### 🚀 Features
+
+* **browse:** removes redundant props ([35605b5](https://github.com/hitmaizer/radflix/commit/35605b52799b710e8d2dad9a7d8669d3ff5ab0c4))
+* **browse:** updates skaters data fetched by getStaticProps ([8932764](https://github.com/hitmaizer/radflix/commit/89327640c2c4543ebb3f965556d14c9a85b33564))
+* **LinkText:** adds func to clear filteredData before pagemove ([b504f01](https://github.com/hitmaizer/radflix/commit/b504f01cd6d072530faa0dcc851b5fd31ee835e8))
+* **next.config:** adds missing host ([e267305](https://github.com/hitmaizer/radflix/commit/e267305f485d6fe6e2324d0e0bfc8b1bd8ba6d98))
+* **redux:** adds skaters slice ([98825b7](https://github.com/hitmaizer/radflix/commit/98825b711bc1ba60a530f60855856a95fbdb7aff))
+* **Results:** adds underBanner for results component ([0e1d77f](https://github.com/hitmaizer/radflix/commit/0e1d77feac7057fca1a5647565a427474ce18555))
+* **Results:** reading from redux store ([22b53f0](https://github.com/hitmaizer/radflix/commit/22b53f08fe5721885bae9b9b93602d48259a1fd1))
+* **ResultsDocs:** adds underBanner to resultsDocs component ([d1b47c8](https://github.com/hitmaizer/radflix/commit/d1b47c8684fa92ae51792180c224f39e9d350210))
+* **UnderBanner:** updates chained statement ([ad0b84f](https://github.com/hitmaizer/radflix/commit/ad0b84f3afed0b928572513d03068bf2d4bf60a8))
+* **UnderDocs:** adds UnderDocs component files ([492a7de](https://github.com/hitmaizer/radflix/commit/492a7dedb1ede3b7f1b71e8818b45bc4e2334bcf))
+* **yarnlock:** updates yarnlock ([16e6eb6](https://github.com/hitmaizer/radflix/commit/16e6eb6ad6c963bccffe3b9ad89cc2db8eea34d6))
+
 ## [1.20.0](https://github.com/hitmaizer/radflix/compare/v1.19.0...v1.20.0) (2022-06-04)
 
 
