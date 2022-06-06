@@ -3,14 +3,11 @@ import { useEffect } from 'react';
 import { Browse, Content, Homepage, Logged } from '@components/index';
 import MenuList from '@components/MenuList';
 import Results from '@components/Results';
-import { GetServerSideProps } from 'next';
-import { useSession, getSession, signOut } from 'next-auth/react';
+import { GetStaticProps } from 'next';
+import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
-import axios from 'src/axios/instance';
-import requests from 'src/axios/requests';
 import { setMovies } from 'src/redux/allMovies';
-import { setError } from 'src/redux/error';
 import { setLoading } from 'src/redux/loading';
 import { RootState } from 'src/redux/store';
 
@@ -26,7 +23,7 @@ import {
   Text,
 } from '@ui';
 
-const index = () => {
+const index = ({ allMovies }: any) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
   const movies = useSelector((state: RootState) => state.movies.movies);
@@ -36,16 +33,10 @@ const index = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    async function fetchData() {
-      dispatch(setLoading(true));
-      axios
-        .get(requests.allMovies)
-        .then((res) => dispatch(setMovies(res.data?.data)))
-        .catch((err) => dispatch(setError(err)))
-        .finally(() => dispatch(setLoading(false)));
-    }
-    fetchData();
-  }, []);
+    dispatch(setLoading(true));
+    dispatch(setMovies(allMovies.data));
+    dispatch(setLoading(false));
+  }, [allMovies]);
 
   if (typeof window === 'undefined') return null;
 
@@ -129,21 +120,15 @@ const index = () => {
 
 export default index;
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const session = await getSession(context);
-
-  if (!session) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    };
-  }
+export const getStaticProps: GetStaticProps = async () => {
+  const request1 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/all-movies?populate=*'
+  );
+  const allMovies = await request1.json();
 
   return {
     props: {
-      session,
+      allMovies,
     },
   };
 };
