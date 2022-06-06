@@ -1,46 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import ImageCard from '@components/ImageCard';
-import { useSelector, useDispatch } from 'react-redux';
-import { setError } from 'src/redux/error';
-import { setLoading } from 'src/redux/loading';
+import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
 
 import { Heading } from '@ui';
 
-import axios from '../../axios/instance';
 import UnderBanner from '../UnderBanner/UnderBanner';
 import * as S from './SkaterRow.styles';
 import { SkaterObj, SkaterRowProps } from './SkaterRow.types';
 
 import 'swiper/css';
 
-const Row = ({ title, fetchURL, square, poster, ...rest }: SkaterRowProps) => {
-  const [skaters, setSkaters] = useState<SkaterObj[]>([]);
+const Row = ({ title, square, poster, ...rest }: SkaterRowProps) => {
+  const skaters = useSelector((state: RootState) => state.skaters.skaters);
   const [selectedSkater, setSelectedSkater] = useState<SkaterObj>();
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
-  const dispatch = useDispatch();
 
   const handleClick = (m: SkaterObj) => {
     setSelectedSkater(m);
     setShowUnder(true);
   };
-
-  useEffect(() => {
-    async function fetchData() {
-      dispatch(setLoading(true));
-      const request = await axios
-        .get(fetchURL)
-        .then((res) => setSkaters(res.data?.data))
-        .catch((err) => dispatch(setError(err)))
-        .finally(() => dispatch(setLoading(false)));
-      return request;
-    }
-    fetchData();
-  }, [fetchURL]);
 
   return (
     <>
