@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMovies } from 'src/redux/allMovies';
 import { setLoading } from 'src/redux/loading';
+import { setSkaters } from 'src/redux/skaters';
 import { RootState } from 'src/redux/store';
 
 import {
@@ -23,7 +24,7 @@ import {
   Text,
 } from '@ui';
 
-const index = ({ allMovies }: any) => {
+const index = ({ allMovies, skaters }: any) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
   const movies = useSelector((state: RootState) => state.movies.movies);
@@ -35,6 +36,7 @@ const index = ({ allMovies }: any) => {
   useEffect(() => {
     dispatch(setLoading(true));
     dispatch(setMovies(allMovies.data));
+    dispatch(setSkaters(skaters.data));
     dispatch(setLoading(false));
   }, [allMovies]);
 
@@ -125,10 +127,16 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/all-movies?populate=*'
   );
   const allMovies = await request1.json();
+  const request2 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/skaters?populate=*'
+  );
+  const skaters = await request2.json();
 
   return {
     props: {
       allMovies,
+      skaters,
     },
+    revalidate: 43200,
   };
 };
