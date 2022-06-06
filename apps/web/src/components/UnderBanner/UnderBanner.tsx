@@ -45,7 +45,7 @@ const UnderBanner = ({
           {`${
             selectedMovie
               ? selectedMovie?.description.substring(0, 150)
-              : selectedSkater?.bio.substring(0, 150)
+              : selectedSkater?.bio?.substring(0, 150)
           }...`}
         </Text>
         {children}
