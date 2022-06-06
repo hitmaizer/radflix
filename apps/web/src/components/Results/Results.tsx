@@ -4,6 +4,8 @@ import { MovieObj } from '@components/Banner/Banner.types';
 import ImageCard from '@components/ImageCard';
 import { StyledSwiper } from '@components/SkaterRow/SkaterRow.styles';
 import UnderBanner from '@components/UnderBanner';
+import { useSelector } from 'react-redux';
+import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
@@ -15,6 +17,9 @@ import { ResultsProps } from './Results.types';
 const Results = ({ children, data, square, ...rest }: ResultsProps) => {
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const [selectedDoc, setSelectedDoc] = useState<MovieObj>();
+  const filteredData = useSelector(
+    (state: RootState) => state.filteredData.filter
+  );
 
   const handleClick = (d: MovieObj) => {
     setSelectedDoc(d);
@@ -45,7 +50,7 @@ const Results = ({ children, data, square, ...rest }: ResultsProps) => {
             },
           }}
         >
-          {data?.map((value) => {
+          {filteredData?.map((value: any) => {
             return (
               <SwiperSlide key={value.id} onClick={() => handleClick(value)}>
                 <ImageCard imgSrc={value.backdropPoster} square />
