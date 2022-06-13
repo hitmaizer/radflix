@@ -6,7 +6,6 @@ import BackBtn from '@components/BackBtn';
 import { MovieObj } from '@components/Banner/Banner.types';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import requests from 'src/axios/requests';
 
 import { Browse } from '@components';
 import { Loading, Player, Skeleton, Stack } from '@ui';
@@ -82,7 +81,9 @@ export default Watch;
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params as IParams;
-  const response = await axios.get(`${requests.allMovies}/${slug}`);
+  const response = await axios.get(
+    `https://radflix-cms.herokuapp.com/api/all-movies/${slug}`
+  );
   const data = await response.data;
 
   return {
