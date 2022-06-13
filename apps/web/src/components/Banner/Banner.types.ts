@@ -10,10 +10,20 @@ export interface MovieObj {
   id: number;
   title: string;
   movieLink: string;
-  moviePoster: string;
+  poster: {
+    data: {
+      url: string;
+      blurhash: string;
+    };
+  };
   slug: string;
   releaseYear: number;
-  backdropPoster: string;
+  backdrop: {
+    data: {
+      url: string;
+      blurhash: string;
+    };
+  };
   description: string;
   createdAt: string;
   updatedAt: string;
