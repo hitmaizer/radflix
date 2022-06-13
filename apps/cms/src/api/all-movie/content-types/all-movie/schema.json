@@ -22,20 +22,12 @@
       "required": true,
       "unique": true
     },
-    "moviePoster": {
-      "type": "string",
-      "required": true
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
     },
     "releaseYear": {
       "type": "integer",
-      "required": true
-    },
-    "backdropPoster": {
-      "type": "string",
       "required": true
     },
     "description": {
@@ -49,10 +41,10 @@
       "allowedTypes": ["images", "videos"]
     },
     "backdrop": {
-      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": ["images", "videos"]
     }
   }
 }
