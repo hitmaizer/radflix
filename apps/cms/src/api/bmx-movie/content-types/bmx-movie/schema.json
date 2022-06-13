@@ -22,11 +22,6 @@
       "required": true,
       "unique": true
     },
-    "moviePoster": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -34,25 +29,21 @@
     "releaseYear": {
       "type": "integer"
     },
-    "backdropPoster": {
-      "type": "string",
-      "required": true
-    },
     "description": {
       "type": "text",
       "required": true
     },
     "poster": {
-      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": ["images", "videos"]
     },
     "backdrop": {
-      "allowedTypes": ["images", "videos"],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": ["images", "videos"]
     }
   }
 }
