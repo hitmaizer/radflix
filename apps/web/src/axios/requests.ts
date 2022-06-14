@@ -11,6 +11,12 @@ const requests = {
   skateDocs: `/skate-docs?populate=*`,
   snowDocs: `/snowboard-docs?populate=*`,
   surfDocs: `/surf-docs?populate=*`,
+  berrics: `/berrics?populate=*`,
+  brailles: `/brailles?populate=*`,
+  redbulls: `/redbulls?populate=*`,
+  transworld: `/transworlds?populate=*`,
+  trasher: `/trashers?populate=*`,
+  vans: `/vans?populate=*`,
 };
 
 export default requests;

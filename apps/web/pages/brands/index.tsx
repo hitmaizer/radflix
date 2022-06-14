@@ -1,17 +1,14 @@
-import { useEffect } from 'react';
+import React from 'react';
 
-import { Browse, Content, Homepage, Logged } from '@components/index';
-import MenuList from '@components/MenuList';
-import Results from '@components/Results';
+import BrandRow from '@components/BrandRow';
 import { GetStaticProps } from 'next';
-import { useSession, signOut } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
-import { useSelector, useDispatch } from 'react-redux';
-import { setMovies } from 'src/redux/allMovies';
-import { setLoading } from 'src/redux/loading';
-import { setSkaters } from 'src/redux/skaters';
+import { useSelector } from 'react-redux';
+import requests from 'src/axios/requests';
 import { RootState } from 'src/redux/store';
 
+import { Banner, Browse, Homepage, Logged, MenuList, Row } from '@components';
 import {
   Box,
   Button,
@@ -24,24 +21,11 @@ import {
   Text,
 } from '@ui';
 
-const index = ({ allMovies, skaters }: any) => {
+const index = ({ allMovies }) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
-  const movies = useSelector((state: RootState) => state.movies.movies);
-  const filteredData = useSelector(
-    (state: RootState) => state.filteredData.filter
-  );
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(setLoading(true));
-    dispatch(setMovies(allMovies));
-    dispatch(setSkaters(skaters));
-    dispatch(setLoading(false));
-  }, [allMovies]);
 
   if (typeof window === 'undefined') return null;
-
   if (session) {
     return (
       <>
@@ -57,7 +41,7 @@ const index = ({ allMovies, skaters }: any) => {
               imgSrc="/placeholder-avatar.jpg"
               display="flex"
               alignItems="center"
-              filteredData={movies}
+              filteredData={allMovies}
             >
               <Link href="/" passHref>
                 <a href="dummy">
@@ -68,6 +52,23 @@ const index = ({ allMovies, skaters }: any) => {
               </Link>
             </Logged>
           </Navbar>
+          <Banner movies={allMovies} />
+
+          <BrandRow title="The Berrics" fetchURL={requests.berrics} square />
+          <Row
+            title="Braille Skateboarding"
+            fetchURL={requests.brailles}
+            square
+          />
+          <Row title="Red Bull" fetchURL={requests.redbulls} square />
+          <Row
+            title="TransWorld SKATEboarding"
+            fetchURL={requests.transworld}
+            square
+          />
+          <Row title="Thrasher Magazine" fetchURL={requests.trasher} square />
+          <Row title="Vans" fetchURL={requests.vans} square />
+
           {loading && (
             <>
               <Loading
@@ -85,24 +86,14 @@ const index = ({ allMovies, skaters }: any) => {
                   <Skeleton card />
                   <Skeleton card />
                 </Stack>
-                <Skeleton heading />
-                <Stack display="flex" gridGap="16px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                </Stack>
               </Loading>
             </>
           )}
-          {filteredData.length !== 0 && <Results square />}
-          {filteredData.length === 0 && <Content />}
         </Browse>
       </>
     );
   }
+
   return (
     <Homepage>
       <Box
@@ -124,18 +115,13 @@ export default index;
 
 export const getStaticProps: GetStaticProps = async () => {
   const request1 = await fetch(
-    'https://radflix-cms.herokuapp.com/api/all-movies?populate=*'
+    'https://radflix-cms.herokuapp.com/api/all-brands?populate=*'
   );
   const allMovies = await request1.json();
-  const request2 = await fetch(
-    'https://radflix-cms.herokuapp.com/api/skaters?populate=*'
-  );
-  const skaters = await request2.json();
 
   return {
     props: {
       allMovies: allMovies.data,
-      skaters: skaters.data,
     },
     revalidate: 43200,
   };

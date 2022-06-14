@@ -4,6 +4,7 @@ export interface BannerProps {
   children?: ReactNode;
   title?: string;
   description?: string;
+  movies: MovieObj[];
 }
 
 export interface MovieObj {
