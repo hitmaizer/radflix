@@ -1,3 +1,33 @@
+## [1.22.0](https://github.com/hitmaizer/radflix/compare/v1.21.0...v1.22.0) (2022-06-14)
+
+
+### ✂️ Refactor
+
+* **axios:** updates requests object to include media ([84a6c20](https://github.com/hitmaizer/radflix/commit/84a6c201d1c6d8371ba193ceeb7a1837f7f623d5))
+* **Banner:** updates path to Banner backdrop ([5407363](https://github.com/hitmaizer/radflix/commit/5407363fdb3cde54f8d62a40834cddd91fb2710e))
+* **cms:** updates all-movies contenttype to cloudinary media ([6953338](https://github.com/hitmaizer/radflix/commit/6953338bc9adda93d6a2fc83dc33484309089b5c))
+* **cms:** updates bmx-movie contenttype to cloudinary media ([61615cd](https://github.com/hitmaizer/radflix/commit/61615cdc87c085f15ef3078e921c48f347885242))
+* **cms:** updates dirt-movies contenttype to cloudinary ([21222cc](https://github.com/hitmaizer/radflix/commit/21222cc34830d204c336935dbaa07aecb41f0409))
+* **cms:** updates skate-movies contenttype to cloudinary ([53dd6b0](https://github.com/hitmaizer/radflix/commit/53dd6b04ed600ff5b47e6c84b5f1d9f559d2e56f))
+* **cms:** updates snoboard-movies contenttype to cloudinary ([576bbb9](https://github.com/hitmaizer/radflix/commit/576bbb973a32b9258cb7653f6af2a81cbef66db2))
+* **cms:** updates surf-movies contenttype to cloudinary ([b6f74a4](https://github.com/hitmaizer/radflix/commit/b6f74a4e2d4a86f07fad787e5d347aba87006200))
+* **MovieObj:** updates MovieObj interface ([6937946](https://github.com/hitmaizer/radflix/commit/6937946ad3c4d05e49a93f9feba85bf0e32234eb))
+* **next-config:** removes unnecessary image hosts ([c0cba3e](https://github.com/hitmaizer/radflix/commit/c0cba3ee1a69b357d9b5e5ee44572b9f9300c1f9))
+* **Row:** updates imgSrc prop to get poster/backdrop media ([aa33998](https://github.com/hitmaizer/radflix/commit/aa339982febcefb5dea50c1cd88389d54699a6e5))
+* **UnderBanner:** updates backdrop path from cloudinary url ([6d02c38](https://github.com/hitmaizer/radflix/commit/6d02c38af140df3f7ee713ed2954bd53d8f624d9))
+
+
+### 🐛 Fixes
+
+* **watch:** updates fetch url to fix dynamic watch path ([e6f6f78](https://github.com/hitmaizer/radflix/commit/e6f6f78e7e68344653b81b28d8e450b73c68185b))
+
+
+### 🚀 Features
+
+* **cms:** adds redbull content type files ([a50b135](https://github.com/hitmaizer/radflix/commit/a50b135086b793ab73390199632fffea98a4777c))
+* **cms:** adds vans content type files ([9045924](https://github.com/hitmaizer/radflix/commit/9045924db52f8d724ff942dbeadaef4dc41b0ad4))
+* **yarn-lock:** updates yarn lock ([563adf4](https://github.com/hitmaizer/radflix/commit/563adf49367b190b8ad025a8e98547cbbdad0b8d))
+
 ## [1.21.0](https://github.com/hitmaizer/radflix/compare/v1.20.0...v1.21.0) (2022-06-06)
 
 
