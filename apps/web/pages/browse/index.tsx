@@ -35,8 +35,8 @@ const index = ({ allMovies, skaters }: any) => {
 
   useEffect(() => {
     dispatch(setLoading(true));
-    dispatch(setMovies(allMovies.data));
-    dispatch(setSkaters(skaters.data));
+    dispatch(setMovies(allMovies));
+    dispatch(setSkaters(skaters));
     dispatch(setLoading(false));
   }, [allMovies]);
 
@@ -134,8 +134,8 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      allMovies,
-      skaters,
+      allMovies: allMovies.data,
+      skaters: skaters.data,
     },
     revalidate: 43200,
   };
