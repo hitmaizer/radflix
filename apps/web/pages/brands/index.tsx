@@ -1,12 +1,14 @@
 import React from 'react';
 
+import BrandRow from '@components/BrandRow';
 import { GetStaticProps } from 'next';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
+import requests from 'src/axios/requests';
 import { RootState } from 'src/redux/store';
 
-import { Browse, Homepage, Logged, MenuList } from '@components';
+import { Banner, Browse, Homepage, Logged, MenuList, Row } from '@components';
 import {
   Box,
   Button,
@@ -50,7 +52,23 @@ const index = ({ allMovies }) => {
               </Link>
             </Logged>
           </Navbar>
-          <h1>hellomate</h1>
+          <Banner movies={allMovies} />
+
+          <BrandRow title="The Berrics" fetchURL={requests.berrics} square />
+          <Row
+            title="Braille Skateboarding"
+            fetchURL={requests.brailles}
+            square
+          />
+          <Row title="Red Bull" fetchURL={requests.redbulls} square />
+          <Row
+            title="TransWorld SKATEboarding"
+            fetchURL={requests.transworld}
+            square
+          />
+          <Row title="Thrasher Magazine" fetchURL={requests.trasher} square />
+          <Row title="Vans" fetchURL={requests.vans} square />
+
           {loading && (
             <>
               <Loading
