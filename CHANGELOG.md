@@ -1,3 +1,22 @@
+## [1.24.0](https://github.com/hitmaizer/radflix/compare/v1.23.0...v1.24.0) (2022-06-14)
+
+
+### 🚀 Features
+
+* **yarn.lock:** updates yarn.lock ([58e5882](https://github.com/hitmaizer/radflix/commit/58e588296850b22fafae4628f4b1800926051f0c))
+
+## [1.23.0](https://github.com/hitmaizer/radflix/compare/v1.22.0...v1.23.0) (2022-06-14)
+
+
+### 🐛 Fixes
+
+* **ui:** adds npm-force-resolutions to dedup [@types-react](https://github.com/types-react) ([842e0a9](https://github.com/hitmaizer/radflix/commit/842e0a93a802aefd1830ca3b87d618af03d2f613))
+
+
+### 🚀 Features
+
+* **cms:** adds all-brand content type ([bb45d53](https://github.com/hitmaizer/radflix/commit/bb45d53ffa1ece5cc571dbe545c4e01b06420118))
+
 ## [1.22.0](https://github.com/hitmaizer/radflix/compare/v1.21.0...v1.22.0) (2022-06-14)
 
 
