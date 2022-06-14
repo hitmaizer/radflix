@@ -1,3 +1,10 @@
+## [1.24.0](https://github.com/hitmaizer/radflix/compare/v1.23.0...v1.24.0) (2022-06-14)
+
+
+### 🚀 Features
+
+* **yarn.lock:** updates yarn.lock ([58e5882](https://github.com/hitmaizer/radflix/commit/58e588296850b22fafae4628f4b1800926051f0c))
+
 ## [1.23.0](https://github.com/hitmaizer/radflix/compare/v1.22.0...v1.23.0) (2022-06-14)
 
 
