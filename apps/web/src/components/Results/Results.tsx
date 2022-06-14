@@ -14,7 +14,7 @@ import { Heading } from '@ui';
 import * as S from './Results.styles';
 import { ResultsProps } from './Results.types';
 
-const Results = ({ children, data, square, ...rest }: ResultsProps) => {
+const Results = ({ children, square, ...rest }: ResultsProps) => {
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const [selectedDoc, setSelectedDoc] = useState<MovieObj>();
   const filteredData = useSelector(
@@ -30,7 +30,7 @@ const Results = ({ children, data, square, ...rest }: ResultsProps) => {
     <>
       <S.Results {...rest}>
         <Heading size="2xl" fontWeight="700" color="white" mr="auto">
-          We found {data?.length} results
+          We found {filteredData?.length} results
         </Heading>
         <StyledSwiper
           slidesPerView={square ? 2 : 2}
@@ -53,7 +53,7 @@ const Results = ({ children, data, square, ...rest }: ResultsProps) => {
           {filteredData?.map((value: any) => {
             return (
               <SwiperSlide key={value.id} onClick={() => handleClick(value)}>
-                <ImageCard imgSrc={value.backdropPoster} square />
+                <ImageCard imgSrc={value.backdrop.data.url} square />
               </SwiperSlide>
             );
           })}
