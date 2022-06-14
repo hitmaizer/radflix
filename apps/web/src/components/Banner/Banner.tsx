@@ -9,11 +9,10 @@ import { Button, Heading, Stack, Text } from '@ui';
 import * as S from './Banner.styles';
 import { BannerProps, MovieObj } from './Banner.types';
 
-const Banner = ({ children, ...rest }: BannerProps) => {
+const Banner = ({ children, movies, ...rest }: BannerProps) => {
   const [movie, setMovie] = useState<MovieObj>();
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
-  const movies = useSelector((state: RootState) => state.movies.movies);
 
   useEffect(() => {
     setMovie(movies[Math.floor(Math.random() * movies.length)]);

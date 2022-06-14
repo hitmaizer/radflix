@@ -1,7 +1,9 @@
 import React from 'react';
 
 import SkaterRow from '@components/SkaterRow';
+import { useSelector } from 'react-redux';
 import requests from 'src/axios/requests';
+import { RootState } from 'src/redux/store';
 
 import Banner from '../Banner/Banner';
 import Row from '../Row/Row';
@@ -9,9 +11,10 @@ import * as S from './Content.styles';
 import { ContentProps } from './Content.types';
 
 const Content = ({ children, ...rest }: ContentProps) => {
+  const movies = useSelector((state: RootState) => state.movies.movies);
   return (
     <S.Content {...rest}>
-      <Banner />
+      <Banner movies={movies} />
       <SkaterRow title="Skaters" fetchURL={requests.skaters} poster />
       <Row title="Skateboarding" fetchURL={requests.skateMovies} square />
       <Row title="Snowboarding" fetchURL={requests.snowboardMovies} square />
