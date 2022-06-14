@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "surf_movies",
+  "collectionName": "vans",
   "info": {
-    "singularName": "surf-movie",
-    "pluralName": "surf-movies",
-    "displayName": "SurfMovie",
-    "description": ""
+    "singularName": "van",
+    "pluralName": "vans",
+    "displayName": "Van"
   },
   "options": {
     "draftAndPublish": true
@@ -22,29 +21,21 @@
       "required": true,
       "unique": true
     },
+    "backdrop": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
     "slug": {
       "type": "uid",
       "targetField": "title"
     },
     "releaseYear": {
-      "type": "integer",
-      "required": true
+      "type": "integer"
     },
     "description": {
       "type": "text",
       "required": true
-    },
-    "poster": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["images", "videos"]
-    },
-    "backdrop": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": ["images", "videos"]
     }
   }
 }
