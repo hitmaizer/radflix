@@ -115,6 +115,7 @@ const index = ({ doc }: Doc) => {
                 title={doc.title}
                 slug={doc.slug}
                 description={doc.description}
+                path="docs"
               />
               <Stack display="flex" vertical gridGap="40px">
                 <DocRow
