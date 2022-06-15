@@ -13,7 +13,7 @@ import { SkaterObj, SkaterRowProps } from './SkaterRow.types';
 
 import 'swiper/css';
 
-const Row = ({ title, square, poster, ...rest }: SkaterRowProps) => {
+const Row = ({ title, square, poster, path, ...rest }: SkaterRowProps) => {
   const skaters = useSelector((state: RootState) => state.skaters.skaters);
   const [selectedSkater, setSelectedSkater] = useState<SkaterObj>();
   const [showUnder, setShowUnder] = useState<boolean>(false);
@@ -78,7 +78,13 @@ const Row = ({ title, square, poster, ...rest }: SkaterRowProps) => {
         </S.Row>
       )}
 
-      {showUnder && <UnderBanner selectedSkater={selectedSkater} />}
+      {showUnder && (
+        <UnderBanner
+          selectedSkater={selectedSkater}
+          path={path}
+          slug={selectedSkater?.slug}
+        />
+      )}
 
       {error && <p>{error}</p>}
     </>
