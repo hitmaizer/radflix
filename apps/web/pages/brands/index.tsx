@@ -52,7 +52,7 @@ const index = ({ allMovies }) => {
               </Link>
             </Logged>
           </Navbar>
-          <Banner movies={allMovies} />
+          <Banner movies={allMovies} path="brand" />
 
           <BrandRow title="The Berrics" fetchURL={requests.berrics} square />
           <Row
