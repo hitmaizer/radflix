@@ -1,3 +1,27 @@
+## [1.25.0](https://github.com/hitmaizer/radflix/compare/v1.24.0...v1.25.0) (2022-06-14)
+
+
+### ✂️ Refactor
+
+* **Banner:** updates banner logic to make component reusable ([e16b84f](https://github.com/hitmaizer/radflix/commit/e16b84f7b86a837a9af6d784b4f1d05cfcdc99d0))
+* **browse:** updates getStaticProps ([5c236fa](https://github.com/hitmaizer/radflix/commit/5c236fa5d10097b475d2062e95f38b83c54dd529))
+* **Content:** updates Content component to pass movies to banner ([eb4fb14](https://github.com/hitmaizer/radflix/commit/eb4fb14e58103a2b9e8bb313c9897d24580a03f0))
+
+
+### 🐛 Fixes
+
+* **Results:** updates Results component to fix search func ([336aec9](https://github.com/hitmaizer/radflix/commit/336aec92d57479a55f4e390a81422a3d8a271b5f))
+
+
+### 🚀 Features
+
+* **axios:** updates requests object ([b509266](https://github.com/hitmaizer/radflix/commit/b50926646fb7e6cfac95a78b2c35413f18094ee3))
+* **Banner:** updates Banner component prop types ([5756232](https://github.com/hitmaizer/radflix/commit/5756232f56c3d2cd7bd11e9f7c2a92e40e2be46f))
+* **BrandRow:** adds BrandRow component files ([a52ac3b](https://github.com/hitmaizer/radflix/commit/a52ac3bbefb9c46e0fdebcf1a2626ee76d386562))
+* **brands:** adds index page initial markup for Brands page ([d1a60fe](https://github.com/hitmaizer/radflix/commit/d1a60fe21307302057e0f3547ef9ecf92b7409fd))
+* **brands:** updates brands page markup ([9abc8fe](https://github.com/hitmaizer/radflix/commit/9abc8feba827d1bc78c9dc92339eae82c5491d8e))
+* **yarn.lock:** updates yarn.lock ([35c85e1](https://github.com/hitmaizer/radflix/commit/35c85e106c71b6a7ec3b8e8b37a7f32892067177))
+
 ## [1.24.0](https://github.com/hitmaizer/radflix/compare/v1.23.0...v1.24.0) (2022-06-14)
 
 
