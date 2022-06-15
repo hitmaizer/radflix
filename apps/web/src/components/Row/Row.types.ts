@@ -9,4 +9,5 @@ export interface RowProps extends SpaceProps, FlexboxProps, LayoutProps {
   square?: boolean;
   isBigRow?: boolean;
   poster?: boolean;
+  path?: string;
 }
