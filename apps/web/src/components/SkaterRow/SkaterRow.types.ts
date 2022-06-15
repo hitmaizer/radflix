@@ -9,6 +9,7 @@ export interface SkaterRowProps extends SpaceProps, FlexboxProps, LayoutProps {
   square?: boolean;
   isBigRow?: boolean;
   poster?: boolean;
+  path?: string;
 }
 
 export interface SkaterObj {
