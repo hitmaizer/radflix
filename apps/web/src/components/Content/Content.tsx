@@ -15,12 +15,37 @@ const Content = ({ children, ...rest }: ContentProps) => {
   return (
     <S.Content {...rest}>
       <Banner movies={movies} />
-      <SkaterRow title="Skaters" fetchURL={requests.skaters} poster />
-      <Row title="Skateboarding" fetchURL={requests.skateMovies} square />
-      <Row title="Snowboarding" fetchURL={requests.snowboardMovies} square />
-      <Row title="Surf" fetchURL={requests.surfMovies} square />
-      <Row title="BMX Movies" fetchURL={requests.bmxMovies} square />
-      <Row title="Dirt Bikes" fetchURL={requests.dirtbikeMovies} poster />
+      <SkaterRow
+        title="Skaters"
+        fetchURL={requests.skaters}
+        poster
+        path="skaters"
+      />
+      <Row
+        title="Skateboarding"
+        fetchURL={requests.skateMovies}
+        square
+        path="watch"
+      />
+      <Row
+        title="Snowboarding"
+        fetchURL={requests.snowboardMovies}
+        square
+        path="watch"
+      />
+      <Row title="Surf" fetchURL={requests.surfMovies} square path="watch" />
+      <Row
+        title="BMX Movies"
+        fetchURL={requests.bmxMovies}
+        square
+        path="watch"
+      />
+      <Row
+        title="Dirt Bikes"
+        fetchURL={requests.dirtbikeMovies}
+        poster
+        path="watch"
+      />
 
       {children}
     </S.Content>

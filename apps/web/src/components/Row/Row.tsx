@@ -17,7 +17,7 @@ import { RowProps } from './Row.types';
 
 import 'swiper/css';
 
-const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
+const Row = ({ title, fetchURL, square, poster, path, ...rest }: RowProps) => {
   const [movies, setMovies] = useState<MovieObj[]>([]);
   const [selectedMovie, setSelectedMovie] = useState<MovieObj>();
   const [showUnder, setShowUnder] = useState<boolean>(false);
@@ -84,7 +84,13 @@ const Row = ({ title, fetchURL, square, poster, ...rest }: RowProps) => {
         </S.Row>
       )}
 
-      {showUnder && <UnderBanner selectedMovie={selectedMovie} />}
+      {showUnder && (
+        <UnderBanner
+          selectedMovie={selectedMovie}
+          slug={selectedMovie?.slug}
+          path={path}
+        />
+      )}
 
       {error && <p>{error}</p>}
     </>

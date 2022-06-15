@@ -8,4 +8,6 @@ export interface UnderBannerProps {
   children?: ReactNode;
   selectedMovie?: MovieObj;
   selectedSkater?: SkaterObj;
+  path?: string;
+  slug?: string;
 }

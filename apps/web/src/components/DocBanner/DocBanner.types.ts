@@ -6,4 +6,5 @@ export interface DocBannerProps {
   title?: string;
   slug?: string;
   description?: string;
+  path?: string;
 }

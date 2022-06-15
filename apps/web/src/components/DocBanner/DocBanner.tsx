@@ -36,6 +36,7 @@ const DocBanner = ({
   title,
   slug,
   description,
+  path,
   ...rest
 }: DocBannerProps) => {
   const error = useSelector((state: RootState) => state.error.error);
@@ -51,7 +52,7 @@ const DocBanner = ({
             {title}
           </Heading>
           <Stack display="flex" gridGap={4}>
-            <Link href={`/docs/${slug}`}>
+            <Link href={`/${path}/${slug}`}>
               <Button banner>Play</Button>
             </Link>
             <Button banner>My List</Button>
