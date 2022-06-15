@@ -14,7 +14,7 @@ const Content = ({ children, ...rest }: ContentProps) => {
   const movies = useSelector((state: RootState) => state.movies.movies);
   return (
     <S.Content {...rest}>
-      <Banner movies={movies} />
+      <Banner movies={movies} path="watch" />
       <SkaterRow
         title="Skaters"
         fetchURL={requests.skaters}
