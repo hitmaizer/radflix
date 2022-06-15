@@ -9,7 +9,7 @@ import { Button, Heading, Stack, Text } from '@ui';
 import * as S from './Banner.styles';
 import { BannerProps, MovieObj } from './Banner.types';
 
-const Banner = ({ children, movies, ...rest }: BannerProps) => {
+const Banner = ({ children, movies, path, ...rest }: BannerProps) => {
   const [movie, setMovie] = useState<MovieObj>();
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
@@ -35,10 +35,8 @@ const Banner = ({ children, movies, ...rest }: BannerProps) => {
             </Heading>
             {children}
             <Stack display="flex" gridGap={4}>
-              <Link href={`/watch/${movie?.slug}`} passHref>
-                <Link href={`/watch/${movie?.slug.toString()}`}>
-                  <Button banner> Play</Button>
-                </Link>
+              <Link href={`/${path}/${movie?.slug}`} passHref>
+                <Button banner> Play</Button>
               </Link>
               <Button banner>My List</Button>
             </Stack>
