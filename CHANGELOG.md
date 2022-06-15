@@ -1,3 +1,34 @@
+## [1.26.0](https://github.com/hitmaizer/radflix/compare/v1.25.0...v1.26.0) (2022-06-15)
+
+
+### ✂️ Refactor
+
+* **cms:** updates all-brand findOne method to search by slug ([a1b2ee5](https://github.com/hitmaizer/radflix/commit/a1b2ee52749f2ec809ade8415285b93f29ab3d71))
+* **cms:** updates redbull findOne method to search by slug ([e7d9de0](https://github.com/hitmaizer/radflix/commit/e7d9de0f7df58da8d05364adf0af0e001b04ac96))
+* **cms:** updates vans findOne method to search by slug ([0d172fb](https://github.com/hitmaizer/radflix/commit/0d172fb5c40b9e4d775d6094de393c3598aa0a81))
+* **DocBanner:** updates component to have dynamic link based path ([92bc997](https://github.com/hitmaizer/radflix/commit/92bc997778178108102492e36736e882dd70ebd2))
+* **Row:** adds path and slug props to UnderBanner component ([e349446](https://github.com/hitmaizer/radflix/commit/e349446c12f7a4c82878c1c2f233bc7e93f40fbd))
+* **UnderBanner:** updates UnderBanner component to dynamic link ([00d5201](https://github.com/hitmaizer/radflix/commit/00d5201d139e2d73c8f6fe806fee56da15127080))
+
+
+### 🐛 Fixes
+
+* **BrandRow:** updates image path on BrandRow component ([2d8c9c3](https://github.com/hitmaizer/radflix/commit/2d8c9c3ba174e458c41d1347d11c006bdb19e250))
+
+
+### 🚀 Features
+
+* **brand:** add new dynamic routes for brands ([7dfacc6](https://github.com/hitmaizer/radflix/commit/7dfacc671fc08db4673257860754ef009db94b08))
+* **BrandRow:** adds new path prop to brandRow component ([299e10c](https://github.com/hitmaizer/radflix/commit/299e10c6cfdb970b4e7c28b496ebbb6628bad0b7))
+* **brands:** adds path props to row components ([d33567d](https://github.com/hitmaizer/radflix/commit/d33567d3b8d8bc945c98ef5a154a1d0377f3b9b9))
+* **Content:** adds path prop to Row components ([1cc56c9](https://github.com/hitmaizer/radflix/commit/1cc56c9478781f75f5d03115ba3877ec3587f31e))
+* **DocBanner:** adds path string prop type ([91c48de](https://github.com/hitmaizer/radflix/commit/91c48de55e2077b574206b6933fec7317badbe6f))
+* **DocRow:** adds path prop to DocRow component ([43e7732](https://github.com/hitmaizer/radflix/commit/43e773276f0bd38e08ca16fe4dff80fc352f29de))
+* **Row:** adds path string prop type to Row component ([270287c](https://github.com/hitmaizer/radflix/commit/270287ccab6d1a198f04f312729104a4fe85106b))
+* **SkaterRow :** adds path and slug props to underBanner component ([64b4c6b](https://github.com/hitmaizer/radflix/commit/64b4c6bab6f3ccecaa0d9e83ac05932c09072493))
+* **SkaterRow:** adds path string prop type ([bac4fb2](https://github.com/hitmaizer/radflix/commit/bac4fb217a1d00567363970f6889be3adaed30b5))
+* **UnderBanner:** adds path and slug string types to UnderBanner ([4c52121](https://github.com/hitmaizer/radflix/commit/4c52121cec8fe0728b71cd4c90e4fc8cec9aaa76))
+
 ## [1.25.0](https://github.com/hitmaizer/radflix/compare/v1.24.0...v1.25.0) (2022-06-14)
 
 
