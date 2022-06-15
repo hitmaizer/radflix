@@ -60,14 +60,25 @@ const index = ({ allMovies }) => {
             fetchURL={requests.brailles}
             square
           />
-          <Row title="Red Bull" fetchURL={requests.redbulls} square />
+          <Row
+            title="Red Bull"
+            fetchURL={requests.redbulls}
+            square
+            path="brand"
+          />
           <Row
             title="TransWorld SKATEboarding"
             fetchURL={requests.transworld}
             square
+            path="brand"
           />
-          <Row title="Thrasher Magazine" fetchURL={requests.trasher} square />
-          <Row title="Vans" fetchURL={requests.vans} square />
+          <Row
+            title="Thrasher Magazine"
+            fetchURL={requests.trasher}
+            square
+            path="brand"
+          />
+          <Row title="Vans" fetchURL={requests.vans} square path="brand" />
 
           {loading && (
             <>

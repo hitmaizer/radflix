@@ -11,6 +11,8 @@ const UnderBanner = ({
   children,
   selectedMovie,
   selectedSkater,
+  path,
+  slug,
 }: UnderBannerProps) => {
   return (
     <S.UnderBanner
@@ -29,14 +31,7 @@ const UnderBanner = ({
           {selectedMovie ? selectedMovie?.title : selectedSkater?.name}
         </Heading>
         <Stack display="flex" gridGap={4}>
-          <Link
-            href={
-              selectedMovie
-                ? `/watch/${selectedMovie?.slug}`
-                : `/skaters/${selectedSkater?.slug}`
-            }
-            passHref
-          >
+          <Link href={`/${path}/${slug}`} passHref>
             <Button banner> Play</Button>
           </Link>
           <Button banner>My List</Button>

@@ -96,10 +96,11 @@ const DocRow = ({
       )}
       {showUnder && (
         <DocBanner
-          imgSrc={selectedDoc?.backdrop.data.url}
+          imgSrc={selectedDoc?.backdrop.data[0].url}
           title={selectedDoc?.title}
           description={selectedDoc?.description}
           slug={selectedDoc?.slug}
+          path="brand"
         />
       )}
       {error && <p>{error}</p>}
