@@ -100,6 +100,7 @@ const DocRow = ({
           title={selectedDoc?.title}
           description={selectedDoc?.description}
           slug={selectedDoc?.slug}
+          path="brand"
         />
       )}
       {error && <p>{error}</p>}
