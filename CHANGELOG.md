@@ -1,3 +1,18 @@
+## [1.27.0](https://github.com/hitmaizer/radflix/compare/v1.26.0...v1.27.0) (2022-06-15)
+
+
+### ✂️ Refactor
+
+* **Banner:** updates component logic to be reusable ([6dbd0db](https://github.com/hitmaizer/radflix/commit/6dbd0dbb4a61d70723a19931ec89654b380dcba5))
+
+
+### 🚀 Features
+
+* **Banner:** adds path and slug string type props to Banner ([be20c67](https://github.com/hitmaizer/radflix/commit/be20c6746350f1269465feeff347de6d0a8958eb))
+* **brands:** add path prop to banner component ([1de66f1](https://github.com/hitmaizer/radflix/commit/1de66f1d6063474b1a768650739466c02e42bfd3))
+* **Content:** adds path prop to Banner component ([88acd77](https://github.com/hitmaizer/radflix/commit/88acd77f5ea691c561a8e2b86fbc4bac5d29932c))
+* **documentaries:** adds path prop to banner component ([745b26c](https://github.com/hitmaizer/radflix/commit/745b26cbbf3a641680d7caef4ae25ad26b4eb750))
+
 ## [1.26.0](https://github.com/hitmaizer/radflix/compare/v1.25.0...v1.26.0) (2022-06-15)
 
 
