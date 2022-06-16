@@ -8,7 +8,15 @@ import { useSelector } from 'react-redux';
 import requests from 'src/axios/requests';
 import { RootState } from 'src/redux/store';
 
-import { Banner, Browse, Homepage, Logged, MenuList, Row } from '@components';
+import {
+  Banner,
+  Browse,
+  Homepage,
+  Logged,
+  MenuList,
+  Results,
+  Row,
+} from '@components';
 import {
   Box,
   Button,
@@ -24,6 +32,9 @@ import {
 const index = ({ allMovies }) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
+  const filteredData = useSelector(
+    (state: RootState) => state.filteredData.filter
+  );
 
   if (typeof window === 'undefined') return null;
   if (session) {
@@ -52,33 +63,42 @@ const index = ({ allMovies }) => {
               </Link>
             </Logged>
           </Navbar>
-          <Banner movies={allMovies} path="brand" />
+          {filteredData.length !== 0 && <Results data={filteredData} square />}
+          {filteredData.length === 0 && (
+            <>
+              <Banner movies={allMovies} path="brand" />
 
-          <BrandRow title="The Berrics" fetchURL={requests.berrics} square />
-          <Row
-            title="Braille Skateboarding"
-            fetchURL={requests.brailles}
-            square
-          />
-          <Row
-            title="Red Bull"
-            fetchURL={requests.redbulls}
-            square
-            path="brand"
-          />
-          <Row
-            title="TransWorld SKATEboarding"
-            fetchURL={requests.transworld}
-            square
-            path="brand"
-          />
-          <Row
-            title="Thrasher Magazine"
-            fetchURL={requests.trasher}
-            square
-            path="brand"
-          />
-          <Row title="Vans" fetchURL={requests.vans} square path="brand" />
+              <BrandRow
+                title="The Berrics"
+                fetchURL={requests.berrics}
+                square
+              />
+              <Row
+                title="Braille Skateboarding"
+                fetchURL={requests.brailles}
+                square
+              />
+              <Row
+                title="Red Bull"
+                fetchURL={requests.redbulls}
+                square
+                path="brand"
+              />
+              <Row
+                title="TransWorld SKATEboarding"
+                fetchURL={requests.transworld}
+                square
+                path="brand"
+              />
+              <Row
+                title="Thrasher Magazine"
+                fetchURL={requests.trasher}
+                square
+                path="brand"
+              />
+              <Row title="Vans" fetchURL={requests.vans} square path="brand" />
+            </>
+          )}
 
           {loading && (
             <>
