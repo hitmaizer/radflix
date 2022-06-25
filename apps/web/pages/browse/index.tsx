@@ -61,7 +61,14 @@ const index = ({ allMovies, skaters }: any) => {
             >
               <Link href="/" passHref>
                 <a href="dummy">
-                  <Button text onClick={() => signOut()}>
+                  <Button
+                    text
+                    onClick={() =>
+                      signOut({
+                        callbackUrl: `${window.location.origin}/`,
+                      })
+                    }
+                  >
                     <Text>Logout from Radflix</Text>
                   </Button>
                 </a>
