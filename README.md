@@ -6,6 +6,8 @@ This app was created, not only as a way to practice my skills but also to simula
 environment.
 WIP.
 
+Here's the [demo](radflix.vercel.app), try it out!
+
 ![radflix](https://user-images.githubusercontent.com/58346965/170453957-57a5b6d3-d636-4ec6-9eb1-fa1a5ecaf5e6.png)
 
 ## What's inside?
