@@ -1,11 +1,20 @@
-import { GetServerSideProps } from 'next';
-import { useSession, signIn, signOut, getSession } from 'next-auth/react';
+import { GetStaticProps } from 'next';
+import { useSession, signIn } from 'next-auth/react';
+import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
+import { setMovies } from 'src/redux/allMovies';
 
 import { Homepage } from '@components';
 import { Box, Button, Heading, Input, Logo, Stack, Text } from '@ui';
 
-export default function Home() {
+export default function Home({ allMovies }: any) {
   const { data: session } = useSession();
+  const router = useRouter();
+  const dispatch = useDispatch();
+  const handleLink = () => {
+    router.push('/browse');
+    dispatch(setMovies(allMovies));
+  };
   return (
     <>
       <Homepage>
@@ -21,14 +30,14 @@ export default function Home() {
             padding="7px 17px"
             onClick={
               session
-                ? () => signOut()
+                ? () => handleLink()
                 : () =>
                     signIn('google', {
                       callbackUrl: `${window.location.origin}/browse`,
                     })
             }
           >
-            {!session ? <Text>Sign In</Text> : <Text>Logout</Text>}
+            {!session ? <Text>Sign In</Text> : <Text>Browse Movies</Text>}
           </Button>
         </Stack>
         <Box
@@ -64,21 +73,16 @@ export default function Home() {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const session = await getSession(context);
-
-  if (session) {
-    return {
-      redirect: {
-        destination: '/browse',
-        permanent: false,
-      },
-    };
-  }
+export const getStaticProps: GetStaticProps = async () => {
+  const request1 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/all-movies?populate=*'
+  );
+  const allMovies = await request1.json();
 
   return {
     props: {
-      session,
+      allMovies: allMovies.data,
     },
+    revalidate: 43200,
   };
 };
