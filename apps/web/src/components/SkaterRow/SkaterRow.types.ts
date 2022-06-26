@@ -5,7 +5,7 @@ import { FlexboxProps, LayoutProps, SpaceProps } from 'styled-system';
 export interface SkaterRowProps extends SpaceProps, FlexboxProps, LayoutProps {
   children?: ReactNode;
   title: string;
-  fetchURL: string;
+  fetchURL?: string;
   square?: boolean;
   isBigRow?: boolean;
   poster?: boolean;
