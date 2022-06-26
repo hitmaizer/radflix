@@ -1,11 +1,16 @@
 import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 
 import moviesSlice from './allMovies';
+import bmxSlice from './bmx';
+import dirtBikesSlice from './dirtBikes';
 import docsSlice from './docs';
 import errorSlice from './error';
 import filterSlice from './filter';
 import loadingSlice from './loading';
+import skateboardingSlice from './skateboarding';
 import skatersSlice from './skaters';
+import snowboardingSlice from './snowboarding';
+import surfingSlice from './surfing';
 
 export const store = configureStore({
   reducer: {
@@ -15,8 +20,11 @@ export const store = configureStore({
     filteredData: filterSlice,
     docsData: docsSlice,
     skaters: skatersSlice,
-    // This is where we add reducers.
-    // Since we don't have any yet, leave this empty
+    skateboarding: skateboardingSlice,
+    snowboarding: snowboardingSlice,
+    surfing: surfingSlice,
+    bmx: bmxSlice,
+    dirtBikes: dirtBikesSlice,
   },
 });
 
