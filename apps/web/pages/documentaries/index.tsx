@@ -99,8 +99,8 @@ const index = ({ doc }: Doc) => {
               filteredData={docs}
             >
               <Link href="/" passHref>
-                <Button text onClick={() => signOut()}>
-                  <Text>Logout from Radflix</Text>
+                <Button onClick={() => signOut()}>
+                  <Text>Logout</Text>
                 </Button>
               </Link>
             </Logged>
