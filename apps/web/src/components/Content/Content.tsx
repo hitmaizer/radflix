@@ -2,7 +2,6 @@ import React from 'react';
 
 import SkaterRow from '@components/SkaterRow';
 import { useSelector } from 'react-redux';
-import requests from 'src/axios/requests';
 import { RootState } from 'src/redux/store';
 
 import Banner from '../Banner/Banner';
@@ -12,41 +11,26 @@ import { ContentProps } from './Content.types';
 
 const Content = ({ children, ...rest }: ContentProps) => {
   const movies = useSelector((state: RootState) => state.movies.movies);
+  const skateboarding = useSelector(
+    (state: RootState) => state.skateboarding.skateboarding
+  );
+  const snowboarding = useSelector(
+    (state: RootState) => state.snowboarding.snowboarding
+  );
+  const surfing = useSelector((state: RootState) => state.surfing.surfing);
+  const bmx = useSelector((state: RootState) => state.bmx.bmx);
+  const dirtBikes = useSelector(
+    (state: RootState) => state.dirtBikes.dirtBikes
+  );
   return (
     <S.Content {...rest}>
       <Banner movies={movies} path="watch" />
-      <SkaterRow
-        title="Skaters"
-        fetchURL={requests.skaters}
-        poster
-        path="skaters"
-      />
-      <Row
-        title="Skateboarding"
-        fetchURL={requests.skateMovies}
-        square
-        path="watch"
-      />
-      <Row
-        title="Snowboarding"
-        fetchURL={requests.snowboardMovies}
-        square
-        path="watch"
-      />
-      <Row title="Surf" fetchURL={requests.surfMovies} square path="watch" />
-      <Row
-        title="BMX Movies"
-        fetchURL={requests.bmxMovies}
-        square
-        path="watch"
-      />
-      <Row
-        title="Dirt Bikes"
-        fetchURL={requests.dirtbikeMovies}
-        poster
-        path="watch"
-      />
-
+      <SkaterRow title="Skaters" poster path="skaters" />
+      <Row title="Skateboarding" store={skateboarding} square path="watch" />
+      <Row title="Snowboarding" store={snowboarding} square path="watch" />
+      <Row title="Surf" store={surfing} square path="watch" />
+      <Row title="BMX Movies" store={bmx} square path="watch" />
+      <Row title="Dirt Bikes" store={dirtBikes} poster path="watch" />
       {children}
     </S.Content>
   );

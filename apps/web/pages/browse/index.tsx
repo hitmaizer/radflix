@@ -8,9 +8,14 @@ import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMovies } from 'src/redux/allMovies';
+import { setBmx } from 'src/redux/bmx';
+import { setDirtBikes } from 'src/redux/dirtBikes';
 import { setLoading } from 'src/redux/loading';
+import { setSkateboarding } from 'src/redux/skateboarding';
 import { setSkaters } from 'src/redux/skaters';
+import { setSnowboarding } from 'src/redux/snowboarding';
 import { RootState } from 'src/redux/store';
+import { setSurfing } from 'src/redux/surfing';
 
 import {
   Box,
@@ -24,7 +29,15 @@ import {
   Text,
 } from '@ui';
 
-const index = ({ allMovies, skaters }: any) => {
+const index = ({
+  allMovies,
+  skaters,
+  skateboarding,
+  snowboarding,
+  surfing,
+  bmx,
+  dirtBikes,
+}: any) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
   const movies = useSelector((state: RootState) => state.movies.movies);
@@ -37,6 +50,11 @@ const index = ({ allMovies, skaters }: any) => {
     dispatch(setLoading(true));
     dispatch(setMovies(allMovies));
     dispatch(setSkaters(skaters));
+    dispatch(setSkateboarding(skateboarding));
+    dispatch(setSnowboarding(snowboarding));
+    dispatch(setSurfing(surfing));
+    dispatch(setBmx(bmx));
+    dispatch(setDirtBikes(dirtBikes));
     dispatch(setLoading(false));
   }, [allMovies]);
 
@@ -138,11 +156,36 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/skaters?populate=*'
   );
   const skaters = await request2.json();
+  const request3 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/skate-movies?populate=*'
+  );
+  const skateboarding = await request3.json();
+  const request4 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/snowboard-movies?populate=*'
+  );
+  const snowboarding = await request4.json();
+  const request5 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/surf-movies?populate=*'
+  );
+  const surfing = await request5.json();
+  const request6 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/bmx-movies?populate=*'
+  );
+  const bmx = await request6.json();
+  const request7 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/dirt-bike-movies?populate=*'
+  );
+  const dirtBikes = await request7.json();
 
   return {
     props: {
       allMovies: allMovies.data,
       skaters: skaters.data,
+      skateboarding: skateboarding.data,
+      snowboarding: snowboarding.data,
+      surfing: surfing.data,
+      bmx: bmx.data,
+      dirtBikes: dirtBikes.data,
     },
     revalidate: 43200,
   };
