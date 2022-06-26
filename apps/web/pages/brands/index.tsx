@@ -5,7 +5,6 @@ import { GetStaticProps } from 'next';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
-import requests from 'src/axios/requests';
 import { RootState } from 'src/redux/store';
 
 import {
@@ -29,7 +28,15 @@ import {
   Text,
 } from '@ui';
 
-const index = ({ allMovies }) => {
+const index = ({
+  allMovies,
+  berrics,
+  brailles,
+  redbulls,
+  transworlds,
+  trashers,
+  vans,
+}) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
   const filteredData = useSelector(
@@ -56,8 +63,8 @@ const index = ({ allMovies }) => {
             >
               <Link href="/" passHref>
                 <a href="dummy">
-                  <Button text onClick={() => signOut()}>
-                    <Text>Logout from Radflix</Text>
+                  <Button onClick={() => signOut()}>
+                    <Text>Logout</Text>
                   </Button>
                 </a>
               </Link>
@@ -68,35 +75,22 @@ const index = ({ allMovies }) => {
             <>
               <Banner movies={allMovies} path="brand" />
 
-              <BrandRow
-                title="The Berrics"
-                fetchURL={requests.berrics}
-                square
-              />
-              <Row
-                title="Braille Skateboarding"
-                fetchURL={requests.brailles}
-                square
-              />
-              <Row
-                title="Red Bull"
-                fetchURL={requests.redbulls}
-                square
-                path="brand"
-              />
+              <BrandRow title="The Berrics" store={berrics} square />
+              <Row title="Braille Skateboarding" store={brailles} square />
+              <Row title="Red Bull" store={redbulls} square path="brand" />
               <Row
                 title="TransWorld SKATEboarding"
-                fetchURL={requests.transworld}
+                store={transworlds}
                 square
                 path="brand"
               />
               <Row
                 title="Thrasher Magazine"
-                fetchURL={requests.trasher}
+                store={trashers}
                 square
                 path="brand"
               />
-              <Row title="Vans" fetchURL={requests.vans} square path="brand" />
+              <Row title="Vans" store={vans} square path="brand" />
             </>
           )}
 
@@ -149,10 +143,40 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/all-brands?populate=*'
   );
   const allMovies = await request1.json();
+  const request2 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/berrics?populate=*'
+  );
+  const berrics = await request2.json();
+  const request3 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/brailles?populate=*'
+  );
+  const brailles = await request3.json();
+  const request4 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/redbulls?populate=*'
+  );
+  const redbulls = await request4.json();
+  const request5 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/transworlds?populate=*'
+  );
+  const transworlds = await request5.json();
+  const request6 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/trashers?populate=*'
+  );
+  const trashers = await request6.json();
+  const request7 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/vans?populate=*'
+  );
+  const vans = await request7.json();
 
   return {
     props: {
       allMovies: allMovies.data,
+      berrics: berrics.data,
+      brailles: brailles.data,
+      redbulls: redbulls.data,
+      transworlds: transworlds.data,
+      trashers: trashers.data,
+      vans: vans.data,
     },
     revalidate: 43200,
   };
