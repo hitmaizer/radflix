@@ -7,4 +7,5 @@ export interface ResultsProps extends LayoutProps, FlexboxProps, LayoutProps {
   children?: ReactNode;
   data?: DocObj[];
   square?: boolean;
+  path?: string;
 }

@@ -12,7 +12,7 @@ import { Heading } from '@ui';
 import * as S from './ResultsDocs.styles';
 import { ResultsProps } from './ResultsDocs.types';
 
-const Results = ({ children, data, square, ...rest }: ResultsProps) => {
+const Results = ({ children, data, square, path, ...rest }: ResultsProps) => {
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const [selectedDoc, setSelectedDoc] = useState<DocObj>();
 
@@ -55,7 +55,13 @@ const Results = ({ children, data, square, ...rest }: ResultsProps) => {
         </StyledSwiper>
         {children}
       </S.Results>
-      {showUnder && <UnderDocs selectedDoc={selectedDoc!} />}
+      {showUnder && (
+        <UnderDocs
+          selectedDoc={selectedDoc!}
+          path={path}
+          slug={selectedDoc!.slug}
+        />
+      )}
     </>
   );
 };

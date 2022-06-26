@@ -99,14 +99,14 @@ const index = ({ doc }: Doc) => {
               filteredData={docs}
             >
               <Link href="/" passHref>
-                <Button text onClick={() => signOut()}>
-                  <Text>Logout from Radflix</Text>
+                <Button onClick={() => signOut()}>
+                  <Text>Logout</Text>
                 </Button>
               </Link>
             </Logged>
           </Navbar>
           {filteredData.length !== 0 && (
-            <ResultsDocs data={filteredData} square />
+            <ResultsDocs data={filteredData} square path="/docs" />
           )}
           {filteredData.length === 0 && (
             <>
