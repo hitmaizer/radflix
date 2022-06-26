@@ -80,14 +80,13 @@ const index = ({
               <Link href="/" passHref>
                 <a href="dummy">
                   <Button
-                    text
                     onClick={() =>
                       signOut({
                         callbackUrl: `${window.location.origin}/`,
                       })
                     }
                   >
-                    <Text>Logout from Radflix</Text>
+                    <Text>Logout</Text>
                   </Button>
                 </a>
               </Link>
