@@ -70,7 +70,9 @@ const index = ({
               </Link>
             </Logged>
           </Navbar>
-          {filteredData.length !== 0 && <Results data={filteredData} square />}
+          {filteredData.length !== 0 && (
+            <Results data={filteredData} square path="/brand" />
+          )}
           {filteredData.length === 0 && (
             <>
               <Banner movies={allMovies} path="brand" />
