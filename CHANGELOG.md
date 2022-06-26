@@ -1,3 +1,44 @@
+## [1.30.0](https://github.com/hitmaizer/radflix/compare/v1.29.0...v1.30.0) (2022-06-26)
+
+
+### ✂️ Refactor
+
+* **BackBtn:** clears filteredData on backBtn click ([084c145](https://github.com/hitmaizer/radflix/commit/084c14542cb72c9f62a8f5c2290e3581454ead59))
+* **BackBtn:** forces movies state to refresh on BackBtn use ([c6ae07d](https://github.com/hitmaizer/radflix/commit/c6ae07d761e54487774e0f83a525e0913567cbca))
+* **BrandRow:** updates BrandRow component to use data from RTK ([7a9e9d4](https://github.com/hitmaizer/radflix/commit/7a9e9d4e0480f471ef1bb472c9ca672448e2aad0))
+* **brands:** adds missing path props on brands rows ([8c1568b](https://github.com/hitmaizer/radflix/commit/8c1568b8ec966558ccede8d7baea95477a29663d))
+* **brands:** updates logout button + fetch logic ([2fc4481](https://github.com/hitmaizer/radflix/commit/2fc44819fcb232178e145fb806dad74fc7a7d4a6))
+* **browse:** updates navbar to use only logout btn ([e6052fe](https://github.com/hitmaizer/radflix/commit/e6052fede9e19202a55a4359ec55250fd3adbcc8))
+* **browse:** updates page logic to get rows from getStaticProps ([68426d0](https://github.com/hitmaizer/radflix/commit/68426d0b9eae3b16a6904466cdf0ebf3a023124d))
+* **Content:** updates Content to use data from redux stores ([3689261](https://github.com/hitmaizer/radflix/commit/3689261807701f15deaafae02c1aaa49a51f7e1e))
+* **documentaries:** updates navbar to use only logout ([508f90c](https://github.com/hitmaizer/radflix/commit/508f90c13d71c21b396fb40f0407a778ccc028d0))
+* **Logged:** deletes unused icons and menus ([664bf33](https://github.com/hitmaizer/radflix/commit/664bf338751d22f41c5de463079d2dbab1d57b21))
+* **Results:** adds path and slug props to UnderBanner component ([0803ca3](https://github.com/hitmaizer/radflix/commit/0803ca310d93016df7b1b56fe1b72a2516d1ce8c))
+* **Results:** updates types to remove any type on filteredData ([1d4bef1](https://github.com/hitmaizer/radflix/commit/1d4bef1c08efeeb3b0861fae5d218973edd046f3))
+* **Row:** updates component to use data from redux store ([cf799c5](https://github.com/hitmaizer/radflix/commit/cf799c55c249d3c861675a967f3376e443be6c5d))
+* **Row:** updates Row component types file ([77346fc](https://github.com/hitmaizer/radflix/commit/77346fccdb91324a4bf6185fc9371e164fbdac2a))
+* **SkaterRow:** updates SkaterRow component types file ([89dab7e](https://github.com/hitmaizer/radflix/commit/89dab7e9bf5de335955f42084fb844c06810c780))
+* **UnderDocs:** updates UnderDocs component to use href from props ([9a667f5](https://github.com/hitmaizer/radflix/commit/9a667f56391040af7deebeb896a3e267aa062691))
+
+
+### 🚀 Features
+
+* **BrandRow:** adds path prop type to BrandRow component ([dcb9aff](https://github.com/hitmaizer/radflix/commit/dcb9aff8ec45f290706477b5646ab102c54332d7))
+* **BrandRow:** updates BrandRow component types file ([5c6bf03](https://github.com/hitmaizer/radflix/commit/5c6bf0362142048e8f1935d339a030b045124098))
+* **brands:** adds path prop to Results component ([c1be362](https://github.com/hitmaizer/radflix/commit/c1be362f098d2261977c45f9ec8c31d8b43bb9ac))
+* **browse:** adds path prop to Results component ([f1a6509](https://github.com/hitmaizer/radflix/commit/f1a65092bbb196f61430d8e0f7b77791506ebdf6))
+* **documentaries:** adds path prop to Results component ([3c74102](https://github.com/hitmaizer/radflix/commit/3c741025026b9566e3acc3273412a444e4ba40b8))
+* **redux:** adds RTK bmx slice ([1de1fb7](https://github.com/hitmaizer/radflix/commit/1de1fb7474e7f5ca044a01aa4517c4ea462edf2f))
+* **redux:** adds RTK dirtBikes slice ([34f89d6](https://github.com/hitmaizer/radflix/commit/34f89d68938302e5f713e8f9375aeee45517c1fe))
+* **redux:** adds RTK skateboarding slice ([4521bd8](https://github.com/hitmaizer/radflix/commit/4521bd8114ac65def22221eeb24ad3bbb603d2cf))
+* **redux:** adds RTK snowboarding slice ([6f4c705](https://github.com/hitmaizer/radflix/commit/6f4c705d18253b6a02661317888bf2fa30d685e4))
+* **redux:** adds RTK surf slice ([ecfa922](https://github.com/hitmaizer/radflix/commit/ecfa92217a219753a5aea5a96dc4e6fad51ef836))
+* **redux:** updates RTK store file to include new slices ([edd360e](https://github.com/hitmaizer/radflix/commit/edd360e81be0785cfc0751a5bef563d403485613))
+* **ResultDocs:** adds path and slug prop to UnderDoc component ([333b724](https://github.com/hitmaizer/radflix/commit/333b724e588965633a6721748a1283ff5f83afe6))
+* **Results:** updates Results component types file ([3cd9003](https://github.com/hitmaizer/radflix/commit/3cd9003c6087d956223b56bba369efcbb168f545))
+* **ResultsDocs:** updates ResultsDocs component types file ([55c01df](https://github.com/hitmaizer/radflix/commit/55c01dfb8e1aa3d287616d01bfadd909d2be6396))
+* **UnderDocs:** updates UnderDocs component types file ([9d7a802](https://github.com/hitmaizer/radflix/commit/9d7a80212362f65a4b9e4b3f5849ca8be5c3b4cc))
+
 ## [1.29.0](https://github.com/hitmaizer/radflix/compare/v1.28.0...v1.29.0) (2022-06-26)
 
 
