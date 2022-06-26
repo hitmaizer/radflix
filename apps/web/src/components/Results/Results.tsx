@@ -14,7 +14,7 @@ import { Heading } from '@ui';
 import * as S from './Results.styles';
 import { ResultsProps } from './Results.types';
 
-const Results = ({ children, square, ...rest }: ResultsProps) => {
+const Results = ({ children, square, path, ...rest }: ResultsProps) => {
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const [selectedDoc, setSelectedDoc] = useState<MovieObj>();
   const filteredData = useSelector(
@@ -60,7 +60,13 @@ const Results = ({ children, square, ...rest }: ResultsProps) => {
         </StyledSwiper>
         {children}
       </S.Results>
-      {showUnder && <UnderBanner selectedMovie={selectedDoc} />}
+      {showUnder && (
+        <UnderBanner
+          selectedMovie={selectedDoc}
+          path={path}
+          slug={selectedDoc?.slug}
+        />
+      )}
     </>
   );
 };
