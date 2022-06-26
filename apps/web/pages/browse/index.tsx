@@ -121,7 +121,7 @@ const index = ({
               </Loading>
             </>
           )}
-          {filteredData.length !== 0 && <Results square />}
+          {filteredData.length !== 0 && <Results square path="/watch" />}
           {filteredData.length === 0 && <Content />}
         </Browse>
       </>

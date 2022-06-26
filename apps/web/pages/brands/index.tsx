@@ -70,13 +70,25 @@ const index = ({
               </Link>
             </Logged>
           </Navbar>
-          {filteredData.length !== 0 && <Results data={filteredData} square />}
+          {filteredData.length !== 0 && (
+            <Results data={filteredData} square path="/brand" />
+          )}
           {filteredData.length === 0 && (
             <>
               <Banner movies={allMovies} path="brand" />
 
-              <BrandRow title="The Berrics" store={berrics} square />
-              <Row title="Braille Skateboarding" store={brailles} square />
+              <BrandRow
+                title="The Berrics"
+                store={berrics}
+                square
+                path="brand"
+              />
+              <Row
+                title="Braille Skateboarding"
+                store={brailles}
+                square
+                path="brand"
+              />
               <Row title="Red Bull" store={redbulls} square path="brand" />
               <Row
                 title="TransWorld SKATEboarding"

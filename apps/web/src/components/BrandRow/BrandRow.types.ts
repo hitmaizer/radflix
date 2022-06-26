@@ -10,4 +10,5 @@ export interface BrandRowProps extends FlexboxProps, SpaceProps, LayoutProps {
   square?: boolean;
   poster?: boolean;
   store?: DocObj[];
+  path?: string;
 }

@@ -7,7 +7,7 @@ import { Button, Heading, Stack, Text } from '@ui';
 import * as S from './UnderDocs.styles';
 import { UnderDocsProps } from './UnderDocs.types';
 
-const UnderDocs = ({ children, selectedDoc }: UnderDocsProps) => {
+const UnderDocs = ({ children, selectedDoc, path, slug }: UnderDocsProps) => {
   return (
     <S.UnderBanner
       style={{
@@ -21,7 +21,7 @@ const UnderDocs = ({ children, selectedDoc }: UnderDocsProps) => {
           {selectedDoc.title}
         </Heading>
         <Stack display="flex" gridGap={4}>
-          <Link href={`/docs/${selectedDoc.slug}`} passHref>
+          <Link href={`/${path}/${slug}`} passHref>
             <Button banner> Play</Button>
           </Link>
           <Button banner>My List</Button>
