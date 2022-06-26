@@ -106,7 +106,7 @@ const index = ({ doc }: Doc) => {
             </Logged>
           </Navbar>
           {filteredData.length !== 0 && (
-            <ResultsDocs data={filteredData} square />
+            <ResultsDocs data={filteredData} square path="/docs" />
           )}
           {filteredData.length === 0 && (
             <>
