@@ -1,3 +1,25 @@
+## [1.29.0](https://github.com/hitmaizer/radflix/compare/v1.28.0...v1.29.0) (2022-06-26)
+
+
+### ✂️ Refactor
+
+* **homepage:** updates bg image on homepage to next/image on cms ([ae2733f](https://github.com/hitmaizer/radflix/commit/ae2733f57367510bf5fc4a2f973071670ace0ebd))
+
+
+### 🎨 Style
+
+* **Homepage:** adjusts Homepage component style rules ([9906536](https://github.com/hitmaizer/radflix/commit/99065366290162e0a76c706c598a2cdd33fe1408))
+
+
+### 🐛 Fixes
+
+* **LinkText:** forces state refresh on movies on route change ([06f3b94](https://github.com/hitmaizer/radflix/commit/06f3b9483c404d276768e3be04e4fb7ebf2865b8))
+
+
+### 🚀 Features
+
+* **yarn.lock:** updates yarn.lock file ([ee0d540](https://github.com/hitmaizer/radflix/commit/ee0d5404369e649d58811d82062eb0d52f61650f))
+
 ## [1.28.0](https://github.com/hitmaizer/radflix/compare/v1.27.0...v1.28.0) (2022-06-25)
 
 
