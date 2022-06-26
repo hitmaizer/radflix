@@ -77,8 +77,18 @@ const index = ({
             <>
               <Banner movies={allMovies} path="brand" />
 
-              <BrandRow title="The Berrics" store={berrics} square />
-              <Row title="Braille Skateboarding" store={brailles} square />
+              <BrandRow
+                title="The Berrics"
+                store={berrics}
+                square
+                path="brand"
+              />
+              <Row
+                title="Braille Skateboarding"
+                store={brailles}
+                square
+                path="brand"
+              />
               <Row title="Red Bull" store={redbulls} square path="brand" />
               <Row
                 title="TransWorld SKATEboarding"
