@@ -50,7 +50,7 @@ const Results = ({ children, square, path, ...rest }: ResultsProps) => {
             },
           }}
         >
-          {filteredData?.map((value: any) => {
+          {filteredData?.map((value: MovieObj) => {
             return (
               <SwiperSlide key={value.id} onClick={() => handleClick(value)}>
                 <ImageCard imgSrc={value.backdrop.data.url} square />
