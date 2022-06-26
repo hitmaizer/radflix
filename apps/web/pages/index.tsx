@@ -1,3 +1,4 @@
+import { StyledImage } from '@components/Homepage/Homepage.styles';
 import { GetStaticProps } from 'next';
 import { useSession, signIn } from 'next-auth/react';
 import { useRouter } from 'next/router';
@@ -17,6 +18,10 @@ export default function Home({ allMovies }: any) {
   };
   return (
     <>
+      <StyledImage
+        src="https://res.cloudinary.com/radflix-cms/image/upload/v1656242095/homepage_banner_12dea159ff.avif?updated_at=2022-06-26T11:14:56.920Z"
+        layout="fill"
+      />
       <Homepage>
         <Stack
           display="flex"
