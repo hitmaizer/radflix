@@ -4,10 +4,7 @@ import DocBanner from '@components/DocBanner';
 import { DocObj } from '@components/DocBanner/DocBanner';
 import ImageCard from '@components/ImageCard';
 import { StyledSwiper } from '@components/SkaterRow/SkaterRow.styles';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'src/axios/instance';
-import { setError } from 'src/redux/error';
-import { setLoading } from 'src/redux/loading';
+import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
 
@@ -23,6 +20,7 @@ const DocRow = ({
   fetchURL,
   square,
   poster,
+  store,
   ...rest
 }: BrandRowProps) => {
   const [docs, setDocs] = useState<DocObj[]>([]);
@@ -30,7 +28,6 @@ const DocRow = ({
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
-  const dispatch = useDispatch();
 
   const handleClick = (d: DocObj) => {
     setSelectedDoc(d);
@@ -38,16 +35,7 @@ const DocRow = ({
   };
 
   useEffect(() => {
-    async function fetchData() {
-      dispatch(setLoading(true));
-      const request = await axios
-        .get(fetchURL!)
-        .then((res) => setDocs(res.data?.data))
-        .catch((err) => dispatch(setError(err)))
-        .finally(() => dispatch(setLoading(false)));
-      return request;
-    }
-    fetchData();
+    setDocs(store!);
   }, [fetchURL]);
 
   return (
