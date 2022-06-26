@@ -1,3 +1,24 @@
+## [1.28.0](https://github.com/hitmaizer/radflix/compare/v1.27.0...v1.28.0) (2022-06-25)
+
+
+### ✂️ Refactor
+
+* **homepage:** updates homepage logic to improve serverless func ([f05f34e](https://github.com/hitmaizer/radflix/commit/f05f34e7ca0c00a578fef7d70f1cf225346be664))
+* **nvm:** updates all nvm versions to 16.15 ([170b6e8](https://github.com/hitmaizer/radflix/commit/170b6e8016abf238e3dc9b920c8826518b6cfecd))
+* **README:** adds link to description ([9fc0ac5](https://github.com/hitmaizer/radflix/commit/9fc0ac57a613657fc7bb06387887114d3c70a587))
+* **README:** updates README file ([fb064aa](https://github.com/hitmaizer/radflix/commit/fb064aa86cb6e19019f3e236243392ca8b2e9da2))
+
+
+### 🐛 Fixes
+
+* **package:** updates types/react to version 17 ([44b7174](https://github.com/hitmaizer/radflix/commit/44b7174372d6ca5fd08dcd4b68b7fa0ee9562e8b))
+
+
+### 🚀 Features
+
+* **brands:** adds search and results to brands page ([4f31711](https://github.com/hitmaizer/radflix/commit/4f317110b45e7c50861b693a49a647623c20e3bd))
+* **browse:** adds redirect on logout ([5c70529](https://github.com/hitmaizer/radflix/commit/5c7052982ac0c33ad25a7135fb70443c68ed7fc8))
+
 ## [1.27.0](https://github.com/hitmaizer/radflix/compare/v1.26.0...v1.27.0) (2022-06-15)
 
 
