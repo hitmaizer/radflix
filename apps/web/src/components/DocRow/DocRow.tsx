@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
-import DocBanner from '@components/DocBanner';
-import { DocObj } from '@components/DocBanner/DocBanner';
+import { MovieObj } from '@components/Banner/Banner.types';
 import ImageCard from '@components/ImageCard';
 import { StyledSwiper } from '@components/SkaterRow/SkaterRow.styles';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'src/axios/instance';
-import { setError } from 'src/redux/error';
-import { setLoading } from 'src/redux/loading';
+import UnderBanner from '@components/UnderBanner';
+import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
 
@@ -20,35 +17,25 @@ import { DocRowProps } from './DocRow.types';
 const DocRow = ({
   children,
   title,
-  fetchURL,
+  store,
   square,
   poster,
   ...rest
 }: DocRowProps) => {
-  const [docs, setDocs] = useState<DocObj[]>([]);
-  const [selectedDoc, setSelectedDoc] = useState<DocObj>();
+  const [docs, setDocs] = useState<MovieObj[]>([]);
+  const [selectedDoc, setSelectedDoc] = useState<MovieObj>();
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const error = useSelector((state: RootState) => state.error.error);
   const loading = useSelector((state: RootState) => state.loading.loading);
-  const dispatch = useDispatch();
 
-  const handleClick = (d: DocObj) => {
+  const handleClick = (d: MovieObj) => {
     setSelectedDoc(d);
     setShowUnder(true);
   };
 
   useEffect(() => {
-    async function fetchData() {
-      dispatch(setLoading(true));
-      const request = await axios
-        .get(fetchURL!)
-        .then((res) => setDocs(res.data?.data))
-        .catch((err) => dispatch(setError(err)))
-        .finally(() => dispatch(setLoading(false)));
-      return request;
-    }
-    fetchData();
-  }, [fetchURL]);
+    setDocs(store!);
+  }, [store]);
 
   return (
     <>
@@ -75,7 +62,7 @@ const DocRow = ({
               },
             }}
           >
-            {docs.map((doc: DocObj) => (
+            {docs.map((doc: MovieObj) => (
               <SwiperSlide key={doc.id} onClick={() => handleClick(doc)}>
                 <ImageCard
                   poster={poster}
@@ -95,10 +82,8 @@ const DocRow = ({
         </S.DocRow>
       )}
       {showUnder && (
-        <DocBanner
-          imgSrc={selectedDoc?.backdrop.data.url}
-          title={selectedDoc?.title}
-          description={selectedDoc?.description}
+        <UnderBanner
+          selectedMovie={selectedDoc!}
           slug={selectedDoc?.slug}
           path="docs"
         />

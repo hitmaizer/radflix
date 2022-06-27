@@ -16,7 +16,7 @@ const Banner = ({ children, movies, path, ...rest }: BannerProps) => {
 
   useEffect(() => {
     setMovie(movies[Math.floor(Math.random() * movies.length)]);
-  }, []);
+  }, [movies]);
 
   return (
     <>
