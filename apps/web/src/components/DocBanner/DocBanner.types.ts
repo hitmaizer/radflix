@@ -9,5 +9,5 @@ export interface DocBannerProps {
   slug?: string;
   description?: string;
   path?: string;
-  docs: MovieObj[];
+  docs?: MovieObj[];
 }

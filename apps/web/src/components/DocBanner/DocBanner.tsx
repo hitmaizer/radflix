@@ -37,7 +37,7 @@ const DocBanner = ({ children, path, docs, ...rest }: DocBannerProps) => {
   const loading = useSelector((state: RootState) => state.loading.loading);
 
   useEffect(() => {
-    setMovie(docs[Math.floor(Math.random() * docs.length)]);
+    setMovie(docs![Math.floor(Math.random() * docs!.length)]);
   }, [docs]);
 
   return (
