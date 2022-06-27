@@ -1,3 +1,30 @@
+## [1.31.0](https://github.com/hitmaizer/radflix/compare/v1.30.0...v1.31.0) (2022-06-27)
+
+
+### ✂️ Refactor
+
+* **DocBanner:** updates DocBanner component ([0c6b4dc](https://github.com/hitmaizer/radflix/commit/0c6b4dcf7b35135723582cfb4761e4676f7ff368))
+* **DocRow:** updates DocRow component logic to not fetch data ([0de437d](https://github.com/hitmaizer/radflix/commit/0de437d34c84d5d7e1520d9ad86a91752c74a822))
+* **documentaries:** updates documentaries page logic 2use StaticProps ([22dd064](https://github.com/hitmaizer/radflix/commit/22dd064239c30ac32f5e58ba806b3cd2b81ea389))
+
+
+### 🐛 Fixes
+
+* **DocBanner:** updates DocBanner files to fix build error ([6163b63](https://github.com/hitmaizer/radflix/commit/6163b6397f07d69ced92e67bb4382a4b3040e8ee))
+* **Row:** updates Row useEffect dependency array 2fix render ([7ab7ed6](https://github.com/hitmaizer/radflix/commit/7ab7ed6a52c196c2ecbd9265fd50f89f95c6618a))
+
+
+### 🚀 Features
+
+* **Banner:** updates useEffect dependencies array ([06c1c68](https://github.com/hitmaizer/radflix/commit/06c1c68636ef42e05d22b7c4f140e43b58c364e8))
+* **DocBanner:** updates DocBanner component types file ([18cc61a](https://github.com/hitmaizer/radflix/commit/18cc61aff8626bf6391e6ddbdb1fd9a2208684f9))
+* **DocRow:** updates DocRow component types file ([8c17021](https://github.com/hitmaizer/radflix/commit/8c17021a3e362e31c601210ebeb3cfc2cd34922e))
+* **redux:** adds bmxDocs slice file ([19ace4c](https://github.com/hitmaizer/radflix/commit/19ace4cef30de0babb525b09276832660c9916cb))
+* **redux:** adds skateDocs slice file ([cb4b678](https://github.com/hitmaizer/radflix/commit/cb4b678a78446ea8af5f7922d9513b139fd225a9))
+* **redux:** adds snowDocs slice file ([b22714b](https://github.com/hitmaizer/radflix/commit/b22714bda3030f3be6925ef4a93a8b0a92369db8))
+* **redux:** adds surfDocs slice file ([eabff36](https://github.com/hitmaizer/radflix/commit/eabff36a71b1bfd16ef81001c26ef43ab1a6507d))
+* **redux:** updates RTK store file to include new slices ([a4220ff](https://github.com/hitmaizer/radflix/commit/a4220ff5ade9873374b2cafbcc43b3436747f00b))
+
 ## [1.30.0](https://github.com/hitmaizer/radflix/compare/v1.29.0...v1.30.0) (2022-06-26)
 
 
