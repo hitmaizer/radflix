@@ -85,7 +85,7 @@ const index = ({ allDocs, skateDocs, snowDocs, surfDocs, bmxDocs }: any) => {
             </Link>
             <MenuList />
             <Logged
-              imgSrc="/placeholder-avatar.jpg"
+              imgSrc={session.user?.image!}
               display="flex"
               alignItems="center"
               filteredData={docs}
