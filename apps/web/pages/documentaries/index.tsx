@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
+import Header from '@components/Header';
 import ResultsDocs from '@components/ResultsDocs';
 import { GetStaticProps } from 'next';
-import { signOut, useSession } from 'next-auth/react';
-import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setBmxDocs } from 'src/redux/bmxDocs';
 import { setDocs } from 'src/redux/docs';
@@ -13,29 +13,11 @@ import { setSnowDocs } from 'src/redux/snowDocs';
 import { RootState } from 'src/redux/store';
 import { setSurfDocs } from 'src/redux/surfDocs';
 
-import {
-  Browse,
-  DocBanner,
-  Homepage,
-  Logged,
-  MenuList,
-  Row,
-} from '@components';
-import {
-  Box,
-  Button,
-  Heading,
-  Loading,
-  Logo,
-  Navbar,
-  Skeleton,
-  Stack,
-  Text,
-} from '@ui';
+import { Browse, DocBanner, Row } from '@components';
+import { Loading, Skeleton, Stack } from '@ui';
 
 const index = ({ allDocs, skateDocs, snowDocs, surfDocs, bmxDocs }: any) => {
   const { data: session } = useSession();
-  const loading = useSelector((state: RootState) => state.loading.loading);
   const docs = useSelector((state: RootState) => state.docsData.docs);
   const filteredData = useSelector(
     (state: RootState) => state.filteredData.filter
@@ -53,50 +35,12 @@ const index = ({ allDocs, skateDocs, snowDocs, surfDocs, bmxDocs }: any) => {
   }, [allDocs]);
 
   if (typeof window === 'undefined') return null;
+
   if (session) {
     return (
       <>
         <Browse>
-          {loading && (
-            <>
-              <Loading
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                ml={10}
-              >
-                <Skeleton heading />
-                <Stack display="flex" gridGap="16px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                </Stack>
-              </Loading>
-            </>
-          )}
-          <Navbar browse>
-            <Link href="/browse" passHref>
-              <a href="dummy">
-                <Logo imgSrc="radflix-logo.png" width="100px" />
-              </a>
-            </Link>
-            <MenuList />
-            <Logged
-              imgSrc={session.user?.image!}
-              display="flex"
-              alignItems="center"
-              filteredData={docs}
-            >
-              <Link href="/" passHref>
-                <Button onClick={() => signOut()}>
-                  <Text>Logout</Text>
-                </Button>
-              </Link>
-            </Logged>
-          </Navbar>
+          <Header filteredData={docs} />
           {filteredData.length !== 0 && (
             <ResultsDocs data={filteredData} square path="/docs" />
           )}
@@ -136,19 +80,24 @@ const index = ({ allDocs, skateDocs, snowDocs, surfDocs, bmxDocs }: any) => {
     );
   }
   return (
-    <Homepage>
-      <Box
+    <Browse>
+      <Loading
         display="flex"
-        justifyContent="center"
         flexDirection="column"
         alignItems="center"
-        pt={15}
+        ml={10}
       >
-        <Heading size="4xl" color="white" fontWeight="bold" textAlign="center">
-          Please Login to access this page.
-        </Heading>
-      </Box>
-    </Homepage>
+        <Skeleton heading />
+        <Stack display="flex" gridGap="16px">
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+        </Stack>
+      </Loading>
+    </Browse>
   );
 };
 
