@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nineclubs",
+  "info": {
+    "singularName": "nineclub",
+    "pluralName": "nineclubs",
+    "displayName": "nineclub"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "movieLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "releaseYear": {
+      "type": "integer"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

@@ -20,7 +20,7 @@ export const Card = styled.div<ImageCardProps>`
 
   &:hover {
     transform: scale(104%);
-    transition-delay: 300ms;
+    transition-delay: 100ms;
   }
   ${({ poster }) =>
     poster &&
