@@ -2,31 +2,12 @@ import React from 'react';
 
 import BrandRow from '@components/BrandRow';
 import { GetStaticProps } from 'next';
-import { signOut, useSession } from 'next-auth/react';
-import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 
-import {
-  Banner,
-  Browse,
-  Homepage,
-  Logged,
-  MenuList,
-  Results,
-  Row,
-} from '@components';
-import {
-  Box,
-  Button,
-  Heading,
-  Loading,
-  Logo,
-  Navbar,
-  Skeleton,
-  Stack,
-  Text,
-} from '@ui';
+import { Banner, Browse, Header, Results, Row } from '@components';
+import { Loading, Skeleton, Stack } from '@ui';
 
 const index = ({
   allMovies,
@@ -48,28 +29,7 @@ const index = ({
     return (
       <>
         <Browse>
-          <Navbar browse>
-            <Link href="/" passHref>
-              <a href="dummy">
-                <Logo imgSrc="radflix-logo.png" width="100px" />
-              </a>
-            </Link>
-            <MenuList />
-            <Logged
-              imgSrc={session.user?.image!}
-              display="flex"
-              alignItems="center"
-              filteredData={allMovies}
-            >
-              <Link href="/" passHref>
-                <a href="dummy">
-                  <Button onClick={() => signOut()}>
-                    <Text>Logout</Text>
-                  </Button>
-                </a>
-              </Link>
-            </Logged>
-          </Navbar>
+          <Header filteredData={allMovies} />
           {filteredData.length !== 0 && (
             <Results data={filteredData} square path="/brand" />
           )}
@@ -132,19 +92,24 @@ const index = ({
   }
 
   return (
-    <Homepage>
-      <Box
+    <Browse>
+      <Loading
         display="flex"
-        justifyContent="center"
         flexDirection="column"
         alignItems="center"
-        pt={15}
+        ml={10}
       >
-        <Heading size="4xl" color="white" fontWeight="bold" textAlign="center">
-          Please Login to access this page.
-        </Heading>
-      </Box>
-    </Homepage>
+        <Skeleton heading />
+        <Stack display="flex" gridGap="16px">
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+        </Stack>
+      </Loading>
+    </Browse>
   );
 };
 
