@@ -1,3 +1,32 @@
+## [1.32.0](https://github.com/hitmaizer/radflix/compare/v1.31.0...v1.32.0) (2022-06-28)
+
+
+### ✂️ Refactor
+
+* **brands:** updates brands page to use Header component ([23090f9](https://github.com/hitmaizer/radflix/commit/23090f9419e42b92a84891fd41ee6e8128f4f525))
+* **brands:** updates imgSrc path to session user image ([a7bad60](https://github.com/hitmaizer/radflix/commit/a7bad603c281702b9e3128e374d09dfea7195934))
+* **browse:** updates browse page render to use Header component ([ce13799](https://github.com/hitmaizer/radflix/commit/ce13799a885be774fe89087385a4d45a5b45b2ae))
+* **browse:** updates imgSrc path to session user image ([e2b4cf4](https://github.com/hitmaizer/radflix/commit/e2b4cf41955cb5d6fff744162b4ca927ba6aa8fb))
+* **cms:** updates nineclub and shredz findOne to slug ([928d402](https://github.com/hitmaizer/radflix/commit/928d402c8f4b3cd2e01726246dbde13790328618))
+* **documentaries:** updates documentaries page to use Header component ([48c78a4](https://github.com/hitmaizer/radflix/commit/48c78a4c03018a8b14dbea6502a8e5127cd82649))
+* **documentaries:** updates imgSrc path to session user image ([6d6c909](https://github.com/hitmaizer/radflix/commit/6d6c909dd3c7a1a591e3a88359110009f0a71e31))
+
+
+### 🎨 Style
+
+* **ImageCard:** decreases transition delay on ImageCard ([55c7a45](https://github.com/hitmaizer/radflix/commit/55c7a45a9e89ea3657a25202a0109fa39816798a))
+
+
+### 🚀 Features
+
+* **cms:** adds nineclub content type ([4b5117d](https://github.com/hitmaizer/radflix/commit/4b5117d799db93f6de9d3417d9f8d60fff968d22))
+* **cms:** adds shredzshop content type ([241f1bd](https://github.com/hitmaizer/radflix/commit/241f1bd0e4bc56b393c16e93fde51ae5dc1ab4e7))
+* **components:** updates components index exports file ([0088840](https://github.com/hitmaizer/radflix/commit/00888406b4160fb322d44b2b16ecfd37374954c4))
+* **Header:** adds Header component index file ([a55f7b6](https://github.com/hitmaizer/radflix/commit/a55f7b6f46bc2fff78127fdaa367ada959bff960))
+* **Header:** adds Header component markup file ([6ce25be](https://github.com/hitmaizer/radflix/commit/6ce25be75566130516fefc2b0618b0bc88555bce))
+* **Header:** adds Header component styles file ([fe8ef58](https://github.com/hitmaizer/radflix/commit/fe8ef58f285467fa6617f4ff6d530fa466e026ea))
+* **Header:** adds Header component types file ([30ab48c](https://github.com/hitmaizer/radflix/commit/30ab48ca2d4ef39859dbf18abc960b6f8830e25e))
+
 ## [1.31.0](https://github.com/hitmaizer/radflix/compare/v1.30.0...v1.31.0) (2022-06-27)
 
 
