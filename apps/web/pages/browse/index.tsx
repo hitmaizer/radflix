@@ -1,11 +1,10 @@
 import { useEffect } from 'react';
 
-import { Browse, Content, Homepage, Logged } from '@components/index';
-import MenuList from '@components/MenuList';
+import Header from '@components/Header';
+import { Browse, Content } from '@components/index';
 import Results from '@components/Results';
 import { GetStaticProps } from 'next';
-import { useSession, signOut } from 'next-auth/react';
-import Link from 'next/link';
+import { useSession } from 'next-auth/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMovies } from 'src/redux/allMovies';
 import { setBmx } from 'src/redux/bmx';
@@ -17,17 +16,7 @@ import { setSnowboarding } from 'src/redux/snowboarding';
 import { RootState } from 'src/redux/store';
 import { setSurfing } from 'src/redux/surfing';
 
-import {
-  Box,
-  Button,
-  Heading,
-  Loading,
-  Logo,
-  Navbar,
-  Skeleton,
-  Stack,
-  Text,
-} from '@ui';
+import { Loading, Skeleton, Stack } from '@ui';
 
 const index = ({
   allMovies,
@@ -64,34 +53,7 @@ const index = ({
     return (
       <>
         <Browse>
-          <Navbar browse>
-            <Link href="/" passHref>
-              <a href="dummy">
-                <Logo imgSrc="radflix-logo.png" width="100px" />
-              </a>
-            </Link>
-            <MenuList />
-            <Logged
-              imgSrc={session.user?.image!}
-              display="flex"
-              alignItems="center"
-              filteredData={movies}
-            >
-              <Link href="/" passHref>
-                <a href="dummy">
-                  <Button
-                    onClick={() =>
-                      signOut({
-                        callbackUrl: `${window.location.origin}/`,
-                      })
-                    }
-                  >
-                    <Text>Logout</Text>
-                  </Button>
-                </a>
-              </Link>
-            </Logged>
-          </Navbar>
+          <Header filteredData={movies} />
           {loading && (
             <>
               <Loading
@@ -128,19 +90,24 @@ const index = ({
     );
   }
   return (
-    <Homepage>
-      <Box
+    <Browse>
+      <Loading
         display="flex"
-        justifyContent="center"
         flexDirection="column"
         alignItems="center"
-        pt={15}
+        ml={10}
       >
-        <Heading size="4xl" color="white" fontWeight="bold" textAlign="center">
-          Please Login to access this page.
-        </Heading>
-      </Box>
-    </Homepage>
+        <Skeleton heading />
+        <Stack display="flex" gridGap="16px">
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+          <Skeleton card />
+        </Stack>
+      </Loading>
+    </Browse>
   );
 };
 
