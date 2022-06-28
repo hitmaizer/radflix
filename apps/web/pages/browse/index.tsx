@@ -72,7 +72,7 @@ const index = ({
             </Link>
             <MenuList />
             <Logged
-              imgSrc="/placeholder-avatar.jpg"
+              imgSrc={session.user?.image!}
               display="flex"
               alignItems="center"
               filteredData={movies}
