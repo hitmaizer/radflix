@@ -24,6 +24,7 @@
     "pg-connection-string": "^2.5.0",
     "plaiceholder": "^2.3.0",
     "sharp": "^0.30.6",
+    "strapi-plugin-placeholder": "^4.1.7",
     "strapi-plugin-react-editorjs": "^2.0.0",
     "strapi-plugin-transformer": "^2.0.1"
   },
