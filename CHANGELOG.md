@@ -1,3 +1,16 @@
+## [1.33.0](https://github.com/hitmaizer/radflix/compare/v1.32.0...v1.33.0) (2022-06-28)
+
+
+### ✂️ Refactor
+
+* **cms:** updates index file to default values ([7572931](https://github.com/hitmaizer/radflix/commit/7572931cba03467650cc01156f30b839f8509198))
+
+
+### 🚀 Features
+
+* **cms:** adds placeholder config to plugins file ([d7792c1](https://github.com/hitmaizer/radflix/commit/d7792c1c86385ed3fcf856df3ddfc6ed5078c2a7))
+* **cms:** adds strapi-plugin-placeholder ([5da6f8b](https://github.com/hitmaizer/radflix/commit/5da6f8b7a3401b8834a57b658bf5f87d92942b80))
+
 ## [1.32.0](https://github.com/hitmaizer/radflix/compare/v1.31.0...v1.32.0) (2022-06-28)
 
 
