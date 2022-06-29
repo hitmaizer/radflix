@@ -17,6 +17,8 @@ const index = ({
   transworlds,
   trashers,
   vans,
+  nineclubs,
+  shredzshops,
 }) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
@@ -37,6 +39,12 @@ const index = ({
             <>
               <Banner movies={allMovies} path="brand" />
 
+              <Row
+                title="Thrasher Magazine"
+                store={trashers}
+                square
+                path="brand"
+              />
               <BrandRow
                 title="The Berrics"
                 store={berrics}
@@ -49,16 +57,22 @@ const index = ({
                 square
                 path="brand"
               />
-              <Row title="Red Bull" store={redbulls} square path="brand" />
               <Row
-                title="TransWorld SKATEboarding"
-                store={transworlds}
+                title="The Nine Club"
+                store={nineclubs}
                 square
                 path="brand"
               />
               <Row
-                title="Thrasher Magazine"
-                store={trashers}
+                title="Shredz Shop"
+                store={shredzshops}
+                square
+                path="brand"
+              />
+              <Row title="Red Bull" store={redbulls} square path="brand" />
+              <Row
+                title="TransWorld SKATEboarding"
+                store={transworlds}
                 square
                 path="brand"
               />
@@ -144,6 +158,14 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/vans?populate=*'
   );
   const vans = await request7.json();
+  const request8 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/nineclubs?populate=*'
+  );
+  const nineclubs = await request8.json();
+  const request9 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/shredzshops?populate=*'
+  );
+  const shredzshops = await request9.json();
 
   return {
     props: {
@@ -154,6 +176,8 @@ export const getStaticProps: GetStaticProps = async () => {
       transworlds: transworlds.data,
       trashers: trashers.data,
       vans: vans.data,
+      nineclubs: nineclubs.data,
+      shredzshops: shredzshops.data,
     },
     revalidate: 43200,
   };
