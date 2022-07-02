@@ -41,7 +41,7 @@ const DocRow = ({
   return (
     <>
       {!loading && (
-        <S.BrandRow display="flex" flexDirection="column" ml={16} {...rest}>
+        <S.BrandRow display="flex" flexDirection="column" {...rest}>
           <Heading size="2xl" fontWeight="700" color="white" mr="auto">
             {title}
           </Heading>

@@ -4,6 +4,9 @@ import Logged from '@components/Logged';
 import MenuList from '@components/MenuList';
 import { signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
+import { useDispatch, useSelector } from 'react-redux';
+import { setIsOpen } from 'src/redux/show';
+import { RootState } from 'src/redux/store';
 
 import { Button, Hamburger, Logo, Navbar, Text } from '@ui';
 
@@ -12,10 +15,12 @@ import { HeaderProps } from './Header.types';
 
 const Header = ({ children, filteredData, ...rest }: HeaderProps) => {
   const { data: session } = useSession();
-  const [isOpen, setIsOpen] = React.useState(false);
+  const isOpen = useSelector((state: RootState) => state.open.open);
+  const dispatch = useDispatch();
+
   return (
     <S.Header {...rest}>
-      <Navbar browse>
+      <Navbar browse open={isOpen}>
         <Link href="/browse" passHref>
           <a href="dummy">
             <Logo imgSrc="radflix-logo.png" width="100px" />
@@ -40,7 +45,11 @@ const Header = ({ children, filteredData, ...rest }: HeaderProps) => {
             </Button>
           </Link>
         </Logged>
-        <Hamburger open={isOpen} onClick={() => setIsOpen(!isOpen)} web>
+        <Hamburger
+          open={isOpen}
+          onClick={() => dispatch(setIsOpen(!isOpen))}
+          web
+        >
           <MenuList mob />
           <Link href="/" passHref>
             <Button

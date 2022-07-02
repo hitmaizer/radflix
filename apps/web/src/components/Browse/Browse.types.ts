@@ -13,4 +13,5 @@ export interface BrowseProps
     SpaceProps,
     PositionProps {
   children?: ReactNode;
+  open?: boolean;
 }

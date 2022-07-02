@@ -1,7 +1,9 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { flexbox, layout, position, space } from 'styled-system';
 
-export const Browse = styled.div`
+import { BrowseProps } from './Browse.types';
+
+export const Browse = styled.div<BrowseProps>`
   ${layout}
   ${flexbox}
   ${space}
@@ -12,4 +14,10 @@ export const Browse = styled.div`
   min-width: 100vw;
   background-color: ${({ theme }) => theme.colors.gray900};
   overflow: hidden;
+
+  ${({ open }) =>
+    open &&
+    css`
+      position: fixed;
+    `}
 `;

@@ -33,7 +33,7 @@ const Row = ({ title, square, poster, path, store, ...rest }: RowProps) => {
   return (
     <>
       {!loading && (
-        <S.Row display="flex" flexDirection="column" ml={16} {...rest}>
+        <S.Row display="flex" flexDirection="column" {...rest}>
           <Heading size="2xl" fontWeight="700" color="white" mr="auto">
             {title}
           </Heading>
