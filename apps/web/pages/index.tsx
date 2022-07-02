@@ -61,7 +61,7 @@ export default function Home({ allMovies }: any) {
             All of your favorite extreme sports movies in a single place!
           </Heading>
           <Heading size="2xl" color="white" marginTop={4} fontWeight="regular">
-            Watch anywhere. Cancel anytime.
+            Watch anywhere. 100% Free.
           </Heading>
           <Text
             color="white"
