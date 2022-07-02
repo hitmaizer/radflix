@@ -1,3 +1,32 @@
+## [1.35.0](https://github.com/hitmaizer/radflix/compare/v1.34.0...v1.35.0) (2022-07-02)
+
+
+### ✂️ Refactor
+
+* **Header:** updates Header component to include Hamburger comp ([93fb8bc](https://github.com/hitmaizer/radflix/commit/93fb8bcc33bb3c6b7dc8d00f83d3fabe7de1093a))
+* **Homepage:** adds logic to calculate innerHeight + local state ([ae97812](https://github.com/hitmaizer/radflix/commit/ae97812591004bc02d4337e83d7b13a1e2b4caf3))
+* **MenuList:** updates MenuList component markup ([ed07095](https://github.com/hitmaizer/radflix/commit/ed070956e70468e21aebfabc9b28035bed702130))
+* **MenuList:** updates MenuList prop types file ([336cf37](https://github.com/hitmaizer/radflix/commit/336cf37b6bfdd4568b0dbf7eec69a20b4bbcd4da))
+
+
+### 🎨 Style
+
+* **Banner:** updates banner size to 70vh ([3f6ecd0](https://github.com/hitmaizer/radflix/commit/3f6ecd0a7a919bca6ad3f5832c427e9058674d6c))
+* **Button:** adds size lg styles ([1fcf5cc](https://github.com/hitmaizer/radflix/commit/1fcf5cce79431caa79e0416a6f1297320601a82b))
+* **LinkText:** updates LinkText basic styling ([0ea5625](https://github.com/hitmaizer/radflix/commit/0ea5625f2f9975f253d7681cb6e3f6a9de2f3fa1))
+* **Logged:** hides Logged component on mobile ([390a50e](https://github.com/hitmaizer/radflix/commit/390a50e76a522ef3618786b426de40e93707619d))
+* **MenuList:** updates MenuList styling for mobile ([84d5b7a](https://github.com/hitmaizer/radflix/commit/84d5b7a1d6ace75b11a676dd09065a76a6ad7e5b))
+* **Navbar:** adds navbar styling for mobile ([104c425](https://github.com/hitmaizer/radflix/commit/104c4256ac2ed5a2d1118acdf4912091a80fd53c))
+
+
+### 🚀 Features
+
+* **Hamburger:** adds Hamburger component files ([bbc2854](https://github.com/hitmaizer/radflix/commit/bbc28542465b39d18606de889ac57042deb1f607))
+* **Homepage:** adds dynamic height value to Homepage component ([85e8790](https://github.com/hitmaizer/radflix/commit/85e87907d898aef9c180b250b4c65c538c481ef6))
+* **Homepage:** adds height number prop type ([034f898](https://github.com/hitmaizer/radflix/commit/034f8989fec9f8698d7eb6f598dfc248b846f2c2))
+* **Navbar :** updates show state on small screen size ([a97949d](https://github.com/hitmaizer/radflix/commit/a97949d6a854b4372f6ea074dfff131aa046f5c6))
+* **ui:** updates components index exports ([50e8346](https://github.com/hitmaizer/radflix/commit/50e83469effc84556fea3e55600b47efbb2d2096))
+
 ## [1.34.0](https://github.com/hitmaizer/radflix/compare/v1.33.0...v1.34.0) (2022-07-02)
 
 
