@@ -12,7 +12,6 @@ import { Loading, Skeleton, Stack } from '@ui';
 const index = ({
   allMovies,
   berrics,
-  brailles,
   redbulls,
   transworlds,
   trashers,
@@ -48,12 +47,6 @@ const index = ({
               <BrandRow
                 title="The Berrics"
                 store={berrics}
-                square
-                path="brand"
-              />
-              <Row
-                title="Braille Skateboarding"
-                store={brailles}
                 square
                 path="brand"
               />
@@ -138,10 +131,6 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/berrics?populate=*'
   );
   const berrics = await request2.json();
-  const request3 = await fetch(
-    'https://radflix-cms.herokuapp.com/api/brailles?populate=*'
-  );
-  const brailles = await request3.json();
   const request4 = await fetch(
     'https://radflix-cms.herokuapp.com/api/redbulls?populate=*'
   );
@@ -171,7 +160,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       allMovies: allMovies.data,
       berrics: berrics.data,
-      brailles: brailles.data,
       redbulls: redbulls.data,
       transworlds: transworlds.data,
       trashers: trashers.data,
