@@ -1,3 +1,24 @@
+## [1.34.0](https://github.com/hitmaizer/radflix/compare/v1.33.0...v1.34.0) (2022-07-02)
+
+
+### ✂️ Refactor
+
+* **Avatar:** removes cursor pointer ([5617409](https://github.com/hitmaizer/radflix/commit/5617409d3fc29def2b673e3a585a6e5c35137042))
+* **brands:** removes brailles row from brands page ([bff85b3](https://github.com/hitmaizer/radflix/commit/bff85b3615f64a58390140594101414eaa22d785))
+* **homepage:** removes unused input from homepage ([d06a6ce](https://github.com/hitmaizer/radflix/commit/d06a6ce3f22207fe4624461c2806e67017757231))
+* **homepage:** updates homepage text ([be0a727](https://github.com/hitmaizer/radflix/commit/be0a727d79399827f0df25dbddab1475f033a05f))
+
+
+### 🎨 Style
+
+* **Homepage:** increases overlay opacity on Homepage component ([250daeb](https://github.com/hitmaizer/radflix/commit/250daebd42ae41fed1fb5f01d8692d0dee22fbaf))
+
+
+### 🚀 Features
+
+* **brands:** renders new collection types Rows on brands page ([c1c3896](https://github.com/hitmaizer/radflix/commit/c1c38965d2a5dbcc8c5bafcf620717179836b778))
+* **Rows:** disables select on Rows to prevent drag bugs ([45a8383](https://github.com/hitmaizer/radflix/commit/45a838322ce5fd3728bcbaf2fe4b51c6821cca6d))
+
 ## [1.33.0](https://github.com/hitmaizer/radflix/compare/v1.32.0...v1.33.0) (2022-06-28)
 
 
