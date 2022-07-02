@@ -1,5 +1,17 @@
 import { ReactNode } from 'react';
 
-export interface MenuListProps {
+import {
+  FlexboxProps,
+  GridGapProps,
+  LayoutProps,
+  SpaceProps,
+} from 'styled-system';
+
+export interface MenuListProps
+  extends SpaceProps,
+    LayoutProps,
+    FlexboxProps,
+    GridGapProps {
   children?: ReactNode;
+  mob?: boolean;
 }

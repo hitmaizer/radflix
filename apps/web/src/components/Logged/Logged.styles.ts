@@ -4,11 +4,17 @@ import { User, ChevronDown } from '@styled-icons/boxicons-regular';
 import styled from 'styled-components';
 import { flexbox, layout, space } from 'styled-system';
 
+import { mediaQueries } from '@styles';
+
 export const Logged = styled.div`
   ${flexbox}
   ${space}
   ${layout}
   gap: 16px;
+  display: none;
+  ${mediaQueries.lg} {
+    display: flex;
+  }
 `;
 
 export const Content = styled(HoverCard.Content)`
