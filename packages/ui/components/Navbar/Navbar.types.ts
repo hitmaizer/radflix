@@ -6,4 +6,5 @@ export interface NavbarProps extends SpaceProps {
   children: ReactNode;
   show?: boolean;
   browse?: boolean;
+  open?: boolean;
 }
