@@ -1,3 +1,25 @@
+## [1.36.0](https://github.com/hitmaizer/radflix/compare/v1.35.0...v1.36.0) (2022-07-02)
+
+
+### ✂️ Refactor
+
+* **Browse:** updates Browse component 2remove scrolling on open ([f744603](https://github.com/hitmaizer/radflix/commit/f7446033629345a3ba2f774f65f7ea16664adf98))
+* **Header:** updates Header component sends open state to RTK ([e0d9c04](https://github.com/hitmaizer/radflix/commit/e0d9c0434fd14649c7c47d2368def970faa5e086))
+* **Navbar:** removes state change to give solid background mob ([55bb09e](https://github.com/hitmaizer/radflix/commit/55bb09eb79e5e62faacf8d7609d9f7b9badfe1af))
+* **Row:** removes fixed margin-left values ([49871ce](https://github.com/hitmaizer/radflix/commit/49871cecb7e229a93acd622431206972932248ee))
+
+
+### 🎨 Style
+
+* **Navbar:** adds background color to navbar on menu open ([1c49e68](https://github.com/hitmaizer/radflix/commit/1c49e68d1d7ac4584f48ad2f3d003db6e69c794d))
+* **Row:** updates margin-left values on Row components ([538f187](https://github.com/hitmaizer/radflix/commit/538f187b68d4600c0df9a696258e9722377162da))
+
+
+### 🚀 Features
+
+* **Navbar:** adds open boolean prop type to Navbar ([e2f5eb0](https://github.com/hitmaizer/radflix/commit/e2f5eb01b26cceed5b321b76665718eca9163865))
+* **redux:** adds open state to RTK ([db5eeed](https://github.com/hitmaizer/radflix/commit/db5eeedb3973ce6307ac7f74d5a82a7502d32056))
+
 ## [1.35.0](https://github.com/hitmaizer/radflix/compare/v1.34.0...v1.35.0) (2022-07-02)
 
 
