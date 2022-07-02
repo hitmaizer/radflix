@@ -3,6 +3,8 @@ import styled, { css } from 'styled-components';
 import { flexbox, layout, space } from 'styled-system';
 import { Swiper } from 'swiper/react';
 
+import { mediaQueries } from '@styles';
+
 export const Row = styled.div<CardProps>`
   ${layout}
   ${flexbox}
@@ -10,6 +12,12 @@ export const Row = styled.div<CardProps>`
   width: 100%;
   gap: 0px;
   z-index: 0;
+  margin-left: 16px;
+
+  ${mediaQueries.lg} {
+    margin-left: 64px;
+  }
+
   ${({ square }) =>
     square &&
     css`
