@@ -2,7 +2,9 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { flexbox, layout, position, space } from 'styled-system';
 
-export const Homepage = styled.div`
+import { HomepageProps } from './Homepage.types';
+
+export const Homepage = styled.div<HomepageProps>`
   ${layout}
   ${flexbox}
   ${space}
@@ -12,7 +14,7 @@ export const Homepage = styled.div`
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  height: calc(${({ height }) => height}px);
   padding: 16px;
   position: relative;
 `;

@@ -1,18 +1,16 @@
 import LinkText from '@components/LinkText';
 
-import { Stack } from '@ui';
-
 import * as S from './MenuList.styles';
 import { MenuListProps } from './MenuList.types';
 
-const MenuList = ({ children }: MenuListProps) => {
+const MenuList = ({ children, mob, ...rest }: MenuListProps) => {
   return (
-    <S.MenuList>
-      <Stack display="flex" gridGap="16px" ml={10}>
+    <S.MenuList mob={mob} {...rest}>
+      <S.ListWrapper display="flex" gridGap="16px" mob={mob}>
         <LinkText pathName="browse">Categories</LinkText>
         <LinkText pathName="documentaries">Documentaries</LinkText>
         <LinkText pathName="brands">Brands</LinkText>
-      </Stack>
+      </S.ListWrapper>
       {children}
     </S.MenuList>
   );
