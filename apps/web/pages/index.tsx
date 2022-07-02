@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux';
 import { setMovies } from 'src/redux/allMovies';
 
 import { Homepage } from '@components';
-import { Box, Button, Heading, Input, Logo, Stack, Text } from '@ui';
+import { Box, Button, Heading, Logo, Stack, Text } from '@ui';
 
 export default function Home({ allMovies }: any) {
   const { data: session } = useSession();
@@ -50,7 +50,7 @@ export default function Home({ allMovies }: any) {
           justifyContent="center"
           flexDirection="column"
           alignItems="center"
-          pt={15}
+          height="90vh"
         >
           <Heading
             size="4xl"
@@ -61,7 +61,7 @@ export default function Home({ allMovies }: any) {
             All of your favorite extreme sports movies in a single place!
           </Heading>
           <Heading size="2xl" color="white" marginTop={4} fontWeight="regular">
-            Watch anywhere. Cancel anytime.
+            Watch anywhere. 100% Free.
           </Heading>
           <Text
             color="white"
@@ -71,7 +71,6 @@ export default function Home({ allMovies }: any) {
           >
             Ready to watch? Login and start watching right away!
           </Text>
-          <Input mt={12} />
         </Box>
       </Homepage>
     </>

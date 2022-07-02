@@ -12,11 +12,12 @@ import { Loading, Skeleton, Stack } from '@ui';
 const index = ({
   allMovies,
   berrics,
-  brailles,
   redbulls,
   transworlds,
   trashers,
   vans,
+  nineclubs,
+  shredzshops,
 }) => {
   const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
@@ -37,6 +38,12 @@ const index = ({
             <>
               <Banner movies={allMovies} path="brand" />
 
+              <Row
+                title="Thrasher Magazine"
+                store={trashers}
+                square
+                path="brand"
+              />
               <BrandRow
                 title="The Berrics"
                 store={berrics}
@@ -44,8 +51,14 @@ const index = ({
                 path="brand"
               />
               <Row
-                title="Braille Skateboarding"
-                store={brailles}
+                title="The Nine Club"
+                store={nineclubs}
+                square
+                path="brand"
+              />
+              <Row
+                title="Shredz Shop"
+                store={shredzshops}
                 square
                 path="brand"
               />
@@ -53,12 +66,6 @@ const index = ({
               <Row
                 title="TransWorld SKATEboarding"
                 store={transworlds}
-                square
-                path="brand"
-              />
-              <Row
-                title="Thrasher Magazine"
-                store={trashers}
                 square
                 path="brand"
               />
@@ -124,10 +131,6 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/berrics?populate=*'
   );
   const berrics = await request2.json();
-  const request3 = await fetch(
-    'https://radflix-cms.herokuapp.com/api/brailles?populate=*'
-  );
-  const brailles = await request3.json();
   const request4 = await fetch(
     'https://radflix-cms.herokuapp.com/api/redbulls?populate=*'
   );
@@ -144,16 +147,25 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/vans?populate=*'
   );
   const vans = await request7.json();
+  const request8 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/nineclubs?populate=*'
+  );
+  const nineclubs = await request8.json();
+  const request9 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/shredzshops?populate=*'
+  );
+  const shredzshops = await request9.json();
 
   return {
     props: {
       allMovies: allMovies.data,
       berrics: berrics.data,
-      brailles: brailles.data,
       redbulls: redbulls.data,
       transworlds: transworlds.data,
       trashers: trashers.data,
       vans: vans.data,
+      nineclubs: nineclubs.data,
+      shredzshops: shredzshops.data,
     },
     revalidate: 43200,
   };
