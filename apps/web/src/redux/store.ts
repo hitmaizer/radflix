@@ -8,6 +8,7 @@ import docsSlice from './docs';
 import errorSlice from './error';
 import filterSlice from './filter';
 import loadingSlice from './loading';
+import openSlice from './show';
 import skateboardingSlice from './skateboarding';
 import skateDocsSlice from './skateDocs';
 import skatersSlice from './skaters';
@@ -33,6 +34,7 @@ export const store = configureStore({
     snowDocs: snowDocsSlice,
     bmxDocs: bmxDocsSlice,
     surfDocs: surfDocsSlice,
+    open: openSlice,
   },
 });
 
