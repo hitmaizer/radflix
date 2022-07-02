@@ -25,5 +25,4 @@ export const Avatar = styled.img<AvatarProps>`
   ${space}
   ${size}
   border-radius: 8px;
-  cursor: pointer;
 `;
