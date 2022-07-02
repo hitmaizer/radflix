@@ -8,7 +8,7 @@ export const Homepage = styled.div`
   ${space}
   ${position}
   
-  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.9) 0.01%, rgba(0, 0, 0, 0.2) 33.08%, rgba(0, 0, 0, 0.9) 100%);
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.9) 0.01%, rgba(0, 0, 0, 0.6) 33.08%, rgba(0, 0, 0, 0.9) 100%);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
