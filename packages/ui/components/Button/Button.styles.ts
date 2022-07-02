@@ -13,12 +13,14 @@ export const Button = styled.button<ButtonProps>`
   background-color: ${({ theme }) => theme.colors?.primary};
   color: ${({ theme }) => theme.colors?.white};
   border-radius: ${({ borderRadius }) => borderRadius};
+
   ${({ outline }) =>
     outline &&
     css`
       background-color: transparent;
       border: 1px solid white;
     `}
+
   ${({ banner }) =>
     banner &&
     css`
@@ -31,11 +33,18 @@ export const Button = styled.button<ButtonProps>`
         color: ${({ theme }) => theme.colors?.white};
       }
     `}
+    
     ${({ text }) =>
     text &&
     css`
       background-color: transparent;
       border: none;
       color: ${({ theme }) => theme.colors?.white};
+    `}
+
+    ${({ size }) =>
+    size === 'lg' &&
+    css`
+      padding: 16px 82px;
     `}
 `;
