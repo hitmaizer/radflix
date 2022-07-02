@@ -31,7 +31,6 @@ const Row = ({ title, square, poster, path, ...rest }: SkaterRowProps) => {
         <S.Row
           display="flex"
           flexDirection="column"
-          ml={16}
           square={square}
           poster={poster}
           {...rest}
