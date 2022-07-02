@@ -14,6 +14,9 @@ const Navbar = ({ children, ...rest }: NavbarProps) => {
       } else {
         setShow(false);
       }
+      if (window.innerWidth < 768) {
+        setShow(true);
+      }
       return () => {
         window.removeEventListener('scroll', () => {});
       };
