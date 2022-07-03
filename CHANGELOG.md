@@ -1,3 +1,10 @@
+## [1.37.1](https://github.com/hitmaizer/radflix/compare/v1.37.0...v1.37.1) (2022-07-03)
+
+
+### 🎨 Style
+
+* **UnderBanner:** updates UnderBanner background position to top ([f69f278](https://github.com/hitmaizer/radflix/commit/f69f2780be3075b35cf0c54b8137a11e2083a37c))
+
 ## [1.37.0](https://github.com/hitmaizer/radflix/compare/v1.36.0...v1.37.0) (2022-07-03)
 
 
