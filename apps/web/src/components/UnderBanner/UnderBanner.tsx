@@ -23,7 +23,7 @@ const UnderBanner = ({
             ? selectedMovie?.backdrop.data.url
             : selectedSkater?.backdrop.data.url
         }")`,
-        backgroundPosition: 'center',
+        backgroundPosition: 'top',
       }}
     >
       <S.UnderContent>
