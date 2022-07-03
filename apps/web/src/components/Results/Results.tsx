@@ -14,6 +14,9 @@ import { Heading } from '@ui';
 import * as S from './Results.styles';
 import { ResultsProps } from './Results.types';
 
+const BLUR_FALLBACK =
+  'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAgEDBQAAAAAAAAAAAAABAgADBAYHIRESF1GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhEDEQA/AJbRrnbqjBpTxyt+WtSrZbZnMFdwgBPaBwCwJ+yVs6liQgA68D1EQqypf//Z';
+
 const Results = ({ children, square, path, ...rest }: ResultsProps) => {
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const [selectedDoc, setSelectedDoc] = useState<MovieObj>();
@@ -53,7 +56,11 @@ const Results = ({ children, square, path, ...rest }: ResultsProps) => {
           {filteredData?.map((value: MovieObj) => {
             return (
               <SwiperSlide key={value.id} onClick={() => handleClick(value)}>
-                <ImageCard imgSrc={value.backdrop.data.url} square />
+                <ImageCard
+                  imgSrc={value.backdrop.data.url}
+                  blurhash={value.backdrop.data.blurhash || BLUR_FALLBACK}
+                  square
+                />
               </SwiperSlide>
             );
           })}
