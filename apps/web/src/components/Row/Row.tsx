@@ -14,6 +14,9 @@ import { RowProps } from './Row.types';
 
 import 'swiper/css';
 
+const BLUR_FALLBACK =
+  'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAgEDBQAAAAAAAAAAAAABAgADBAYHIRESF1GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhEDEQA/AJbRrnbqjBpTxyt+WtSrZbZnMFdwgBPaBwCwJ+yVs6liQgA68D1EQqypf//Z';
+
 const Row = ({ title, square, poster, path, store, ...rest }: RowProps) => {
   const [movies, setMovies] = useState<MovieObj[]>([]);
   const [selectedMovie, setSelectedMovie] = useState<MovieObj>();
@@ -55,18 +58,21 @@ const Row = ({ title, square, poster, path, store, ...rest }: RowProps) => {
               },
             }}
           >
-            {movies.map((movie: MovieObj) => (
-              <SwiperSlide key={movie.id} onClick={() => handleClick(movie)}>
-                <ImageCard
-                  poster={poster}
-                  square={square}
-                  title={movie.title}
-                  imgSrc={
-                    square ? movie.backdrop.data.url : movie.poster.data.url
-                  }
-                />
-              </SwiperSlide>
-            ))}
+            {movies.map((movie: MovieObj) => {
+              return (
+                <SwiperSlide key={movie.id} onClick={() => handleClick(movie)}>
+                  <ImageCard
+                    poster={poster}
+                    square={square}
+                    title={movie.title}
+                    imgSrc={
+                      square ? movie.backdrop.data.url : movie.poster.data.url
+                    }
+                    blurhash={movie.backdrop.data.blurhash || BLUR_FALLBACK}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </S.StyledSwiper>
         </S.Row>
       )}
