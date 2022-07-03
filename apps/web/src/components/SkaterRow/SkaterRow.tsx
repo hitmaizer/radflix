@@ -13,6 +13,9 @@ import { SkaterObj, SkaterRowProps } from './SkaterRow.types';
 
 import 'swiper/css';
 
+const BLUR_FALLBACK =
+  'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABQf/xAAmEAACAQIEBQUAAAAAAAAAAAABAgMEBQAREkEGISIxYQcTFCQy/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABkRAQADAQEAAAAAAAAAAAAAAAEAAgMREv/aAAwDAQACEQMRAD8Ab9X+MLMbXX22jtFW969qKoirHcudaMGXPJsyTo7efGJu1k4iu5Nyqbjc4p6z7EkaVmhUZ+ogLsAT22wrb0SokuTzqsrgFgzjUc82588Xqjij+JB0L+F28YLbS2TwiPI1Gf/Z';
+
 const Row = ({ title, square, poster, path, ...rest }: SkaterRowProps) => {
   const skaters = useSelector((state: RootState) => state.skaters.skaters);
   const [selectedSkater, setSelectedSkater] = useState<SkaterObj>();
@@ -56,23 +59,24 @@ const Row = ({ title, square, poster, path, ...rest }: SkaterRowProps) => {
               },
             }}
           >
-            {skaters.map((skater: SkaterObj) => (
-              <SwiperSlide key={skater.id} onClick={() => handleClick(skater)}>
-                <ImageCard
-                  poster={poster}
-                  square={square}
-                  title={skater.name}
-                  imgSrc={
-                    square ? skater.backdrop.data.url : skater.poster.data.url
-                  }
-                  blurhash={
-                    square
-                      ? skater.backdrop.data.blurhash
-                      : skater.poster.data.blurhash
-                  }
-                />
-              </SwiperSlide>
-            ))}
+            {skaters.map((skater: SkaterObj) => {
+              return (
+                <SwiperSlide
+                  key={skater.id}
+                  onClick={() => handleClick(skater)}
+                >
+                  <ImageCard
+                    poster={poster}
+                    square={square}
+                    title={skater.name}
+                    imgSrc={
+                      square ? skater.backdrop.data.url : skater.poster.data.url
+                    }
+                    blurhash={skater.poster.data.blurhash || BLUR_FALLBACK}
+                  />
+                </SwiperSlide>
+              );
+            })}
           </S.StyledSwiper>
         </S.Row>
       )}
