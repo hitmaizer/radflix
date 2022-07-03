@@ -12,6 +12,9 @@ import { Heading } from '@ui';
 import * as S from './ResultsDocs.styles';
 import { ResultsProps } from './ResultsDocs.types';
 
+const BLUR_FALLBACK =
+  'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAgEDBQAAAAAAAAAAAAABAgADBAYHIRESF1GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhEDEQA/AJbRrnbqjBpTxyt+WtSrZbZnMFdwgBPaBwCwJ+yVs6liQgA68D1EQqypf//Z';
+
 const Results = ({ children, data, square, path, ...rest }: ResultsProps) => {
   const [showUnder, setShowUnder] = useState<boolean>(false);
   const [selectedDoc, setSelectedDoc] = useState<DocObj>();
@@ -48,7 +51,11 @@ const Results = ({ children, data, square, path, ...rest }: ResultsProps) => {
           {data?.map((value) => {
             return (
               <SwiperSlide key={value.id} onClick={() => handleClick(value)}>
-                <ImageCard imgSrc={value.backdrop.data[0].url} square />
+                <ImageCard
+                  imgSrc={value.backdrop.data[0].url}
+                  blurhash={value.backdrop.data.blurhash || BLUR_FALLBACK}
+                  square
+                />
               </SwiperSlide>
             );
           })}
