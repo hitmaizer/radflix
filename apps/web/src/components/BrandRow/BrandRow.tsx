@@ -14,6 +14,9 @@ import 'swiper/css';
 import * as S from './BrandRow.styles';
 import { BrandRowProps } from './BrandRow.types';
 
+const BLUR_FALLBACK =
+  'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAgEDBQAAAAAAAAAAAAABAgADBAYHIRESF1GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhEDEQA/AJbRrnbqjBpTxyt+WtSrZbZnMFdwgBPaBwCwJ+yVs6liQgA68D1EQqypf//Z';
+
 const DocRow = ({
   children,
   title,
@@ -70,11 +73,7 @@ const DocRow = ({
                   square={square}
                   title={doc.title}
                   imgSrc={doc.backdrop.data[0].url}
-                  blurhash={
-                    square
-                      ? doc.backdrop.data.blurhash
-                      : doc.poster.data.blurhash
-                  }
+                  blurhash={doc.backdrop.data.blurhash || BLUR_FALLBACK}
                 />
               </SwiperSlide>
             ))}
