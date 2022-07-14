@@ -16,7 +16,7 @@ export interface MovieObj {
   poster: {
     data: {
       url: string;
-      blurhash: string;
+      placeholder: string;
     };
   };
   slug: string;
@@ -24,7 +24,7 @@ export interface MovieObj {
   backdrop: {
     data: {
       url: string;
-      blurhash: string;
+      placeholder: string;
     };
   };
   description: string;

@@ -72,7 +72,7 @@ const Row = ({ title, square, poster, path, ...rest }: SkaterRowProps) => {
                     imgSrc={
                       square ? skater.backdrop.data.url : skater.poster.data.url
                     }
-                    blurhash={skater.poster.data.blurhash || BLUR_FALLBACK}
+                    blurhash={skater.poster.data.placeholder || BLUR_FALLBACK}
                   />
                 </SwiperSlide>
               );

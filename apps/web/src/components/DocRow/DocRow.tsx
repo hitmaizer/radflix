@@ -71,8 +71,8 @@ const DocRow = ({
                   imgSrc={square ? doc.backdrop.data.url : doc.poster.data.url}
                   blurhash={
                     square
-                      ? doc.backdrop.data.blurhash
-                      : doc.poster.data.blurhash
+                      ? doc.backdrop.data.placeholder
+                      : doc.poster.data.placeholder
                   }
                 />
               </SwiperSlide>

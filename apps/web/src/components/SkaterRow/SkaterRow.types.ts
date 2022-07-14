@@ -21,13 +21,13 @@ export interface SkaterObj {
   poster: {
     data: {
       url: string;
-      blurhash: string;
+      placeholder: string;
     };
   };
   backdrop: {
     data: {
       url: string;
-      blurhash: string;
+      placeholder: string;
     };
   };
 }
