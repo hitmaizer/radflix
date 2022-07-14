@@ -1,3 +1,23 @@
+## [1.37.2](https://github.com/hitmaizer/radflix/compare/v1.37.1...v1.37.2) (2022-07-14)
+
+
+### ✂️ Refactor
+
+* **Banner:** updates MovieObj types to placeholder ([2044ced](https://github.com/hitmaizer/radflix/commit/2044ceda9c90abfcab050ac5ff685a16dfa4a328))
+* **BrandRow:** updates blurhash path to placeholder ([d0a0450](https://github.com/hitmaizer/radflix/commit/d0a0450f2399ee76366a82f375ce354cbd465e76))
+* **DocBanner:** updates DocObj to placeholder ([52ea96e](https://github.com/hitmaizer/radflix/commit/52ea96ed8c94473e967252a6e134bf964886745c))
+* **README:** updates README image ([89e490e](https://github.com/hitmaizer/radflix/commit/89e490ed9f09a4d954a082cb1e4d3b65b3f22b37))
+* **Results:** updates blurhash path to placeholder ([38a7a09](https://github.com/hitmaizer/radflix/commit/38a7a09cb290623cba2729d5cbca5dc3e2b060fc))
+* **ResultsDocs:** updates blurhash path to placeholder ([6c1ae2e](https://github.com/hitmaizer/radflix/commit/6c1ae2ebef96bdbfbe9e19a4fcdee730b7e35e35))
+* **Row:** updates path and logic for poster placeholder ([ee8ed7f](https://github.com/hitmaizer/radflix/commit/ee8ed7f72fc591c0f6a8205a76d612597b6c24fb))
+* **SkaterRow:** updates blurhash path to placeholder ([e613693](https://github.com/hitmaizer/radflix/commit/e6136939ed2db7e63ea2cbc1ef548db95f2eb8a3))
+* **SkaterRow:** updates SkaterObj to placeholder ([7d1d7e5](https://github.com/hitmaizer/radflix/commit/7d1d7e5c5845f73321f2c65c29fc5c024a1507a6))
+
+
+### 🐛 Fixes
+
+* **DocRow:** updates path to placeholder ([18dcb26](https://github.com/hitmaizer/radflix/commit/18dcb261bb494ea320c7516565d672b3213ee4ac))
+
 ## [1.37.1](https://github.com/hitmaizer/radflix/compare/v1.37.0...v1.37.1) (2022-07-03)
 
 
