@@ -73,7 +73,7 @@ const DocRow = ({
                   square={square}
                   title={doc.title}
                   imgSrc={doc.backdrop.data[0].url}
-                  blurhash={doc.backdrop.data.blurhash || BLUR_FALLBACK}
+                  blurhash={doc.backdrop.data.placeholder || BLUR_FALLBACK}
                 />
               </SwiperSlide>
             ))}

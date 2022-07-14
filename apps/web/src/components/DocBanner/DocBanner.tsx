@@ -15,7 +15,7 @@ export interface DocObj {
   backdrop: {
     data: {
       url: string;
-      blurhash: string;
+      placeholder: string;
     };
   };
   id: number;
@@ -23,7 +23,7 @@ export interface DocObj {
   poster: {
     data: {
       url: string;
-      blurhash: string;
+      placeholder: string;
     };
   };
   slug: string;

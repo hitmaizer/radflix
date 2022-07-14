@@ -53,7 +53,7 @@ const Results = ({ children, data, square, path, ...rest }: ResultsProps) => {
               <SwiperSlide key={value.id} onClick={() => handleClick(value)}>
                 <ImageCard
                   imgSrc={value.backdrop.data[0].url}
-                  blurhash={value.backdrop.data.blurhash || BLUR_FALLBACK}
+                  blurhash={value.backdrop.data.placeholder || BLUR_FALLBACK}
                   square
                 />
               </SwiperSlide>
