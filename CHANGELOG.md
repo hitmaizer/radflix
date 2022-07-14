@@ -1,3 +1,26 @@
+## [1.37.1](https://github.com/hitmaizer/radflix/compare/v1.37.0...v1.37.1) (2022-07-03)
+
+
+### 🎨 Style
+
+* **UnderBanner:** updates UnderBanner background position to top ([f69f278](https://github.com/hitmaizer/radflix/commit/f69f2780be3075b35cf0c54b8137a11e2083a37c))
+
+## [1.37.0](https://github.com/hitmaizer/radflix/compare/v1.36.0...v1.37.0) (2022-07-03)
+
+
+### ✂️ Refactor
+
+* **ImageCard:** sets placeholder to blur ([b93df9e](https://github.com/hitmaizer/radflix/commit/b93df9eace4cd16fd8414f356a454772ec9f27cb))
+
+
+### 🚀 Features
+
+* **BrandRow:** adds blurhash value + blurfallback to BrandRow ([9eed4fb](https://github.com/hitmaizer/radflix/commit/9eed4fb93c4e414166be2633a20b1603d94cf0d3))
+* **Results:** adds blurhash value + base64 fallback ([b6de003](https://github.com/hitmaizer/radflix/commit/b6de0031216dd0e1b36bd5da94204b2ea9e56ea7))
+* **ResultsDocs:** adds blurhash value + base64 fallback ([b277fec](https://github.com/hitmaizer/radflix/commit/b277fec6d2e419a8be036370566b29408c109793))
+* **Row:** adds blurhash value + base64 fallback ([31a85fa](https://github.com/hitmaizer/radflix/commit/31a85fa9e69d441940243bcd5ab5e32361227f15))
+* **SkaterRow:** adds blurhash value + base64 fallback ([c6b9e78](https://github.com/hitmaizer/radflix/commit/c6b9e782b520f574fc6b45cc159700d7c309153e))
+
 ## [1.36.0](https://github.com/hitmaizer/radflix/compare/v1.35.0...v1.36.0) (2022-07-02)
 
 
