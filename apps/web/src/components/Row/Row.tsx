@@ -68,7 +68,11 @@ const Row = ({ title, square, poster, path, store, ...rest }: RowProps) => {
                     imgSrc={
                       square ? movie.backdrop.data.url : movie.poster.data.url
                     }
-                    blurhash={movie.backdrop.data.blurhash || BLUR_FALLBACK}
+                    blurhash={
+                      (poster
+                        ? movie.poster.data.placeholder
+                        : movie.backdrop.data.placeholder) || BLUR_FALLBACK
+                    }
                   />
                 </SwiperSlide>
               );
