@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-import DocBanner from '@components/DocBanner';
 import { DocObj } from '@components/DocBanner/DocBanner';
 import ImageCard from '@components/ImageCard';
 import { StyledSwiper } from '@components/SkaterRow/SkaterRow.styles';
+import UnderBanner from '@components/UnderBanner';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
@@ -82,11 +82,10 @@ const DocRow = ({
         </S.BrandRow>
       )}
       {showUnder && (
-        <DocBanner
-          imgSrc={selectedDoc?.backdrop.data[0].url}
-          title={selectedDoc?.title}
-          description={selectedDoc?.description}
+        <UnderBanner
+          selectedMovie={selectedDoc}
           slug={selectedDoc?.slug}
+          imgSrc={selectedDoc?.backdrop.data[0].url}
           path="brand"
         />
       )}
