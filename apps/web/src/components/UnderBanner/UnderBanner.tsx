@@ -12,6 +12,7 @@ const UnderBanner = ({
   selectedMovie,
   selectedSkater,
   path,
+  imgSrc,
   slug,
 }: UnderBannerProps) => {
   return (
@@ -19,9 +20,10 @@ const UnderBanner = ({
       style={{
         backgroundSize: 'cover',
         backgroundImage: `linear-gradient(180deg, rgba(23,23,23,1) 9%, rgba(23,23,23,0.4822303921568627) 51%, rgba(23,23,23,1) 100%), url("${
-          selectedMovie
+          imgSrc ||
+          (selectedMovie
             ? selectedMovie?.backdrop.data.url
-            : selectedSkater?.backdrop.data.url
+            : selectedSkater?.backdrop.data.url)
         }")`,
         backgroundPosition: 'top',
       }}
