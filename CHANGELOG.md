@@ -1,3 +1,16 @@
+## [1.40.0](https://github.com/hitmaizer/radflix/compare/v1.39.0...v1.40.0) (2022-07-26)
+
+
+### ✂️ Refactor
+
+* **web:** updates _app file to include ga ([dc7cce0](https://github.com/hitmaizer/radflix/commit/dc7cce0a4f9893c4e0a909a83acb17de692c57cc))
+
+
+### 🚀 Features
+
+* **web:** adds ga pageviews func ([b1def56](https://github.com/hitmaizer/radflix/commit/b1def56ae728eaf2cf2ce27659bb8920a28330d3))
+* **web:** updates web tsconfig file to include ga ([24c4861](https://github.com/hitmaizer/radflix/commit/24c486145ca53d523ea89d8d7c016ca60c6ea5c3))
+
 ## [1.39.0](https://github.com/hitmaizer/radflix/compare/v1.38.0...v1.39.0) (2022-07-26)
 
 
