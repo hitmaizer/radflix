@@ -1,3 +1,16 @@
+## [1.38.0](https://github.com/hitmaizer/radflix/compare/v1.37.2...v1.38.0) (2022-07-22)
+
+
+### ✂️ Refactor
+
+* **BrandRow:** updates BrandRow component to use UnderBanner ([fc71ed4](https://github.com/hitmaizer/radflix/commit/fc71ed433760566fda0d09e15ea0bdc71cf0f1ad))
+* **UnderBanner:** updates UnderBanner to prioritize imgSrc prop ([ab9ce18](https://github.com/hitmaizer/radflix/commit/ab9ce18043e31d1cf117f618fbf1adb3ef3e7604))
+
+
+### 🚀 Features
+
+* **UnderBanner:** updates UnderBanner prop types file ([fbf0ec3](https://github.com/hitmaizer/radflix/commit/fbf0ec3a1786a5339c63dc9d24c9d7348a42a2f9))
+
 ## [1.37.2](https://github.com/hitmaizer/radflix/compare/v1.37.1...v1.37.2) (2022-07-14)
 
 
