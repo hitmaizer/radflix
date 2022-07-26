@@ -1,3 +1,10 @@
+## [1.39.0](https://github.com/hitmaizer/radflix/compare/v1.38.0...v1.39.0) (2022-07-26)
+
+
+### 🚀 Features
+
+* **web:** adds gtag scripts for analytics ([74c68c0](https://github.com/hitmaizer/radflix/commit/74c68c028c530a58116939b332b830f4e47b24bd))
+
 ## [1.38.0](https://github.com/hitmaizer/radflix/compare/v1.37.2...v1.38.0) (2022-07-22)
 
 
