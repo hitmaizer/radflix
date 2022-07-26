@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 import Head from '@components/Head';
 import SEO from '@config/next-seo';
@@ -13,6 +13,8 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'ui/styles';
 import theme from 'ui/styles/theme';
 
+import * as ga from '../lib/ga';
+
 const MyApp: FC<AppProps> = ({
   Component,
   pageProps: { session, ...pageProps },
@@ -20,12 +22,23 @@ const MyApp: FC<AppProps> = ({
   const [mounted, setMounted] = useState(false);
   const { asPath } = useRouter();
 
+  const router = useRouter();
+
   const page = asPath === '/' ? '' : asPath;
   const [canonicalUrl] = `https://radflix.com${page}`.split('?');
 
   useEffect(() => {
     setMounted(true);
-  }, []);
+
+    const handlgeRouteChange = (url) => {
+      ga.pageView(url);
+    };
+
+    router.events.on('routeChangeComplete', handlgeRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handlgeRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
