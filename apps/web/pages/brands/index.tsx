@@ -2,7 +2,6 @@ import React from 'react';
 
 import BrandRow from '@components/BrandRow';
 import { GetStaticProps } from 'next';
-import { useSession } from 'next-auth/react';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 
@@ -19,104 +18,66 @@ const index = ({
   nineclubs,
   shredzshops,
 }) => {
-  const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
   const filteredData = useSelector(
     (state: RootState) => state.filteredData.filter
   );
 
   if (typeof window === 'undefined') return null;
-  if (session) {
-    return (
-      <>
-        <Browse>
-          <Header filteredData={allMovies} />
-          {filteredData.length !== 0 && (
-            <Results data={filteredData} square path="/brand" />
-          )}
-          {filteredData.length === 0 && (
-            <>
-              <Banner movies={allMovies} path="brand" />
-
-              <Row
-                title="Thrasher Magazine"
-                store={trashers}
-                square
-                path="brand"
-              />
-              <BrandRow
-                title="The Berrics"
-                store={berrics}
-                square
-                path="brand"
-              />
-              <Row
-                title="The Nine Club"
-                store={nineclubs}
-                square
-                path="brand"
-              />
-              <Row
-                title="Shredz Shop"
-                store={shredzshops}
-                square
-                path="brand"
-              />
-              <Row title="Red Bull" store={redbulls} square path="brand" />
-              <Row
-                title="TransWorld SKATEboarding"
-                store={transworlds}
-                square
-                path="brand"
-              />
-              <Row title="Vans" store={vans} square path="brand" />
-            </>
-          )}
-
-          {loading && (
-            <>
-              <Loading
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                ml={10}
-              >
-                <Skeleton heading />
-                <Stack display="flex" gridGap="16px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                </Stack>
-              </Loading>
-            </>
-          )}
-        </Browse>
-      </>
-    );
-  }
 
   return (
-    <Browse>
-      <Loading
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        ml={10}
-      >
-        <Skeleton heading />
-        <Stack display="flex" gridGap="16px">
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-        </Stack>
-      </Loading>
-    </Browse>
+    <>
+      <Browse>
+        <Header filteredData={allMovies} />
+        {filteredData.length !== 0 && (
+          <Results data={filteredData} square path="/brand" />
+        )}
+        {filteredData.length === 0 && (
+          <>
+            <Banner movies={allMovies} path="brand" />
+
+            <Row
+              title="Thrasher Magazine"
+              store={trashers}
+              square
+              path="brand"
+            />
+            <BrandRow title="The Berrics" store={berrics} square path="brand" />
+            <Row title="The Nine Club" store={nineclubs} square path="brand" />
+            <Row title="Shredz Shop" store={shredzshops} square path="brand" />
+            <Row title="Red Bull" store={redbulls} square path="brand" />
+            <Row
+              title="TransWorld SKATEboarding"
+              store={transworlds}
+              square
+              path="brand"
+            />
+            <Row title="Vans" store={vans} square path="brand" />
+          </>
+        )}
+
+        {loading && (
+          <>
+            <Loading
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              ml={10}
+            >
+              <Skeleton heading />
+              <Stack display="flex" gridGap="16px">
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+              </Stack>
+            </Loading>
+          </>
+        )}
+      </Browse>
+    </>
   );
 };
 
