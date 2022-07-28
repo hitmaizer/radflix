@@ -28,7 +28,7 @@ const Header = ({ children, filteredData, ...rest }: HeaderProps) => {
         </Link>
         <MenuList ml={10} />
         <Logged
-          imgSrc={session?.user?.image!}
+          imgSrc={session ? session?.user?.image! : '/placeholder-avatar.jpg'}
           display="flex"
           alignItems="center"
           filteredData={filteredData}
@@ -41,7 +41,7 @@ const Header = ({ children, filteredData, ...rest }: HeaderProps) => {
                 })
               }
             >
-              <Text>Logout</Text>
+              <Text>{session ? 'Logout' : 'Go Back'}</Text>
             </Button>
           </Link>
         </Logged>

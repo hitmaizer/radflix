@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 import { setMovies } from 'src/redux/allMovies';
 
-import { Homepage } from '@components';
+import { Homepage, LinkText } from '@components';
 import { Box, Button, Heading, Logo, Stack, Text } from '@ui';
 
 export default function Home({ allMovies }: any) {
@@ -30,20 +30,27 @@ export default function Home({ allMovies }: any) {
           p="16px 32px"
         >
           <Logo imgSrc="/radflix-logo.png" width="100px" />
-
-          <Button
-            padding="7px 17px"
-            onClick={
-              session
-                ? () => handleLink()
-                : () =>
-                    signIn('google', {
-                      callbackUrl: `${window.location.origin}/browse`,
-                    })
-            }
+          <Stack
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gridGap="16px"
           >
-            {!session ? <Text>Sign In</Text> : <Text>Browse Movies</Text>}
-          </Button>
+            <LinkText pathName="/browse">Proceed without Login</LinkText>
+            <Button
+              padding="7px 17px"
+              onClick={
+                session
+                  ? () => handleLink()
+                  : () =>
+                      signIn('google', {
+                        callbackUrl: `${window.location.origin}/browse`,
+                      })
+              }
+            >
+              {!session ? <Text>Sign In</Text> : <Text>Browse Movies</Text>}
+            </Button>
+          </Stack>
         </Stack>
         <Box
           display="flex"
