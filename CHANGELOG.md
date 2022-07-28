@@ -1,3 +1,10 @@
+## [1.41.1](https://github.com/hitmaizer/radflix/compare/v1.41.0...v1.41.1) (2022-07-28)
+
+
+### 🐛 Fixes
+
+* **homepage:** fixes navbar on mobile ([dbcd578](https://github.com/hitmaizer/radflix/commit/dbcd578a9ac293bca8ea9f9fdde33724d73c811b))
+
 ## [1.41.0](https://github.com/hitmaizer/radflix/compare/v1.40.0...v1.41.0) (2022-07-28)
 
 
