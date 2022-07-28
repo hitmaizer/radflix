@@ -4,7 +4,6 @@ import Header from '@components/Header';
 import { Browse, Content } from '@components/index';
 import Results from '@components/Results';
 import { GetStaticProps } from 'next';
-import { useSession } from 'next-auth/react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setMovies } from 'src/redux/allMovies';
 import { setBmx } from 'src/redux/bmx';
@@ -27,7 +26,6 @@ const index = ({
   bmx,
   dirtBikes,
 }: any) => {
-  const { data: session } = useSession();
   const loading = useSelector((state: RootState) => state.loading.loading);
   const movies = useSelector((state: RootState) => state.movies.movies);
   const filteredData = useSelector(
@@ -49,66 +47,65 @@ const index = ({
 
   if (typeof window === 'undefined') return null;
 
-  if (session) {
-    return (
-      <>
-        <Browse>
-          <Header filteredData={movies} />
-          {loading && (
-            <>
-              <Loading
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                ml={10}
-              >
-                <Skeleton heading />
-                <Stack display="flex" gridGap="16px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                </Stack>
-                <Skeleton heading />
-                <Stack display="flex" gridGap="16px">
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                  <Skeleton card />
-                </Stack>
-              </Loading>
-            </>
-          )}
-          {filteredData.length !== 0 && <Results square path="/watch" />}
-          {filteredData.length === 0 && <Content />}
-        </Browse>
-      </>
-    );
-  }
   return (
-    <Browse>
-      <Loading
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        ml={10}
-      >
-        <Skeleton heading />
-        <Stack display="flex" gridGap="16px">
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-          <Skeleton card />
-        </Stack>
-      </Loading>
-    </Browse>
+    <>
+      <Browse>
+        <Header filteredData={movies} />
+        {loading && (
+          <>
+            <Loading
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              ml={10}
+            >
+              <Skeleton heading />
+              <Stack display="flex" gridGap="16px">
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+              </Stack>
+              <Skeleton heading />
+              <Stack display="flex" gridGap="16px">
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+                <Skeleton card />
+              </Stack>
+            </Loading>
+          </>
+        )}
+        {filteredData.length !== 0 && <Results square path="/watch" />}
+        {filteredData.length === 0 && <Content />}
+      </Browse>
+    </>
   );
+
+  // return (
+  //   <Browse>
+  //     <Loading
+  //       display="flex"
+  //       flexDirection="column"
+  //       alignItems="center"
+  //       ml={10}
+  //     >
+  //       <Skeleton heading />
+  //       <Stack display="flex" gridGap="16px">
+  //         <Skeleton card />
+  //         <Skeleton card />
+  //         <Skeleton card />
+  //         <Skeleton card />
+  //         <Skeleton card />
+  //         <Skeleton card />
+  //       </Stack>
+  //     </Loading>
+  //   </Browse>
+  // );
 };
 
 export default index;
