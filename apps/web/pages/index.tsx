@@ -27,7 +27,7 @@ export default function Home({ allMovies }: any) {
           display="flex"
           flexDirection="row"
           justifyContent="space-between"
-          p="16px 32px"
+          p={window.innerWidth > 1000 ? '16px 32px' : '0'}
         >
           <Logo imgSrc="/radflix-logo.png" width="100px" />
           <Stack
