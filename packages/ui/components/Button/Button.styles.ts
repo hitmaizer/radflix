@@ -13,6 +13,7 @@ export const Button = styled.button<ButtonProps>`
   background-color: ${({ theme }) => theme.colors?.primary};
   color: ${({ theme }) => theme.colors?.white};
   border-radius: ${({ borderRadius }) => borderRadius};
+  min-width: fit-content;
 
   ${({ outline }) =>
     outline &&
