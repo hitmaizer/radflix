@@ -1,3 +1,10 @@
+## [1.44.1](https://github.com/hitmaizer/radflix/compare/v1.44.0...v1.44.1) (2022-07-29)
+
+
+### ✂️ Refactor
+
+* **cms:** all new content types findOne to slug ([4baa322](https://github.com/hitmaizer/radflix/commit/4baa322e1ef42f1cadb5795d1bdd3d62084f1335))
+
 ## [1.44.0](https://github.com/hitmaizer/radflix/compare/v1.43.0...v1.44.0) (2022-07-29)
 
 
