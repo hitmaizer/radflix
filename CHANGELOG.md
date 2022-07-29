@@ -1,3 +1,12 @@
+## [1.46.0](https://github.com/hitmaizer/radflix/compare/v1.45.0...v1.46.0) (2022-07-29)
+
+
+### 🚀 Features
+
+* **browse:** adds oldskool fetch + state ([1524387](https://github.com/hitmaizer/radflix/commit/1524387710b21d3af8ace209f2699731ddce4bed))
+* **Content:** adds Old-School skate Row ([8e46c8f](https://github.com/hitmaizer/radflix/commit/8e46c8f24a53d05d00fe2b50fd7da07975aa972d))
+* **redux:** adds oldSkool slice and updates store file ([8a7b54d](https://github.com/hitmaizer/radflix/commit/8a7b54d4d75e9bf5930468b156e97ffddb350db6))
+
 ## [1.45.0](https://github.com/hitmaizer/radflix/compare/v1.44.1...v1.45.0) (2022-07-29)
 
 
