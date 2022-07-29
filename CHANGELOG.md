@@ -1,3 +1,39 @@
+## [1.45.0](https://github.com/hitmaizer/radflix/compare/v1.44.1...v1.45.0) (2022-07-29)
+
+
+### 🚀 Features
+
+* **cms:** updates sharp version ([06ff72a](https://github.com/hitmaizer/radflix/commit/06ff72ad824f6e271bff38be743b5f46da9a17ec))
+
+## [1.44.1](https://github.com/hitmaizer/radflix/compare/v1.44.0...v1.44.1) (2022-07-29)
+
+
+### ✂️ Refactor
+
+* **cms:** all new content types findOne to slug ([4baa322](https://github.com/hitmaizer/radflix/commit/4baa322e1ef42f1cadb5795d1bdd3d62084f1335))
+
+## [1.44.0](https://github.com/hitmaizer/radflix/compare/v1.43.0...v1.44.0) (2022-07-29)
+
+
+### 🚀 Features
+
+* **web:** space to force redeploy ([e1a7120](https://github.com/hitmaizer/radflix/commit/e1a7120bc22f5e9f3dfcb6eafbbd2f1de721421f))
+
+## [1.43.0](https://github.com/hitmaizer/radflix/compare/v1.42.0...v1.43.0) (2022-07-29)
+
+
+### 🚀 Features
+
+* **cms:** adds all-competition content type ([a405c12](https://github.com/hitmaizer/radflix/commit/a405c12827f4619397356eccaeb36efd10ca4adb))
+* **cms:** adds climbing content type files ([861faca](https://github.com/hitmaizer/radflix/commit/861faca9a6b4e46a0c92b6348131c6034ef2a43f))
+* **cms:** adds dew-tour content type files ([d395dea](https://github.com/hitmaizer/radflix/commit/d395dea8c9222c70fa87191843e2615c5b1b9bb6))
+* **cms:** adds oldSkool content type files ([53845b2](https://github.com/hitmaizer/radflix/commit/53845b265a69eba124f2a28dc8b8de95d98b4b61))
+* **cms:** adds olympics content type files ([78d3281](https://github.com/hitmaizer/radflix/commit/78d32811b47fe6009b1f6e589acb9d01ac1b54ce))
+* **cms:** adds skiMovies content type files ([c32a03d](https://github.com/hitmaizer/radflix/commit/c32a03d9500462a9839cc6e6e67f0625d394268d))
+* **cms:** adds street league content type files ([1a1647c](https://github.com/hitmaizer/radflix/commit/1a1647cbdbd0e2a4773dace581ccd8827d124759))
+* **cms:** adds tampa content type files ([9684bd3](https://github.com/hitmaizer/radflix/commit/9684bd3052959d2ba791c7378fb403566cfbeec9))
+* **cms:** adds x-games content type files ([4422255](https://github.com/hitmaizer/radflix/commit/4422255918999db51da8128b7ea7834d6005afe0))
+
 ## [1.42.0](https://github.com/hitmaizer/radflix/compare/v1.41.1...v1.42.0) (2022-07-29)
 
 
