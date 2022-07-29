@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "all_competitions",
+  "info": {
+    "singularName": "all-competition",
+    "pluralName": "all-competitions",
+    "displayName": "allCompetition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "movieLink": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "backdrop": {
+      "allowedTypes": ["images", "files"],
+      "type": "media",
+      "multiple": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "releaseYear": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
