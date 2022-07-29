@@ -1,3 +1,10 @@
+## [1.45.0](https://github.com/hitmaizer/radflix/compare/v1.44.1...v1.45.0) (2022-07-29)
+
+
+### 🚀 Features
+
+* **cms:** updates sharp version ([06ff72a](https://github.com/hitmaizer/radflix/commit/06ff72ad824f6e271bff38be743b5f46da9a17ec))
+
 ## [1.44.1](https://github.com/hitmaizer/radflix/compare/v1.44.0...v1.44.1) (2022-07-29)
 
 
