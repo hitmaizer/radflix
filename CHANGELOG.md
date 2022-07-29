@@ -1,3 +1,35 @@
+## [1.42.0](https://github.com/hitmaizer/radflix/compare/v1.41.1...v1.42.0) (2022-07-29)
+
+
+### ✂️ Refactor
+
+* **Browse:** updates min-height to inner-height value ([61534ac](https://github.com/hitmaizer/radflix/commit/61534acde4b379420482be28d1b3599658a0c5da))
+* **Player:** adds innerHeight to container + overflow hidden ([8992456](https://github.com/hitmaizer/radflix/commit/899245610e75f5e615d67c72da5776a0cb7baeea))
+
+
+### 🎨 Style
+
+* **ImageCard:** adds grabbing cursor on active ([b52d764](https://github.com/hitmaizer/radflix/commit/b52d764660c262942f725bd3df40e0ed2331d426))
+
+
+### 🐛 Fixes
+
+* **Content:** consistent naming on all Rows ([b2c7af3](https://github.com/hitmaizer/radflix/commit/b2c7af33951ca85a51862bf68a9c89d9b01e7192))
+* **Hamburger:** updates hamburger content button text ([69a4c70](https://github.com/hitmaizer/radflix/commit/69a4c70c956a8546d22b82e4f7a55acb3d9012c6))
+
+
+### 🚀 Features
+
+* **Browse:** adds innerHeight number prop type ([63b366d](https://github.com/hitmaizer/radflix/commit/63b366d5ffc8b3bba3de9892aab7f1c934241d15))
+* **Browse:** adds innerHeight prop ([67928ce](https://github.com/hitmaizer/radflix/commit/67928ce92a61d5465b07e7efa475ef432c89c1d0))
+* **hooks:** adds useHeight custom hook ([6362d25](https://github.com/hitmaizer/radflix/commit/6362d255121b3d1be59d63c759098f4b534e4133))
+* **Player:** adds innerHeight number prop type ([0f45012](https://github.com/hitmaizer/radflix/commit/0f45012e830a02c909c3f0a6b18d41fd32101d62))
+* **Player:** adds innerHeight value as prop to PlayerContainer ([4ca1703](https://github.com/hitmaizer/radflix/commit/4ca1703d565f9a81593108f0ef437bf2e4ae3d0a))
+* **Player:** adds useHeight custom hook to Player ([14058da](https://github.com/hitmaizer/radflix/commit/14058da3c0057119fac5734e0dfe15ca2f80f330))
+* **Row:** adds scroll on UnderBanner open ([3008b6e](https://github.com/hitmaizer/radflix/commit/3008b6e212dd70cded4f87ca3d5757cddbaf60ed))
+* **SkaterRow:** adds scroll on showUnder open ([6e60621](https://github.com/hitmaizer/radflix/commit/6e606216ea36c5ce3bcf8ea8aa51463f095682a2))
+* **yarn.lock:** updates yarn.lock ([a101320](https://github.com/hitmaizer/radflix/commit/a101320ba41dd48b655cf7c90c0edb9bd89bbdc9))
+
 ## [1.41.1](https://github.com/hitmaizer/radflix/compare/v1.41.0...v1.41.1) (2022-07-28)
 
 
