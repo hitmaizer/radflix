@@ -14,4 +14,5 @@ export interface BrowseProps
     PositionProps {
   children?: ReactNode;
   open?: boolean;
+  innerHeight?: number;
 }
