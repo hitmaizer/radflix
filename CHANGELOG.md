@@ -1,3 +1,31 @@
+## [1.41.1](https://github.com/hitmaizer/radflix/compare/v1.41.0...v1.41.1) (2022-07-28)
+
+
+### 🐛 Fixes
+
+* **homepage:** fixes navbar on mobile ([dbcd578](https://github.com/hitmaizer/radflix/commit/dbcd578a9ac293bca8ea9f9fdde33724d73c811b))
+
+## [1.41.0](https://github.com/hitmaizer/radflix/compare/v1.40.0...v1.41.0) (2022-07-28)
+
+
+### ✂️ Refactor
+
+* **brands:** updates brands page to work with no login ([f2e1537](https://github.com/hitmaizer/radflix/commit/f2e153731caaed83d1b52dbefb0102a4bc68b4c6))
+* **browse:** updates browse page to work with no login ([471d529](https://github.com/hitmaizer/radflix/commit/471d5294d236e700df69478c383603b4cb22b84d))
+* **Header:** updates Header to render placeholder avatar ([a937b2f](https://github.com/hitmaizer/radflix/commit/a937b2f10d042c1ceb7a0cd9d992f1f67b6fb163))
+* **homepage:** updates homepage to include no login option ([b135d87](https://github.com/hitmaizer/radflix/commit/b135d872ffa051d980d0380c0a8f82e3d1ee009d))
+* **web:** updates gtag script ([cae3a89](https://github.com/hitmaizer/radflix/commit/cae3a890043a4c570c61a38fe6cb01722e79ba43))
+
+
+### 🎨 Style
+
+* **Button:** adds min-width rule for Button component ([770ff98](https://github.com/hitmaizer/radflix/commit/770ff9817e234348559d76d1a1a2af643296de3d))
+
+
+### 🚀 Features
+
+* **documentaries:** updates documentaries page to work with no login ([326253c](https://github.com/hitmaizer/radflix/commit/326253c0e700efb9ab3c76918b85e94205c9b763))
+
 ## [1.40.0](https://github.com/hitmaizer/radflix/compare/v1.39.0...v1.40.0) (2022-07-26)
 
 
