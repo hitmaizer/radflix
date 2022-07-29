@@ -81,6 +81,7 @@ const DocRow = ({
           {children}
         </S.DocRow>
       )}
+
       {showUnder && (
         <UnderBanner
           selectedMovie={selectedDoc!}
