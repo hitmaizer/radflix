@@ -25,7 +25,20 @@ const Row = ({ title, square, poster, path, ...rest }: SkaterRowProps) => {
 
   const handleClick = (m: SkaterObj) => {
     setSelectedSkater(m);
-    setShowUnder(true);
+    setShowUnder(!showUnder);
+    if (showUnder === false) {
+      window.scrollTo({
+        top: window.pageYOffset + 400,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      window.scrollTo({
+        top: window.pageYOffset - 400,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (

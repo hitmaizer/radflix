@@ -27,6 +27,19 @@ const Row = ({ title, square, poster, path, store, ...rest }: RowProps) => {
   const handleClick = (m: MovieObj) => {
     setSelectedMovie(m);
     setShowUnder(() => !showUnder);
+    if (showUnder === false) {
+      window.scrollTo({
+        top: window.pageYOffset + 400,
+        left: 0,
+        behavior: 'smooth',
+      });
+    } else {
+      window.scrollTo({
+        top: window.pageYOffset - 400,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
   };
 
   useEffect(() => {
