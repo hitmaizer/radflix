@@ -9,6 +9,7 @@ import { setMovies } from 'src/redux/allMovies';
 import { setBmx } from 'src/redux/bmx';
 import { setDirtBikes } from 'src/redux/dirtBikes';
 import { setLoading } from 'src/redux/loading';
+import { setOldSkool } from 'src/redux/oldSkool';
 import { setSkateboarding } from 'src/redux/skateboarding';
 import { setSkaters } from 'src/redux/skaters';
 import { setSnowboarding } from 'src/redux/snowboarding';
@@ -25,6 +26,7 @@ const index = ({
   surfing,
   bmx,
   dirtBikes,
+  oldSkool,
 }: any) => {
   const loading = useSelector((state: RootState) => state.loading.loading);
   const movies = useSelector((state: RootState) => state.movies.movies);
@@ -42,6 +44,7 @@ const index = ({
     dispatch(setSurfing(surfing));
     dispatch(setBmx(bmx));
     dispatch(setDirtBikes(dirtBikes));
+    dispatch(setOldSkool(oldSkool));
     dispatch(setLoading(false));
   }, [allMovies]);
 
@@ -85,34 +88,13 @@ const index = ({
       </Browse>
     </>
   );
-
-  // return (
-  //   <Browse>
-  //     <Loading
-  //       display="flex"
-  //       flexDirection="column"
-  //       alignItems="center"
-  //       ml={10}
-  //     >
-  //       <Skeleton heading />
-  //       <Stack display="flex" gridGap="16px">
-  //         <Skeleton card />
-  //         <Skeleton card />
-  //         <Skeleton card />
-  //         <Skeleton card />
-  //         <Skeleton card />
-  //         <Skeleton card />
-  //       </Stack>
-  //     </Loading>
-  //   </Browse>
-  // );
 };
 
 export default index;
 
 export const getStaticProps: GetStaticProps = async () => {
   const request1 = await fetch(
-    'https://radflix-cms.herokuapp.com/api/all-movies?populate=*'
+    'https://radflix-cms.herokuapp.com/api/all-movies?populate=*&pagination[pageSize]=100'
   );
   const allMovies = await request1.json();
   const request2 = await fetch(
@@ -120,7 +102,7 @@ export const getStaticProps: GetStaticProps = async () => {
   );
   const skaters = await request2.json();
   const request3 = await fetch(
-    'https://radflix-cms.herokuapp.com/api/skate-movies?populate=*'
+    'https://radflix-cms.herokuapp.com/api/skate-movies?populate=*&pagination[pageSize]=30'
   );
   const skateboarding = await request3.json();
   const request4 = await fetch(
@@ -139,6 +121,10 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/dirt-bike-movies?populate=*'
   );
   const dirtBikes = await request7.json();
+  const request8 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/old-skool-skates?populate=*'
+  );
+  const oldSkool = await request8.json();
 
   return {
     props: {
@@ -149,6 +135,7 @@ export const getStaticProps: GetStaticProps = async () => {
       surfing: surfing.data,
       bmx: bmx.data,
       dirtBikes: dirtBikes.data,
+      oldSkool: oldSkool.data,
     },
     revalidate: 43200,
   };

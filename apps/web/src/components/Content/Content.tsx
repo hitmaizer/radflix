@@ -22,6 +22,8 @@ const Content = ({ children, ...rest }: ContentProps) => {
   const dirtBikes = useSelector(
     (state: RootState) => state.dirtBikes.dirtBikes
   );
+  const oldSkool = useSelector((state: RootState) => state.oldSkool.oldSkool);
+
   return (
     <S.Content {...rest}>
       <Banner movies={movies} path="watch" />
@@ -31,6 +33,12 @@ const Content = ({ children, ...rest }: ContentProps) => {
         store={skateboarding}
         square
         path="watch"
+      />
+      <Row
+        title="Old-School Skate Movies"
+        path="watch"
+        square
+        store={oldSkool}
       />
       <Row
         title="Snowboarding Movies"
