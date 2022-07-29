@@ -1,3 +1,10 @@
+## [1.44.0](https://github.com/hitmaizer/radflix/compare/v1.43.0...v1.44.0) (2022-07-29)
+
+
+### 🚀 Features
+
+* **web:** space to force redeploy ([e1a7120](https://github.com/hitmaizer/radflix/commit/e1a7120bc22f5e9f3dfcb6eafbbd2f1de721421f))
+
 ## [1.43.0](https://github.com/hitmaizer/radflix/compare/v1.42.0...v1.43.0) (2022-07-29)
 
 
