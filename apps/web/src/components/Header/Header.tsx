@@ -61,7 +61,7 @@ const Header = ({ children, filteredData, ...rest }: HeaderProps) => {
                 })
               }
             >
-              <Text>Logout</Text>
+              <Text>{session ? 'Logout' : 'Go Back'}</Text>
             </Button>
           </Link>
         </Hamburger>
