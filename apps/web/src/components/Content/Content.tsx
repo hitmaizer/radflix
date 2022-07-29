@@ -26,11 +26,21 @@ const Content = ({ children, ...rest }: ContentProps) => {
     <S.Content {...rest}>
       <Banner movies={movies} path="watch" />
       <SkaterRow title="Skaters" poster path="skaters" />
-      <Row title="Skateboarding" store={skateboarding} square path="watch" />
-      <Row title="Snowboarding" store={snowboarding} square path="watch" />
-      <Row title="Surf" store={surfing} square path="watch" />
+      <Row
+        title="Skateboarding Movies"
+        store={skateboarding}
+        square
+        path="watch"
+      />
+      <Row
+        title="Snowboarding Movies"
+        store={snowboarding}
+        square
+        path="watch"
+      />
+      <Row title="Surf Movies" store={surfing} square path="watch" />
       <Row title="BMX Movies" store={bmx} square path="watch" />
-      <Row title="Dirt Bikes" store={dirtBikes} poster path="watch" />
+      <Row title="Dirt Bikes Movies" store={dirtBikes} poster path="watch" />
       {children}
     </S.Content>
   );
