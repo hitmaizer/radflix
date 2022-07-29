@@ -22,6 +22,10 @@ export const Card = styled.div<ImageCardProps>`
     transform: scale(104%);
     transition-delay: 100ms;
   }
+  &:active {
+    cursor: grabbing;
+  }
+
   ${({ poster }) =>
     poster &&
     css`
