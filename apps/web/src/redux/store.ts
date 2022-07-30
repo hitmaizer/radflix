@@ -9,6 +9,7 @@ import docsSlice from './docs';
 import errorSlice from './error';
 import filterSlice from './filter';
 import loadingSlice from './loading';
+import mtbSlice from './mtb';
 import oldSkoolSlice from './oldSkool';
 import openSlice from './show';
 import skateboardingSlice from './skateboarding';
@@ -39,6 +40,7 @@ export const store = configureStore({
     open: openSlice,
     oldSkool: oldSkoolSlice,
     climbing: climbingSlice,
+    mtb: mtbSlice,
   },
 });
 
