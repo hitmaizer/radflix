@@ -1,3 +1,10 @@
+## [1.47.1](https://github.com/hitmaizer/radflix/compare/v1.47.0...v1.47.1) (2022-07-30)
+
+
+### ✂️ Refactor
+
+* **cms:** updates mtb findone method to slug ([8c72fe9](https://github.com/hitmaizer/radflix/commit/8c72fe9e9e843e10bb4437da72c87dc884fb7884))
+
 ## [1.47.0](https://github.com/hitmaizer/radflix/compare/v1.46.0...v1.47.0) (2022-07-30)
 
 
