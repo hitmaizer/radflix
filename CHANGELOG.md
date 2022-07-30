@@ -1,3 +1,26 @@
+## [1.48.0](https://github.com/hitmaizer/radflix/compare/v1.47.1...v1.48.0) (2022-07-30)
+
+
+### 🚀 Features
+
+* **browse:** adds climbings fetch + sets state ([1782aa0](https://github.com/hitmaizer/radflix/commit/1782aa0378314376a8a41929fc33c66485f31bae))
+* **Content:** adds Climbing Movies Row ([735917d](https://github.com/hitmaizer/radflix/commit/735917d7d2d38c86cbb383943e6bb737361cca25))
+* **redux:** adds climbing slice + updates store file ([c16a58b](https://github.com/hitmaizer/radflix/commit/c16a58bb02e93b0db0525080224cc91008ffabce))
+
+## [1.47.1](https://github.com/hitmaizer/radflix/compare/v1.47.0...v1.47.1) (2022-07-30)
+
+
+### ✂️ Refactor
+
+* **cms:** updates mtb findone method to slug ([8c72fe9](https://github.com/hitmaizer/radflix/commit/8c72fe9e9e843e10bb4437da72c87dc884fb7884))
+
+## [1.47.0](https://github.com/hitmaizer/radflix/compare/v1.46.0...v1.47.0) (2022-07-30)
+
+
+### 🚀 Features
+
+* **cms :** adds mtb collectiion type files ([dd36fcf](https://github.com/hitmaizer/radflix/commit/dd36fcf56c52d89d57fe484af58fbeb5d0d7dd7c))
+
 ## [1.46.0](https://github.com/hitmaizer/radflix/compare/v1.45.0...v1.46.0) (2022-07-29)
 
 
