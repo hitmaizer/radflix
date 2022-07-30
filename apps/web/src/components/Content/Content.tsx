@@ -23,6 +23,7 @@ const Content = ({ children, ...rest }: ContentProps) => {
     (state: RootState) => state.dirtBikes.dirtBikes
   );
   const oldSkool = useSelector((state: RootState) => state.oldSkool.oldSkool);
+  const climbings = useSelector((state: RootState) => state.climbing.climbing);
 
   return (
     <S.Content {...rest}>
@@ -48,6 +49,7 @@ const Content = ({ children, ...rest }: ContentProps) => {
       />
       <Row title="Surf Movies" store={surfing} square path="watch" />
       <Row title="BMX Movies" store={bmx} square path="watch" />
+      <Row title="Climbing Movies" store={climbings} square path="watch" />
       <Row title="Dirt Bikes Movies" store={dirtBikes} poster path="watch" />
       {children}
     </S.Content>
