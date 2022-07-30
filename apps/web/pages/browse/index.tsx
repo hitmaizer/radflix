@@ -10,6 +10,7 @@ import { setBmx } from 'src/redux/bmx';
 import { setClimbing } from 'src/redux/climbing';
 import { setDirtBikes } from 'src/redux/dirtBikes';
 import { setLoading } from 'src/redux/loading';
+import { setMtb } from 'src/redux/mtb';
 import { setOldSkool } from 'src/redux/oldSkool';
 import { setSkateboarding } from 'src/redux/skateboarding';
 import { setSkaters } from 'src/redux/skaters';
@@ -29,6 +30,7 @@ const index = ({
   dirtBikes,
   oldSkool,
   climbings,
+  mtbs,
 }: any) => {
   const loading = useSelector((state: RootState) => state.loading.loading);
   const movies = useSelector((state: RootState) => state.movies.movies);
@@ -48,6 +50,7 @@ const index = ({
     dispatch(setDirtBikes(dirtBikes));
     dispatch(setOldSkool(oldSkool));
     dispatch(setClimbing(climbings));
+    dispatch(setMtb(mtbs));
     dispatch(setLoading(false));
   }, [allMovies]);
 
@@ -132,6 +135,10 @@ export const getStaticProps: GetStaticProps = async () => {
     'https://radflix-cms.herokuapp.com/api/climbings?populate=*'
   );
   const climbings = await request9.json();
+  const request10 = await fetch(
+    'https://radflix-cms.herokuapp.com/api/mtbs?populate=*'
+  );
+  const mtbs = await request10.json();
 
   return {
     props: {
@@ -144,6 +151,7 @@ export const getStaticProps: GetStaticProps = async () => {
       dirtBikes: dirtBikes.data,
       oldSkool: oldSkool.data,
       climbings: climbings.data,
+      mtbs: mtbs.data,
     },
     revalidate: 43200,
   };
