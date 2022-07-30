@@ -1,3 +1,10 @@
+## [1.47.0](https://github.com/hitmaizer/radflix/compare/v1.46.0...v1.47.0) (2022-07-30)
+
+
+### 🚀 Features
+
+* **cms :** adds mtb collectiion type files ([dd36fcf](https://github.com/hitmaizer/radflix/commit/dd36fcf56c52d89d57fe484af58fbeb5d0d7dd7c))
+
 ## [1.46.0](https://github.com/hitmaizer/radflix/compare/v1.45.0...v1.46.0) (2022-07-29)
 
 
