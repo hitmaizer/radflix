@@ -3,6 +3,7 @@ import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 import moviesSlice from './allMovies';
 import bmxSlice from './bmx';
 import bmxDocsSlice from './bmxDocs';
+import climbingSlice from './climbing';
 import dirtBikesSlice from './dirtBikes';
 import docsSlice from './docs';
 import errorSlice from './error';
@@ -37,6 +38,7 @@ export const store = configureStore({
     surfDocs: surfDocsSlice,
     open: openSlice,
     oldSkool: oldSkoolSlice,
+    climbing: climbingSlice,
   },
 });
 
