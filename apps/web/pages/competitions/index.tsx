@@ -101,5 +101,6 @@ export const getStaticProps: GetStaticProps = async () => {
       tampa: tampa.data,
       dewTour: dewTour.data,
     },
+    revalidate: 43200,
   };
 };
