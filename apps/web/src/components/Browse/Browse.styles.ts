@@ -9,7 +9,8 @@ export const Browse = styled.div<BrowseProps>`
   ${space}
   ${position}
   
-  min-height: ${`${({ innerHeight }) => innerHeight}px`};
+  min-height: 100vh;
+  height: ${`${({ innerHeight }) => innerHeight}px`};
   width: 100%;
   min-width: 100vw;
   background-color: ${({ theme }) => theme.colors.gray900};

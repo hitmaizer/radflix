@@ -10,6 +10,7 @@ const MenuList = ({ children, mob, ...rest }: MenuListProps) => {
         <LinkText pathName="browse">Categories</LinkText>
         <LinkText pathName="documentaries">Documentaries</LinkText>
         <LinkText pathName="brands">Brands</LinkText>
+        <LinkText pathName="competitions">Competitions</LinkText>
       </S.ListWrapper>
       {children}
     </S.MenuList>
