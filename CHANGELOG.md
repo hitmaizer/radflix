@@ -1,3 +1,12 @@
+## [1.49.0](https://github.com/hitmaizer/radflix/compare/v1.48.0...v1.49.0) (2022-07-30)
+
+
+### 🚀 Features
+
+* **browse:** adds mtb movies fetch + update state ([dcf6397](https://github.com/hitmaizer/radflix/commit/dcf6397bb80730efb425b04cbe32a86804c04f66))
+* **Content:** adds a MTB movies Row ([be11f62](https://github.com/hitmaizer/radflix/commit/be11f62f06723e1a8a03c424ffc58103317e24c4))
+* **redux:** adds mtb slice + updates store ([6c15cdb](https://github.com/hitmaizer/radflix/commit/6c15cdbf340b1c69334381a567053d247bcd4f15))
+
 ## [1.48.0](https://github.com/hitmaizer/radflix/compare/v1.47.1...v1.48.0) (2022-07-30)
 
 
