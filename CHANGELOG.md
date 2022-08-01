@@ -1,3 +1,19 @@
+## [1.50.0](https://github.com/hitmaizer/radflix/compare/v1.49.0...v1.50.0) (2022-08-01)
+
+
+### ✂️ Refactor
+
+* **Browse:** updates Browse height rules ([205237e](https://github.com/hitmaizer/radflix/commit/205237e65965320742de1bfc27cffb3e3718d78c))
+
+
+### 🚀 Features
+
+* **competition:** adds dynamic watch route for competitions ([abbc6c0](https://github.com/hitmaizer/radflix/commit/abbc6c0e52663e2dc03f8ebe7a17614ba14b9d2e))
+* **competitions :** adds all fetch requests of competitions page ([bbf1003](https://github.com/hitmaizer/radflix/commit/bbf1003cdd72edb40531d8327d47285ffb367074))
+* **competitions:** adds competitions index page file ([de356bb](https://github.com/hitmaizer/radflix/commit/de356bb6e8d4e11bed6163ff18a3aa626c6d9595))
+* **competitions:** adds revalidate to getStaticProps ([2eae909](https://github.com/hitmaizer/radflix/commit/2eae909a1b247fa8383340b2118fe8015a86cbd8))
+* **MenuList:** adds Competitions to navbar MenuList ([98d25e3](https://github.com/hitmaizer/radflix/commit/98d25e3d92b75b2c54e6a3c66bb4ca1ffaa1fdb6))
+
 ## [1.49.0](https://github.com/hitmaizer/radflix/compare/v1.48.0...v1.49.0) (2022-07-30)
 
 
