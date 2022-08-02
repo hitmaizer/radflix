@@ -4,4 +4,5 @@ export interface PlayerProps {
   children?: ReactNode;
   vidSrc?: string;
   innerHeight?: number;
+  playlist?: boolean;
 }

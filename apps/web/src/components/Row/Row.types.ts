@@ -12,4 +12,5 @@ export interface RowProps extends SpaceProps, FlexboxProps, LayoutProps {
   poster?: boolean;
   path?: string;
   store?: MovieObj[];
+  shufflePl?: string;
 }

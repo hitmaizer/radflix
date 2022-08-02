@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
 
 import ImageCard from '@components/ImageCard';
+import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
 import { SwiperSlide } from 'swiper/react';
 
-import { Heading } from '@ui';
+import { Button, Heading, Stack } from '@ui';
 
 import { MovieObj } from '../Banner/Banner.types';
 import UnderBanner from '../UnderBanner/UnderBanner';
@@ -17,7 +18,15 @@ import 'swiper/css';
 const BLUR_FALLBACK =
   'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAgEDBQAAAAAAAAAAAAABAgADBAYHIRESF1GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhEDEQA/AJbRrnbqjBpTxyt+WtSrZbZnMFdwgBPaBwCwJ+yVs6liQgA68D1EQqypf//Z';
 
-const Row = ({ title, square, poster, path, store, ...rest }: RowProps) => {
+const Row = ({
+  title,
+  square,
+  poster,
+  path,
+  store,
+  shufflePl,
+  ...rest
+}: RowProps) => {
   const [movies, setMovies] = useState<MovieObj[]>([]);
   const [selectedMovie, setSelectedMovie] = useState<MovieObj>();
   const [showUnder, setShowUnder] = useState<boolean>(false);
@@ -50,9 +59,21 @@ const Row = ({ title, square, poster, path, store, ...rest }: RowProps) => {
     <>
       {!loading && (
         <S.Row display="flex" flexDirection="column" {...rest}>
-          <Heading size="2xl" fontWeight="700" color="white" mr="auto">
-            {title}
-          </Heading>
+          <Stack
+            display="flex"
+            alignItems="end"
+            justifyContent="flex-start"
+            gridGap="8px"
+          >
+            <Heading size="2xl" fontWeight="700" color="white">
+              {title}
+            </Heading>
+            {shufflePl && (
+              <Button shuffle>
+                <Link href={`/watch/${shufflePl}`}>Random one &gt;</Link>
+              </Button>
+            )}
+          </Stack>
           <S.StyledSwiper
             slidesPerView={square ? 2 : 2}
             spaceBetween={8}

@@ -48,4 +48,21 @@ export const Button = styled.button<ButtonProps>`
     css`
       padding: 16px 82px;
     `}
+
+    ${({ shuffle }) =>
+    shuffle &&
+    css`
+      color: ${({ theme }) => theme.colors?.white};
+      background-color: transparent;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      transition: all 300ms ease;
+      opacity: 0.5;
+      transition: opacity 300ms ease;
+      font-size: 0.8rem;
+      &:hover {
+        opacity: 1;
+      }
+    `}
 `;

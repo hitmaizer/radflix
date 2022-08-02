@@ -18,4 +18,5 @@ export interface ButtonProps
   onClick?: () => void | Promise<undefined>;
   banner?: boolean;
   text?: boolean;
+  shuffle?: boolean;
 }
