@@ -35,6 +35,7 @@ const Content = ({ children, ...rest }: ContentProps) => {
         store={skateboarding}
         square
         path="watch"
+        shufflePl="skate"
       />
       <Row
         title="Old-School Skate Movies"
