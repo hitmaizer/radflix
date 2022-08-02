@@ -42,18 +42,44 @@ const Content = ({ children, ...rest }: ContentProps) => {
         path="watch"
         square
         store={oldSkool}
+        shufflePl="oldschool"
       />
       <Row
         title="Snowboarding Movies"
         store={snowboarding}
         square
         path="watch"
+        shufflePl="snowboard"
       />
-      <Row title="Surf Movies" store={surfing} square path="watch" />
-      <Row title="BMX Movies" store={bmx} square path="watch" />
-      <Row title="Climbing Movies" store={climbings} square path="watch" />
-      <Row title="MTB Movies" store={mtbs} square path="watch" />
-      <Row title="Dirt Bikes Movies" store={dirtBikes} poster path="watch" />
+      <Row
+        title="Surf Movies"
+        store={surfing}
+        square
+        path="watch"
+        shufflePl="surf"
+      />
+      <Row title="BMX Movies" store={bmx} square path="watch" shufflePl="bmx" />
+      <Row
+        title="Climbing Movies"
+        store={climbings}
+        square
+        path="watch"
+        shufflePl="climbing"
+      />
+      <Row
+        title="MTB Movies"
+        store={mtbs}
+        square
+        path="watch"
+        shufflePl="mtb"
+      />
+      <Row
+        title="Dirt Bikes Movies"
+        store={dirtBikes}
+        poster
+        path="watch"
+        shufflePl="dirtbikes"
+      />
       {children}
     </S.Content>
   );
