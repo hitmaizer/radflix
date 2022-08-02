@@ -58,5 +58,11 @@ export const Button = styled.button<ButtonProps>`
       text-transform: uppercase;
       letter-spacing: 4px;
       transition: all 300ms ease;
+      opacity: 0.5;
+      transition: opacity 300ms ease;
+      font-size: 0.8rem;
+      &:hover {
+        opacity: 1;
+      }
     `}
 `;
