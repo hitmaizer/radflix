@@ -1,3 +1,38 @@
+## [1.51.0](https://github.com/hitmaizer/radflix/compare/v1.50.0...v1.51.0) (2022-08-02)
+
+
+### ✂️ Refactor
+
+* **Content:** updates all browse Rows to have a random path ([c771081](https://github.com/hitmaizer/radflix/commit/c7710814f8e60cc833d5312d350d0329a9f5c59c))
+
+
+### 🎨 Style
+
+* **Button:** updates styling of shuffle variant ([ca7e225](https://github.com/hitmaizer/radflix/commit/ca7e225073ec4a341472b65bac5ffa8171691211))
+* **LinkText:** forces white color on LinkText elements ([a1b74e8](https://github.com/hitmaizer/radflix/commit/a1b74e8dd62d0a976482a01a6f92261fc4f61712))
+
+
+### 🚀 Features
+
+* **Button:** adds shuffle boolean prop type ([6e25c04](https://github.com/hitmaizer/radflix/commit/6e25c04e79beaa20208500672106d9cba12ae2e8))
+* **Button:** adds Shuffle variant css rules ([750817c](https://github.com/hitmaizer/radflix/commit/750817c97a84fbf83eadbc787be60bc65b605c7b))
+* **Content:** adds route prop to Row component ([dbef491](https://github.com/hitmaizer/radflix/commit/dbef491b25a2cf78264db3f5bca928b29e92b9cd))
+* **globalStyle:** adds a tags global styling ([1e6bd39](https://github.com/hitmaizer/radflix/commit/1e6bd3908ac866ecb6ddd4eb51d6bafb67a6e40e))
+* **PLayer:** adds Playlist boolean prop type ([72f35d2](https://github.com/hitmaizer/radflix/commit/72f35d22b1738cf996f54d3d5966a7c6789d42c3))
+* **Player:** adds ternary operator for playlist vidSrc string ([029c84c](https://github.com/hitmaizer/radflix/commit/029c84c30a45dec555bb2b2053fe90dd5b6748f5))
+* **Row:** adds a Random One button to all rows with shuffle ([509f660](https://github.com/hitmaizer/radflix/commit/509f660b3116b5106f1a540b463457eee04449c4))
+* **Row:** adds Shuffle button with Link route ([6e78d65](https://github.com/hitmaizer/radflix/commit/6e78d654c004ce420e1dfa5abfe29faf9eb4086a))
+* **Row:** adds shufflePl prop type to Row component ([d7d3324](https://github.com/hitmaizer/radflix/commit/d7d3324b4d7b6ca8c4355a09c17fc1891e5efd43))
+* **watch:** adds a skate route page file to /watch ([707dc03](https://github.com/hitmaizer/radflix/commit/707dc037130982a88638d330c6ef57e8c56652b6))
+* **watch:** adds bmx route page file ([fe1f635](https://github.com/hitmaizer/radflix/commit/fe1f63566a7c1f8142da0bd3fe4cd6bb4fbbf379))
+* **watch:** adds climbing route page file ([c032347](https://github.com/hitmaizer/radflix/commit/c0323471fc3e0f99a6a3e85fc1ab6a7aff8643b3))
+* **watch:** adds dirtbikes route page file ([22ce6f5](https://github.com/hitmaizer/radflix/commit/22ce6f5569e7da7a3ef1aa57ddc260204dac80f8))
+* **watch:** adds mtb route page file ([feca2e9](https://github.com/hitmaizer/radflix/commit/feca2e9a6c344fad94503e424381a2dfd366bc1d))
+* **watch:** adds oldschool route page file ([e661181](https://github.com/hitmaizer/radflix/commit/e6611815025ebc8ec5eda239705fe2f99cfb2f4f))
+* **watch:** adds skate route page file ([76efaac](https://github.com/hitmaizer/radflix/commit/76efaac3b184f32f6e95092733303ee455b78194))
+* **watch:** adds snowboard route page file ([0e2eb4e](https://github.com/hitmaizer/radflix/commit/0e2eb4eedcd3a4e9ca8d9ae4e89c3afedf1a3732))
+* **watch:** adds surf route page file ([69d2292](https://github.com/hitmaizer/radflix/commit/69d2292371dc96b785287b72527c85c1b6636cfa))
+
 ## [1.50.0](https://github.com/hitmaizer/radflix/compare/v1.49.0...v1.50.0) (2022-08-01)
 
 
