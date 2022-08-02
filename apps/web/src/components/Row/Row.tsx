@@ -68,9 +68,11 @@ const Row = ({
             <Heading size="2xl" fontWeight="700" color="white">
               {title}
             </Heading>
-            <Button shuffle>
-              <Link href={`/watch/${shufflePl}`}>Shuffle &gt;</Link>
-            </Button>
+            {shufflePl && (
+              <Button shuffle>
+                <Link href={`/watch/${shufflePl}`}>Random one &gt;</Link>
+              </Button>
+            )}
           </Stack>
           <S.StyledSwiper
             slidesPerView={square ? 2 : 2}
