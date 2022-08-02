@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { LinkTextProps } from './LinkText.types';
 
 export const LinkText = styled.a<LinkTextProps>`
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white} !important;
   font-weight: ${({ href, pathName }) => (href === pathName ? 'bold' : '400')};
   transition: color 300ms ease;
   width: 100%;

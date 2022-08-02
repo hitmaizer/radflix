@@ -43,6 +43,14 @@ const GlobalStyle = createGlobalStyle`
   a {
       text-decoration: none;   
   }
+  
+  a,
+      a:visited,
+      a:hover,
+      a:active {
+        color: inherit;
+      }
+
   body {
     overflow-x: hidden;
   }
