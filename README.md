@@ -44,7 +44,7 @@ It's currently hosted on [Vercel](https://vercel.com/).
 
 ## Backend
 
-Radflix's backend is handled by a [Strapi](https://strapi.io/) app that provides a REST API that the frontend uses to fetch data. It's currently deployed to Heroku, so it will most likely take a second to awake up on the first request call.
+Radflix's backend is handled by a [Strapi](https://strapi.io/) app that provides a REST API that the frontend uses to fetch data. It's currently deployed to Heroku.
 
 
 
