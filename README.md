@@ -1,6 +1,6 @@
 # Radflix 
 
-Radflix is a simple Netflix clone, but it's themed around extreme sports, to create an extreme sports movies hub.<br> 
+Radflix is a Netflix clone, but it's themed around extreme sports, to create an extreme sports movies hub.<br> 
 There are Skateboarding, Snowboarding, Surf, BMX, and Surfing movies.<br> 
 This app was created, not only as a way to practice my skills but also to simulate a professional work 
 environment.
