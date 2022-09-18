@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ImageCard from '@components/ImageCard';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
+import { FreeMode } from 'swiper';
 import { SwiperSlide } from 'swiper/react';
 
 import { Heading } from '@ui';
@@ -10,8 +11,6 @@ import { Heading } from '@ui';
 import UnderBanner from '../UnderBanner/UnderBanner';
 import * as S from './SkaterRow.styles';
 import { SkaterObj, SkaterRowProps } from './SkaterRow.types';
-
-import 'swiper/css';
 
 const BLUR_FALLBACK =
   'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAABQf/xAAmEAACAQIEBQUAAAAAAAAAAAABAgMEBQAREkEGISIxYQcTFCQy/8QAFAEBAAAAAAAAAAAAAAAAAAAABP/EABkRAQADAQEAAAAAAAAAAAAAAAEAAgMREv/aAAwDAQACEQMRAD8Ab9X+MLMbXX22jtFW969qKoirHcudaMGXPJsyTo7efGJu1k4iu5Nyqbjc4p6z7EkaVmhUZ+ogLsAT22wrb0SokuTzqsrgFgzjUc82588Xqjij+JB0L+F28YLbS2TwiPI1Gf/Z';
@@ -55,6 +54,8 @@ const Row = ({ title, square, poster, path, ...rest }: SkaterRowProps) => {
             {title}
           </Heading>
           <S.StyledSwiper
+            modules={[FreeMode]}
+            freeMode
             slidesPerView={square ? 2 : 2}
             spaceBetween={8}
             breakpoints={{
