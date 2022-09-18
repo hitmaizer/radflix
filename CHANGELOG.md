@@ -1,3 +1,30 @@
+## [1.51.1](https://github.com/hitmaizer/radflix/compare/v1.51.0...v1.51.1) (2022-09-18)
+
+
+### ✂️ Refactor
+
+* **ImageCard:** remove attributes passed through attrs obj ([de6e8ed](https://github.com/hitmaizer/radflix/commit/de6e8ed0120bab08c9bb392fab465c0ca561c398))
+* **README:** updates README file ([d7a3894](https://github.com/hitmaizer/radflix/commit/d7a3894d753b5d61bf5f53c081c34c8c19e8e293))
+* **README:** updates README file text ([8759b36](https://github.com/hitmaizer/radflix/commit/8759b36ff100661f97f67ab1d933567591736f6d))
+* **Rows:** add freeMode module and delete swiper css import ([71785ac](https://github.com/hitmaizer/radflix/commit/71785ac6172886efa54acc3faa320379ba052593))
+
+
+### 🎨 Style
+
+* **ImageCard.styles:** update Row cards aspect ratio ([5edcd58](https://github.com/hitmaizer/radflix/commit/5edcd58eba44b567f310e5637613c8ae2b82b3c3))
+
+
+### 🐛 Fixes
+
+* **README:** updates path of broken links ([f27e19d](https://github.com/hitmaizer/radflix/commit/f27e19d4d2237229096da0483b1e1e6a27939a1f))
+
+
+### Other
+
+* **root:** add web scope to build script ([3cbf48f](https://github.com/hitmaizer/radflix/commit/3cbf48ffa38a24f578739ba3e0130336409d9eba))
+* **web:** import swiper css on _app file ([5f3ffde](https://github.com/hitmaizer/radflix/commit/5f3ffdec3f32f9f49e930a87e7720140a3eb0f55))
+* **web:** update SEO description ([87c2634](https://github.com/hitmaizer/radflix/commit/87c2634b61b2e81adc97d728d4cdd34d8b5cc70c))
+
 ## [1.51.0](https://github.com/hitmaizer/radflix/compare/v1.50.0...v1.51.0) (2022-08-02)
 
 
