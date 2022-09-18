@@ -12,6 +12,7 @@ import { store } from 'src/redux/store';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'ui/styles';
 import theme from 'ui/styles/theme';
+import 'swiper/css';
 
 import * as ga from '../lib/ga';
 
