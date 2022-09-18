@@ -6,10 +6,10 @@ import { StyledSwiper } from '@components/SkaterRow/SkaterRow.styles';
 import UnderBanner from '@components/UnderBanner';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
+import { FreeMode } from 'swiper';
 import { SwiperSlide } from 'swiper/react';
 
 import { Heading } from '@ui';
-import 'swiper/css';
 
 import * as S from './DocRow.styles';
 import { DocRowProps } from './DocRow.types';
@@ -45,6 +45,8 @@ const DocRow = ({
             {title}
           </Heading>
           <StyledSwiper
+            modules={[FreeMode]}
+            freeMode
             slidesPerView={square ? 2 : 2}
             spaceBetween={8}
             breakpoints={{

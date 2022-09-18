@@ -1,14 +1,14 @@
 # Radflix 
 
-Radflix is a simple Netflix clone, but it's themed around extreme sports, to create an extreme sports movies hub.<br> 
+Radflix is a Netflix clone, but it's themed around extreme sports, to create an extreme sports movies hub.<br> 
 There are Skateboarding, Snowboarding, Surf, BMX, and Surfing movies.<br> 
 This app was created, not only as a way to practice my skills but also to simulate a professional work 
 environment.
 WIP.
 
-Here's the [demo](radflix.vercel.app), try it out!
+Here's the [demo](https://radflix.vercel.app/), try it out!
 
-[radflix.vercel.app](radflix.vercel.app)
+[radflix.vercel.app](https://radflix.vercel.app/)
 
 ![radflix](https://user-images.githubusercontent.com/58346965/177034416-3a219775-31be-4f1a-a4a6-9c0d9c962235.png)
 
@@ -44,7 +44,7 @@ It's currently hosted on [Vercel](https://vercel.com/).
 
 ## Backend
 
-Radflix's backend is handled by a [Strapi](https://strapi.io/) app that provides a REST API that the frontend uses to fetch data. It's currently deployed to Heroku, so it will most likely take a second to awake up on the first request call.
+Radflix's backend is handled by a [Strapi](https://strapi.io/) app that provides a REST API that the frontend uses to fetch data. It's currently deployed to Heroku.
 
 
 

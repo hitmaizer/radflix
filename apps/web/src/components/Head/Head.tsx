@@ -12,7 +12,7 @@ export default function Layout({ children }) {
         />
         <meta
           property="og:description"
-          content="Radflix is a simple Netflix clone, but it's themed around extreme sports, to create an extreme sports movies hub.
+          content="Radflix is a Netflix clone, but it's themed around extreme sports, to create an extreme sports movies hub.
           There are Skateboarding, Snowboarding, Surf, BMX, and Surfing movies."
           key="ogdesc"
         />

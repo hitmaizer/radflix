@@ -2,8 +2,6 @@ import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import { flexbox, layout, space } from 'styled-system';
 
-import { mediaQueries } from '@styles';
-
 import { ImageCardProps } from './ImageCard.types';
 
 export const Card = styled.div<ImageCardProps>`
@@ -15,7 +13,6 @@ export const Card = styled.div<ImageCardProps>`
   display: inline-block;
   cursor: pointer;
   transition: all 300ms 0ms ease;
-  min-height: 100px;
   position: relative;
 
   &:hover {
@@ -32,11 +29,8 @@ export const Card = styled.div<ImageCardProps>`
       height: 100%;
       object-fit: cover;
       object-position: top;
-      height: 300px;
       max-height: 600px;
-      ${mediaQueries.md} {
-        height: 400px;
-      }
+      aspect-ratio: 9 / 16;
     `}
 
   ${({ square }) =>
@@ -46,15 +40,15 @@ export const Card = styled.div<ImageCardProps>`
       object-fit: cover;
       object-position: top;
       max-height: 200px;
-      height: 100px;
-      ${mediaQueries.md} {
-        height: 200px;
-      }
+      aspect-ratio: 9 / 21;
     `}
 `;
 
-export const CardImage = styled(Image)<ImageCardProps>`
-  object-fit: cover;
+export const CardImage = styled(Image).attrs({
+  layout: 'fill',
+  objectFit: 'cover',
+  placeholder: 'blur',
+})<Pick<ImageCardProps, 'square' | 'poster'>>`
   border-radius: 12px;
   width: 100%;
   height: 100%;

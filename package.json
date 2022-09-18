@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "turbo run build --scope=*ui* --scope=*cms* --no-deps",
+    "build": "turbo run build --scope=*ui* --scope=*cms* --scope=*web* --no-deps",
     "dev": "turbo run dev --parallel",
     "web:dev": "turbo run dev --scope=*web* --no-deps",
     "cms:dev": "turbo run dev --scope=*cms* --no-deps",
