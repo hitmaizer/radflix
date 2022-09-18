@@ -4,6 +4,7 @@ import ImageCard from '@components/ImageCard';
 import Link from 'next/link';
 import { useSelector } from 'react-redux';
 import { RootState } from 'src/redux/store';
+import { FreeMode } from 'swiper';
 import { SwiperSlide } from 'swiper/react';
 
 import { Button, Heading, Stack } from '@ui';
@@ -12,8 +13,6 @@ import { MovieObj } from '../Banner/Banner.types';
 import UnderBanner from '../UnderBanner/UnderBanner';
 import * as S from './Row.styles';
 import { RowProps } from './Row.types';
-
-import 'swiper/css';
 
 const BLUR_FALLBACK =
   'data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAGAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAgEAACAgEDBQAAAAAAAAAAAAABAgADBAYHIRESF1GB/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAWEQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhEDEQA/AJbRrnbqjBpTxyt+WtSrZbZnMFdwgBPaBwCwJ+yVs6liQgA68D1EQqypf//Z';
@@ -75,6 +74,8 @@ const Row = ({
             )}
           </Stack>
           <S.StyledSwiper
+            modules={[FreeMode]}
+            freeMode
             slidesPerView={square ? 2 : 2}
             spaceBetween={8}
             breakpoints={{
